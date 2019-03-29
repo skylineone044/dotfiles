@@ -16,3 +16,5 @@ ln -s ~/git/dotfiles/zsh/.oh-my-zsh ~/.oh-my-zsh
 echo linking latte layout...
 ln -s ~/git/dotfiles/latte ~/.config/latte
 
+echo Done!
+
