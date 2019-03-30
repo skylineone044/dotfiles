@@ -90,6 +90,6 @@ Color=252,252,252
 
 [General]
 Blur=true
-Description=New Color Scheme
-Opacity=0
+Description=skykonsole
+Opacity=0.65
 Wallpaper=

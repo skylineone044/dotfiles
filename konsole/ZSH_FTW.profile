@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=New Color Scheme 1
+ColorScheme=skykonsole
 Font=Inconsolata for Powerline,12,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=true
 
