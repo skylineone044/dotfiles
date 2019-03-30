@@ -1,0 +1,1 @@
+/home/skyline/git/dotfiles/vim/.vim
