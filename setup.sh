@@ -3,6 +3,9 @@
 echo --- Started linker script...
 echo -- Getting git...
 sudo apt install -y git || sudo pacman -S --noconfirm git
+echo setting up git...
+git config --global user.email "tokodioli@gmail.com"
+git config --global user.name "skylineone044"
 
 echo -- Starting...
 mkdir ~/git
@@ -47,6 +50,9 @@ echo - getting pylint...
 sudo apt install -y pylint pylint3 || sudo apt install -y python-pylint python3-pylint || sudo apt install -y python2-pylint python-pylint || sudo pacman -S --noconfirm pylint pylint3  || sudo pacman -S --noconfirm python-pylint python3-pylint || sudo pacman -S --noconfirm python2-pylint python-pylint
 echo - getting python-jedi
 sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi python-jedi || sudo pacman -S  --noconfirm python-jedi python3-jedi || sudo pacman -S  --noconfirm python2-jedi python-jedi
+
+echo -- getting chromium
+sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
 
 echo --- Done!
 
