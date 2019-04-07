@@ -4,7 +4,7 @@ Font=Inconsolata for Powerline,12,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=true
 
 [General]
-Command=/bin/zsh
+Command=/bin/tmux
 Directory=/home/skyline/
 Name=ZSH_FTW
 Parent=FALLBACK/
