@@ -34,3 +34,9 @@
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "https:/github.com/JamshedVesuna/vim-markdown-preview"]
+	path = https:/github.com/JamshedVesuna/vim-markdown-preview
+	url = /home/skyline/git/dotfiles/vim/.vim/bundle/vim-markdown-preview
+[submodule "https:/github.com/mcchrish/nnn.vim"]
+	path = https:/github.com/mcchrish/nnn.vim
+	url = /home/skyline/git/dotfiles/vim/.vim/bundle/nnn.vim
