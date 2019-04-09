@@ -1,6 +1,6 @@
-# dotfiles
+# My Dotfiles
 
-My dotfiles for: zsh (with Oh-My-Zsh), vim and tmux
+My dotfiles for: zsh (with Oh-My-Zsh), vim and tmux, 
+but here are my settings for konsole(with fonts and all) and latte-dock aswell.
 
-use git clone --recurse-submodules https://gitlab.com/skylineone044/dotfiles.git
-to get the submodules aswell
+use **setup.sh** to *download and install*.
