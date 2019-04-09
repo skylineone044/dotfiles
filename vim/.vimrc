@@ -213,3 +213,11 @@ map <leader>p "+P
 nnoremap <leader>j :bprevious<CR>
 nnoremap <leader>k :bnext<CR>
 "-------------------------------
+
+
+" Markdown Preview settings ---------------------
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Chromium'
+let vim_markdown_preview_use_xdg_open=1
+
