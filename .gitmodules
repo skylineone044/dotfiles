@@ -40,3 +40,6 @@
 [submodule "https:/github.com/mcchrish/nnn.vim"]
 	path = https:/github.com/mcchrish/nnn.vim
 	url = /home/skyline/git/dotfiles/vim/.vim/bundle/nnn.vim
+[submodule "vim-markdown-preview"]
+	path = vim-markdown-preview
+	url = /home/skyline/git/dotfiles/vim/.vim/bundle/vim-markdown-preview
