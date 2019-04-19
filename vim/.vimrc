@@ -178,7 +178,7 @@ augroup configgroup
 	autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
 	autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
 	autocmd FileType python map <leader>b iif __name__ == "__main__":<CR>
-	autocmd FileType python map <leader>c I#<esc>
+	autocmd FileType python map <leader>c I#<esc>j
 	autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
 	autocmd FileType vim map <leader>c I"<esc>
 augroup END
