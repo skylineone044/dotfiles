@@ -222,3 +222,9 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Chromium'
 let vim_markdown_preview_use_xdg_open=1
 
+" ALE settings ----------------------------------
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:airline#extensions#ale#enabled = 1
+
+
