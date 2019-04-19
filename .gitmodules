@@ -43,3 +43,6 @@
 [submodule "vim-markdown-preview"]
 	path = vim-markdown-preview
 	url = /home/skyline/git/dotfiles/vim/.vim/bundle/vim-markdown-preview
+[submodule "vim/.vim/bundle/ale"]
+	path = vim/.vim/bundle/ale
+	url = https://github.com/w0rp/ale
