@@ -49,3 +49,6 @@
 [submodule "vim/.vim/bundle/papercolor-theme"]
 	path = vim/.vim/bundle/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme/
+[submodule "vim/.vim/bundle/python-syntax"]
+	path = vim/.vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax/
