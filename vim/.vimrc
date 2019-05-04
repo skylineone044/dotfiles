@@ -81,6 +81,8 @@ Plugin 'mcchrish/nnn.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'w0rp/ale'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'hdima/python-syntax'
+Plugin 'sheerun/vim-polyglot'
 "Bundle 'jistr/vim-nerdtree-tabs'
 "Plugin 'xuyuanp/nerdtree-git-plugin'
 "Plugin 'scrooloose/nerdtree'
@@ -144,7 +146,6 @@ set cursorline
 set tabstop=4
 set showcmd
 set list
-colorscheme skylines
 set splitbelow
 set splitright
 set wildmode=longest,list,full
@@ -202,7 +203,7 @@ map gb :GoBuild<CR>
 "Cycle number schemes
 map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
 "Reload vimrc
-nnoremap <F6> :source ~/.vimrc<CR>
+nnoremap <F6> :w<CR>:source ~/.vimrc<CR>
 
 "Copy paste
 ":let @+=@*<CR>
@@ -228,4 +229,69 @@ let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:airline#extensions#ale#enabled = 1
 
+" PaperColor settings ---------------------------
+set t_Co=256
+set background=dark
+
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.dark': {
+  \       'transparent_background': 1,
+  \       'allow_bold': 1,
+  \       'override' : {
+  \         'color00' : ['', '0'],
+  \         'color01' : ['', '9'],
+  \         'color02' : ['', '10'],
+  \         'color03' : ['', '220'],
+  \         'color04' : ['', '0'],
+  \         'color05' : ['', '8'],
+  \         'color06' : ['', '40'],
+  \         'color07' : ['', '15'],
+  \         'color08' : ['', '0'],
+  \         'color09' : ['', '198'],
+  \         'color10' : ['', '197'],
+  \         'color11' : ['', '202'],
+  \         'color12' : ['', '21'],
+  \         'color13' : ['', '201'],
+  \         'color14' : ['', '39'],
+  \         'color15' : ['', '12'],
+  \         'color16' : ['', '46'],
+  \         'color17' : ['', '51'],
+  \         'cursorline' : ['', '235'],
+  \         'cursorlinenr_fg' : ['', '33'],
+  \         'cursorlinenr_bg' : ['', '235'],
+  \         'popupmenu_fg' : ['', '15'],
+  \         'popupmenu_bg' : ['', '235'],
+  \         'linenumber_fg' : ['', '244'],
+  \         'linenumber_bg' : ['', '0'],
+  \         'vertsplit_fg' : ['', '15'],
+  \         'vertsplit_bg' : ['', '0'],
+  \         'error_fg' : ['', '15'],
+  \         'error_bg' : ['', '196'],
+  \         'visual_fg' : ['', '15'],
+  \         'visual_bg' : ['', '88'],
+  \         'folded_fg' : ['', '15'],
+  \         'folded_bg' : ['', '21'],
+  \         'spellbad' : ['', '57'],
+  \         'wildmenu_fg' : ['', '15'],
+  \         'wildmenu_bg' : ['', '33'],
+  \       },
+  \     },
+  \   },
+  \  'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     },
+  \     'cpp': {
+  \       'highlight_standard_library': 1
+  \     }
+  \   }
+  \ }
+
+colorscheme PaperColor
+"colorscheme skylines
+"hi Function ctermfg=Green ctermbg=none cterm=none
+
+" Python-Syntax plugin options ------------------
+let python_highlight_all = 1
 
