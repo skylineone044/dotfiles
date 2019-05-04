@@ -8,7 +8,7 @@ UseFontLineChararacters=true
 CursorShape=0
 
 [General]
-Command=/bin/tmux
+Command=/usr/bin/tmux
 Directory=/home/skyline/
 Name=ZSH_FTW
 Parent=FALLBACK/
