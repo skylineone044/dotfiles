@@ -184,7 +184,7 @@ augroup configgroup
 	autocmd FileType python map <leader>b iif __name__ == "__main__":<CR>
 	autocmd FileType python map <leader>c I#<esc>j
 	autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
-	autocmd FileType vim map <leader>c I"<esc>
+	autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END
 
 " Misc keybindings ------------------------------
@@ -243,7 +243,7 @@ let g:PaperColor_Theme_Options = {
   \         'color00' : ['', '0'],
   \         'color01' : ['', '9'],
   \         'color02' : ['', '10'],
-  \         'color03' : ['', '220'],
+  \         'color03' : ['', '214'],
   \         'color04' : ['', '0'],
   \         'color05' : ['', '8'],
   \         'color06' : ['', '40'],
@@ -251,12 +251,12 @@ let g:PaperColor_Theme_Options = {
   \         'color08' : ['', '0'],
   \         'color09' : ['', '198'],
   \         'color10' : ['', '197'],
-  \         'color11' : ['', '202'],
+  \         'color11' : ['', '46'],
   \         'color12' : ['', '21'],
   \         'color13' : ['', '201'],
   \         'color14' : ['', '39'],
   \         'color15' : ['', '12'],
-  \         'color16' : ['', '46'],
+  \         'color16' : ['', '39'],
   \         'color17' : ['', '51'],
   \         'cursorline' : ['', '235'],
   \         'cursorlinenr_fg' : ['', '33'],
@@ -291,36 +291,46 @@ let g:PaperColor_Theme_Options = {
 
 colorscheme PaperColor
 "colorscheme skylines
-"hi Function ctermfg=Green ctermbg=none cterm=none
+
+function ForceFuncCallColor()
+  hi Function ctermfg=39 ctermbg=none cterm=none
+  syntax match pythonFunction /\v[[:alpha:]_.]+\ze(\s?\()/
+  hi def link pythonFunction Function
+endfunction
+
+autocmd BufWritePost * call ForceFuncCallColor()
 
 " Python-Syntax plugin options ------------------
 let python_highlight_all = 1
 
 
 " Rainbow parens plugin settings ----------------
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+"let g:rbpt_colorpairs = [
+    "\ ['brown',       'RoyalBlue3'],
+    "\ ['Darkblue',    'SeaGreen3'],
+    "\ ['darkgray',    'DarkOrchid3'],
+    "\ ['darkgreen',   'firebrick3'],
+    "\ ['darkcyan',    'RoyalBlue3'],
+    "\ ['darkred',     'SeaGreen3'],
+    "\ ['darkmagenta', 'DarkOrchid3'],
+    "\ ['brown',       'firebrick3'],
+    "\ ['gray',        'RoyalBlue3'],
+    "\ ['black',       'SeaGreen3'],
+    "\ ['darkmagenta', 'DarkOrchid3'],
+    "\ ['Darkblue',    'firebrick3'],
+    "\ ['darkgreen',   'RoyalBlue3'],
+    "\ ['darkcyan',    'SeaGreen3'],
+    "\ ['darkred',     'DarkOrchid3'],
+    "\ ['red',         'firebrick3'],
+    "\ ]
 
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
+"let g:rbpt_max = 16
+"let g:rbpt_loadcmd_toggle = 0
+"
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+
+
