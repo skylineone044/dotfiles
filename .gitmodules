@@ -52,3 +52,6 @@
 [submodule "vim/.vim/bundle/python-syntax"]
 	path = vim/.vim/bundle/python-syntax
 	url = https://github.com/hdima/python-syntax/
+[submodule "vim/.vim/bundle/vim-polyglot"]
+	path = vim/.vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
