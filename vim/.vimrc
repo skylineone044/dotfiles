@@ -83,14 +83,7 @@ Plugin 'w0rp/ale'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'hdima/python-syntax'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'kien/rainbow_parentheses.vim'
-"Bundle 'jistr/vim-nerdtree-tabs'
-"Plugin 'xuyuanp/nerdtree-git-plugin'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'rafi/awesome-vim-colorschemes'
-"Plugin 'nightsense/vimspectr'
-"Plugin 'sjl/gundo.vim'
-"Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/rainbow_parentheses.vim'
 " ------------------------
 call vundle#end()
 filetype plugin indent on
@@ -226,8 +219,12 @@ let vim_markdown_preview_browser='Chromium'
 let vim_markdown_preview_use_xdg_open=1
 
 " ALE settings ----------------------------------
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+"let g:ale_sign_error = '▶'
+let g:ale_sign_error = '⚫'
+let g:ale_sign_warning = '⚫'
+
+"The symbol highlighting is under the colorc=scheme otpions#
+
 let g:airline#extensions#ale#enabled = 1
 
 " PaperColor settings ---------------------------
@@ -300,37 +297,14 @@ endfunction
 
 autocmd BufWritePost * call ForceFuncCallColor()
 
+highlight ALEErrorSign ctermfg=196 ctermbg=NONE
+highlight ALEWarningSign ctermfg=214 ctermbg=NONE
+highlight SignColumn ctermbg=NONE
+highlight clear SignColumn
+
+
 " Python-Syntax plugin options ------------------
 let python_highlight_all = 1
-
-
-" Rainbow parens plugin settings ----------------
-"let g:rbpt_colorpairs = [
-    "\ ['brown',       'RoyalBlue3'],
-    "\ ['Darkblue',    'SeaGreen3'],
-    "\ ['darkgray',    'DarkOrchid3'],
-    "\ ['darkgreen',   'firebrick3'],
-    "\ ['darkcyan',    'RoyalBlue3'],
-    "\ ['darkred',     'SeaGreen3'],
-    "\ ['darkmagenta', 'DarkOrchid3'],
-    "\ ['brown',       'firebrick3'],
-    "\ ['gray',        'RoyalBlue3'],
-    "\ ['black',       'SeaGreen3'],
-    "\ ['darkmagenta', 'DarkOrchid3'],
-    "\ ['Darkblue',    'firebrick3'],
-    "\ ['darkgreen',   'RoyalBlue3'],
-    "\ ['darkcyan',    'SeaGreen3'],
-    "\ ['darkred',     'DarkOrchid3'],
-    "\ ['red',         'firebrick3'],
-    "\ ]
-
-"let g:rbpt_max = 16
-"let g:rbpt_loadcmd_toggle = 0
-"
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
 
 
 
