@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/skyline/python/workspace/project/babysteps/erettsegi'
-let g:netrw_dirhist_2='/home/skyline/python/workspace/project/babysteps/erettsegi/18_okt'
-let g:netrw_dirhist_3='/home/skyline/python/workspace/project/babysteps/erettsegi/18_okt/megold'
-let g:netrw_dirhist_4='/home/skyline/python/workspace/project/babysteps'
-let g:netrw_dirhist_5='/home/skyline/python/workspace/project/babysteps/erettsegi'
-let g:netrw_dirhist_6='/home/skyline/python/workspace/project/babysteps/erettsegi/18_okt'
-let g:netrw_dirhist_7='/home/skyline/python/workspace/project/babysteps/erettsegi/18_okt/megold'
-let g:netrw_dirhist_8='/home/skyline/python/workspace/project/python-basics'
-let g:netrw_dirhist_9='/home/skyline/python/workspace/project/python-basics/playground'
+let g:netrw_dirhist_cnt =0
