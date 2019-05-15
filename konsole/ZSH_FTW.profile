@@ -1,7 +1,8 @@
 [Appearance]
 AntiAliasFonts=true
+BoldIntense=true
 ColorScheme=skykonsole
-Font=Inconsolata for Powerline,12,-1,5,57,0,0,0,0,0,Regular
+Font=Inconsolata Nerd Font Mono,12,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=true
 
 [Cursor Options]
