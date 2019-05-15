@@ -148,9 +148,12 @@ set showmatch
 set incsearch
 set hlsearch
 
+nnoremap <leader>b :buffers<CR>:buffer<space>
+
 
 " Set Marker character for whitespace ---
-set listchars=tab:→\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
+"set listchars=tab:→\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
+set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 "set listchars=tab:▸\ ,eol:¬,space:˙
 "----------------------------------------
 
@@ -305,6 +308,3 @@ highlight clear SignColumn
 
 " Python-Syntax plugin options ------------------
 let python_highlight_all = 1
-
-
-
