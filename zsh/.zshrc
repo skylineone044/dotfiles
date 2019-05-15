@@ -38,7 +38,7 @@ export ZSH="/home/skyline/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER=$USER
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context ssh dir dir_writable vcs newline status)
-# POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='awesome-fontconfig'
 #POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_DISABLE_RPROMPT=true
@@ -56,7 +56,7 @@ POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="009"
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="015"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND="009"
-#POWERLEVEL9K_MODE='awesome-patchd'
+POWERLEVEL9K_MODE='awesome-patchd'
 
 #
 # Set list of themes to pick from when loading at random
@@ -151,7 +151,7 @@ alias sshpi="ssh pi@192.168.1.120"
 
 function chpwd() {
 #    emulate -L zsh
-    ls -l
+    lsd -l
 }
 
 #for key in ${(k)icons[@]}
