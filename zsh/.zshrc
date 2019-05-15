@@ -162,6 +162,10 @@ function chpwd() {
 #    fi
 #done
 
-alias ls="ls -l --color=auto"
-alias "ls -a"="ls -la -- color=auto"
+alias ls="lsd -l --color=auto"
+alias "lsd -a"="ls -la -- color=auto"
+
 alias ":q"="exit"
+alias ":Q"="exit"
+alias ":wq"="exit"
+alias ":WQ"="exit"
