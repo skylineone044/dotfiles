@@ -67,6 +67,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo \n- refreshing tmux...
 tmux source ~/.tmux.conf
 echo \n-! USE PREFIX+I TO INSTALL TMUX PLUGINS
+echo \n-! USE PREFIX+U TO UPDATE TMUX PLUGINS
 
 echo \n\n-- Getting dependencies...
 
