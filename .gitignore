@@ -6,4 +6,6 @@
 .*bundle*
 *.netrwhist*
 .*.netrwhist*
+vim/.vim/bundle/*`
+tmux/.tmux/plugins/*
 
