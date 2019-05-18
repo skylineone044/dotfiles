@@ -48,12 +48,12 @@ ln -s ~/git/dotfiles/zsh/.zshrc ~/.zshrc
 echo \n- linking latte layout...
 ln -s ~/git/dotfiles/latte ~/.config/latte
 
-echo \n\n-- getting powerline fonts...
-cd ~/git/
-git clone https://github.com/powerline/fonts.git --depth=1
-echo \n- installing powerline fonts...
-cd fonts
-./install.sh
+echo \n- installing fonts...
+mkdir ~/.local/share/fonts
+echo copying...
+cp ~/git/dotfiles/"Inconsolata Nerd Font Complete.otf" ~/.local/share/fonts/
+echo refreshing font cache...
+fc-cache -f -v
 
 echo \n- linking konsole...
 ln -s ~/git/dotfiles/konsole/ZSH_FTW.profile ~/.local/share/konsole/ZSH_FTW.profile
@@ -79,7 +79,8 @@ sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi
 
 echo \n\n-- getting chromium
 sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
-
+echo \n\n-- getting lsd
+sudo pacman -S --noconfirm lsd || sudo snapinstall lsd
 
 
 echo \n\n\n--- Done!\n\n\n
