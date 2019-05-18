@@ -4,4 +4,6 @@
 .*~
 *bundle*
 .*bundle*
+*.netrwhist*
+.*.netrwhist*
 
