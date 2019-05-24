@@ -1,5 +1,8 @@
 [Background]
 Color=0,0,0
+MaxRandomHue=0
+MaxRandomSaturation=0
+MaxRandomValue=0
 
 [BackgroundFaint]
 Color=49,54,59

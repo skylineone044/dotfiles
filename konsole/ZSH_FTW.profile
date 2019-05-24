@@ -14,9 +14,14 @@ Directory=/home/skyline/
 Name=ZSH_FTW
 Parent=FALLBACK/
 
+[Interaction Options]
+CopyTextAsHTML=false
+
 [Scrolling]
 HistoryMode=2
 ScrollBarPosition=2
 
 [Terminal Features]
-UrlHintsModifiers=201326592
+BidiRenderingEnabled=false
+FlowControlEnabled=false
+UrlHintsModifiers=67108864
