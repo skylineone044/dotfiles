@@ -224,8 +224,9 @@ let vim_markdown_preview_use_xdg_open=1
 
 " ALE settings ----------------------------------
 "let g:ale_sign_error = '▶'
-let g:ale_sign_error = '⚫'
-let g:ale_sign_warning = '⚫'
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '●'
+"dot symbol: \u25CF
 
 "The symbol highlighting is under the colorc=scheme otpions#
 
