@@ -17,8 +17,8 @@ printf "\n- getting Dotfiles"
 git clone https://gitlab.com/skylineone044/dotfiles.git ~/git/dotfiles
 printf "\n- getting oh-my-zsh" 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-printf "\n- getting POWERLEVEL9K..." 
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+printf "\n- getting POWERLEVEL10K..." 
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 printf "\n\nUSE TPM AND VUNDLE COMMANDS TO GET PLUGINS\n\n" 
 
