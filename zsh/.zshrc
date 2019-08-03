@@ -37,8 +37,10 @@ export ZSH="/home/skyline/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 DEFAULT_USER=$USER
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context ssh dir dir_writable vcs newline status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time os_icon)
+
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time os_icon )
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user context ssh dir dir_writable vcs newline status)
+
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 #POWERLEVEL9K_DISABLE_RPROMPT=true    #Disable the right promt
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=" "
@@ -56,6 +58,11 @@ POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="015"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND="009"
 POWERLEVEL9K_MODE='nerdfont-complete'
+
+#POWERLEVEL9K_ALWAYS_SHOW_USER=true
+#POWERLEVEL9K_USER_ICON="\uF415" #
+#POWERLEVEL9K_ROOT_ICON="#"
+#POWERLEVEL9K_SUDO_ICON="$" #'\uF09C'
 
 
 #
@@ -169,3 +176,5 @@ alias ":q"="exit"
 alias ":Q"="exit"
 alias ":wq"="exit"
 alias ":WQ"="exit"
+
+alias "autoclick"="xdotool click --repeat 60000 --delay 1000 1"
