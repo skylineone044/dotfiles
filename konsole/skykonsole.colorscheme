@@ -1,5 +1,5 @@
 [Background]
-Color=10,10,10
+Color=0,0,0
 MaxRandomHue=0
 MaxRandomSaturation=0
 MaxRandomValue=0
@@ -94,5 +94,5 @@ Color=252,252,252
 [General]
 Blur=true
 Description=skykonsole
-Opacity=0.8
+Opacity=0.45
 Wallpaper=
