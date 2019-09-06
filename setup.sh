@@ -11,7 +11,7 @@ printf "\n\n-- getting essentials: tmux, zsh, vim..."
 sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
 
 printf "\n\n-- Starting..." 
-printf "\n-- Cloning repos..." 
+#printf "\n-- Cloning repos..." 
 #git clone --recurse-submodules https://gitlab.com/skylineone044/dotfiles.git
 printf "\n- getting Dotfiles" 
 git clone https://gitlab.com/skylineone044/dotfiles.git ~/git/dotfiles
@@ -67,8 +67,8 @@ sudo apt install -y pylint pylint3 || sudo apt install -y python-pylint python3-
 printf "\n- getting python-jedi" 
 sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi python-jedi || sudo pacman -S  --noconfirm python-jedi python3-jedi || sudo pacman -S  --noconfirm python2-jedi python-jedi
 
-printf "\n\n-- getting chromium" 
-sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
+#printf "\n\n-- getting chromium" 
+#sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
 printf "\n\n-- getting lsd" 
 sudo pacman -S --noconfirm lsd || sudo snap install lsd
 
