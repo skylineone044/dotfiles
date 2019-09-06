@@ -177,6 +177,6 @@ alias ":Q"="exit"
 alias ":wq"="exit"
 alias ":WQ"="exit"
 
-alias "autoclick"="xdotool click --repeat 60000 --delay 500 1"
+alias "autoclick"="xdotool click --repeat 100000 --delay 500 1"
 
 export PATH=$PATH:~/ShellScripts
