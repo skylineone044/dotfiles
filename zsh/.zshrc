@@ -180,3 +180,4 @@ alias ":WQ"="exit"
 alias "autoclick"="xdotool click --repeat 100000 --delay 500 1"
 
 export PATH=$PATH:~/ShellScripts
+export STEAM_COMPAT_DATA_PATH=$HOME/proton
