@@ -181,3 +181,13 @@ alias "autoclick"="xdotool click --repeat 100000 --delay 500 1"
 
 export PATH=$PATH:~/ShellScripts
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)       # Include hidden files.
+
+#this must be last
+source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

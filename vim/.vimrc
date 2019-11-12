@@ -84,6 +84,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'hdima/python-syntax'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
+"Plugin 'OmniSharp/omnisharp-vim'
 "Plugin 'kien/rainbow_parentheses.vim'
 " ------------------------
 call vundle#end()
@@ -151,6 +152,8 @@ set hlsearch
 
 nnoremap <leader>b :buffers<CR>:buffer<space>
 
+noremap <leader>y "+y
+noremap <leader>p "+p
 
 " Set Marker character for whitespace ---
 "set listchars=tab:→\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
@@ -205,9 +208,6 @@ nnoremap <F6> :w<CR>:source ~/.vimrc<CR>
 
 "Copy paste
 ":let @+=@*<CR>
-
-vnoremap <leader>c "+Y
-map <leader>p "+P
 " -----------------------------------------------
 
 " Cycling through buffers ------
@@ -227,6 +227,9 @@ let vim_markdown_preview_use_xdg_open=1
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '●'
 "dot symbol: \u25CF
+
+"let g:OmniSharp_server_stdio = 1
+"let g:OmniSharp_server_path = '/home/skyline/OmniSharp/run'
 
 "The symbol highlighting is under the colorc=scheme otpions#
 
