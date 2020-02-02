@@ -12,7 +12,7 @@ set nocompatible               " be improved, required
 filetype off                   " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()            " required
+call vundle#begin('~/.config/nvim/bundle')            " required, and sets plugin location
 Plugin 'VundleVim/Vundle.vim'  " required
 
 " ===================
@@ -26,7 +26,7 @@ Plugin 'davidhalter/jedi-vim'
 "    python2-pylint python-pylint python-jedi python2-jedi
 Plugin 'ervandew/supertab'
 "Plugin 'fatih/vim-go'
-Plugin 'mcchrish/nnn.vim'
+"Plugin 'mcchrish/nnn.vim'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'dense-analysis/ale'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -101,7 +101,7 @@ set wildmenu
 set showmatch
 set incsearch
 set hlsearch
-
+set guicursor=
 
 " Set Marker character for whitespace ---------------------
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
@@ -152,7 +152,7 @@ map gb :GoBuild<CR>
 "Cycle number schemes
 map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
 "Reload vimrc
-nnoremap <F6> :w<CR>:source ~/.vimrc<CR>
+nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
 
 "Copy paste
 ":let @+=@*<CR>
