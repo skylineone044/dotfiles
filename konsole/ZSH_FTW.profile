@@ -13,6 +13,8 @@ Command=/usr/bin/tmux
 Directory=/home/skyline/
 Name=ZSH_FTW
 Parent=FALLBACK/
+TerminalColumns=120
+TerminalRows=32
 
 [Interaction Options]
 CopyTextAsHTML=false
