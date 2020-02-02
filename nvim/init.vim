@@ -7,40 +7,6 @@
 "    \|__|\|__| \|__|\|__|    \|__\|__|\|__|/       \|__|\|__|     \|__|
 
 "
-"VUNDLE ---------------------------------------------------
-"set nocompatible               " be improved, required
-"filetype off                   " required
-" set the runtime path to include Vundle and initialize
-"set rtp+=~/.config/nvim/bundle/Vundle.vim
-"call vundle#begin('~/.config/nvim/bundle')            " required, and sets plugin location
-"Plugin 'VundleVim/Vundle.vim'  " required
-
-" ===================
-" my plugins here
-" ===================
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'b3niup/numbers.vim'
-""Plugin 'davidhalter/jedi-vim'
-"    REQUIRED FOR JEDI:
-"    python2-pylint python-pylint python-jedi python2-jedi
-"Plugin 'ervandew/supertab'
-"Plugin 'fatih/vim-go'
-"Plugin 'mcchrish/nnn.vim'
-"Plugin 'JamshedVesuna/vim-markdown-preview'
-"Plugin 'dense-analysis/ale'
-"Plugin 'NLKNguyen/papercolor-theme'
-"Plugin 'hdima/python-syntax'
-"Plugin 'sheerun/vim-polyglot'
-"Plugin 'jiangmiao/auto-pairs'
-"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-"Plugin 'OmniSharp/omnisharp-vim'
-"Plugin 'kien/rainbow_parentheses.vim'
-" ===================
-" end of plugins
-" ===================
-"call vundle#end()               " required
-"filetype plugin indent on       " required
 
 " vim-plug ------------------------------------------------
 call plug#begin('~/.config/nvim/plugins')
@@ -52,7 +18,7 @@ Plug 'b3niup/numbers.vim'
 "Plug 'davidhalter/jedi-vim'
 "    REQUIRED FOR JEDI:
 "    python2-pylint python-pylint python-jedi python2-jedi
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 "Plug 'fatih/vim-go'
 "Plug 'mcchrish/nnn.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
