@@ -26,6 +26,9 @@ printf "- linking vim..."
 ln -s ~/git/dotfiles/vim/.vim ~/.vim
 ln -s ~/git/dotfiles/vim/.vimrc ~/.vimrc
 
+printf "- linking neovim..." 
+ln -s ~/git/dotfiles/nvim/ ~/.config/nvim
+
 printf "\n- linking tmux..." 
 ln -s ~/git/dotfiles/tmux/.tmux ~/.tmux
 ln -s ~/git/dotfiles/tmux/.tmux.conf ~/.tmux.conf
