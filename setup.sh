@@ -8,7 +8,8 @@ git config --global user.email "tokodioli@gmail.com"
 git config --global user.name "skylineone044"
 
 printf "\n\n-- getting essentials: tmux, zsh, vim..." 
-sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
+#sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
+sudo apt install -y tmux zsh neovim || sudo pacman -S --noconfirm tmux zsh neovim
 
 printf "\n\n-- Starting..." 
 #printf "\n-- Cloning repos..." 
@@ -22,9 +23,9 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 
 printf "\n\nUSE TPM AND VUNDLE COMMANDS TO GET PLUGINS\n\n" 
 
-printf "- linking vim..." 
-ln -s ~/git/dotfiles/vim/.vim ~/.vim
-ln -s ~/git/dotfiles/vim/.vimrc ~/.vimrc
+#printf "- linking vim..." 
+#ln -s ~/git/dotfiles/vim/.vim ~/.vim
+#ln -s ~/git/dotfiles/vim/.vimrc ~/.vimrc
 
 printf "- linking neovim..." 
 ln -s ~/git/dotfiles/nvim/ ~/.config/nvim
@@ -37,6 +38,7 @@ printf "\n- getting TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 printf "\n- getting Vundle" 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 
 printf "\n- refreshing tmux..." 
 tmux source ~/.tmux.conf
