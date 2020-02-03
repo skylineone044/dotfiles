@@ -292,6 +292,20 @@ set t_Co=256
 set background=dark
 hi Normal ctermbg=none
 
+let g:PaperColor_Theme_Options = {
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     },
+  \     'cpp': {
+  \       'highlight_standard_library': 1
+  \     },
+  \     'c': {
+  \       'highlight_builtins' : 1
+  \     }
+  \   }
+  \ }
+
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
@@ -300,11 +314,15 @@ colorscheme PaperColor
 "make function calls blue and bold
 function ForceFuncCallColor()
   hi Function ctermfg=39 ctermbg=none cterm=none
-  syntax match pythonFunction /\v[[:alpha:]_.]+\ze(\s?\()/
+  syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
   hi def link pythonFunction Function
+  hi link pythonBuiltin Function
 endfunction
 
+
+autocmd BufEnter * call ForceFuncCallColor()
 autocmd BufWritePost * call ForceFuncCallColor()
+autocmd InsertLeave * call ForceFuncCallColor()
 
 highlight ALEErrorSign ctermfg=196 ctermbg=NONE
 highlight ALEWarningSign ctermfg=214 ctermbg=NONE
