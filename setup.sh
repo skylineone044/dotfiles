@@ -36,9 +36,16 @@ ln -s ~/git/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 printf "\n- getting TPM" 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-printf "\n- getting Vundle" 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
+
+# VUNDLE DEPRECATED
+#printf "\n- getting Vundle" 
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
+
+printf "\n- getting vim-plug"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+printf "USE :PlugInstall of :PlugUpdate to get vim plugins"
 
 printf "\n- refreshing tmux..." 
 tmux source ~/.tmux.conf
