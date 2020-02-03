@@ -22,6 +22,7 @@ Plug 'hdima/python-syntax'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'dstein64/vim-startuptime'
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
@@ -216,6 +217,7 @@ set showmatch
 set incsearch
 set hlsearch
 set guicursor=
+set mouse=a
 
 " Set Marker character for whitespace ---------------------
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
@@ -290,61 +292,62 @@ set t_Co=256
 set background=dark
 hi Normal ctermbg=none
 
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.dark': {
-  \       'transparent_background': 1,
-  \       'allow_bold': 1,
-  \       'override' : {
-  \         'color00' : ['#000000', '0'],
-  \         'color01' : ['#000000', '9'],
-  \         'color02' : ['#000000', '10'],
-  \         'color03' : ['#000000', '214'],
-  \         'color04' : ['#000000', '0'],
-  \         'color05' : ['#000000', '8'],
-  \         'color06' : ['#000000', '40'],
-  \         'color07' : ['#000000', '15'],
-  \         'color08' : ['#000000', '0'],
-  \         'color09' : ['#000000', '198'],
-  \         'color10' : ['#000000', '197'],
-  \         'color11' : ['#000000', '46'],
-  \         'color12' : ['#000000', '21'],
-  \         'color13' : ['#000000', '201'],
-  \         'color14' : ['#000000', '39'],
-  \         'color15' : ['#000000', '12'],
-  \         'color16' : ['#000000', '39'],
-  \         'color17' : ['#000000', '51'],
-  \         'cursorline' : ['#000000', '235'],
-  \         'cursorlinenr_fg' : ['#000000', '33'],
-  \         'cursorlinenr_bg' : ['#000000', '235'],
-  \         'popupmenu_fg' : ['#000000', '15'],
-  \         'popupmenu_bg' : ['#000000', '235'],
-  \         'linenumber_fg' : ['#000000', '244'],
-  \         'linenumber_bg' : ['#000000', '0'],
-  \         'vertsplit_fg' : ['#000000', '15'],
-  \         'vertsplit_bg' : ['#000000', '0'],
-  \         'error_fg' : ['#000000', '15'],
-  \         'error_bg' : ['#000000', '124'],
-  \         'visual_fg' : ['#000000', '15'],
-  \         'visual_bg' : ['#000000', '88'],
-  \         'folded_fg' : ['#000000', '15'],
-  \         'folded_bg' : ['#000000', '245'],
-  \         'spellbad' : ['#000000', '57'],
-  \         'wildmenu_fg' : ['#000000', '15'],
-  \         'wildmenu_bg' : ['#000000', '33'],
-  \       },
-  \     },
-  \   },
-  \  'language': {
-  \     'python': {
-  \       'highlight_builtins' : 1
-  \     },
-  \     'cpp': {
-  \       'highlight_standard_library': 1
-  \     }
-  \   }
-  \ }
-
+"let g:PaperColor_Theme_Options = {
+  "\   'theme': {
+  "\     'default.dark': {
+  "\       'transparent_background': 1,
+  "\       'allow_bold': 1,
+  "\       'override' : {
+  "\         'color00' : ['#000000', '0'],
+  "\         'color01' : ['#ff0000', '9'],
+  "\         'color02' : ['#00ff00', '10'],
+  "\         'color03' : ['#ffaff0', '214'],
+  "\         'color04' : ['#000000', '0'],
+  "\         'color05' : ['#808080', '8'],
+  "\         'color06' : ['#00d700', '40'],
+  "\         'color07' : ['#ffffff', '15'],
+  "\         'color08' : ['#000000', '0'],
+  "\         'color09' : ['#ff0087', '198'],
+  "\         'color10' : ['#ff005f', '197'],
+  "\         'color11' : ['#00ff00', '46'],
+  "\         'color12' : [' #005fd7', '26'],
+  "\         'color13' : ['#ff00ff', '201'],
+  "\         'color14' : ['#005fd7', '26'],
+  "\         'color15' : ['#ffff00', '226'],
+  "\         'color16' : ['#005fd7', '26'],
+  "\         'color17' : [' #00ffff', '51'],
+  "\         'cursorline' : ['#262626', '235'],
+  "\         'cursorlinenr_fg' : ['#0087ff', '33'],
+  "\         'cursorlinenr_bg' : ['#262626', '235'],
+  "\         'popupmenu_fg' : ['#ffffff', '15'],
+  "\         'popupmenu_bg' : ['#262626', '235'],
+  "\         'linenumber_fg' : ['#afaf87', '244'],
+  "\         'linenumber_bg' : ['#000000', '0'],
+  "\         'vertsplit_fg' : ['#ffffff', '15'],
+  "\         'vertsplit_bg' : ['#000000', '0'],
+  "\         'error_fg' : ['#ffffff', '15'],
+  "\         'error_bg' : ['#af0000', '124'],
+  "\         'visual_fg' : ['#ffffff', '15'],
+  "\         'visual_bg' : ['#870000', '88'],
+  "\         'folded_fg' : ['#ffffff', '15'],
+  "\         'folded_bg' : ['#8a8a8a', '245'],
+  "\         'spellbad' : ['#ff0087', '198'],
+  "\         'wildmenu_fg' : ['#ffffff', '15'],
+  "\         'wildmenu_bg' : ['#0087ff', '33'],
+  "\       },
+  "\     },
+  "\   },
+  "\  'language': {
+  "\     'python': {
+  "\       'highlight_builtins' : 1
+  "\     },
+  "\     'cpp': {
+  "\       'highlight_standard_library': 1
+  "\     }
+  "\   }
+  "\ }
+"
+let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
 "colorscheme skylines
 

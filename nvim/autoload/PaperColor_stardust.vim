@@ -1,0 +1,1 @@
+/home/skyline/.config/nvim/PaperColor_stardust.vim
