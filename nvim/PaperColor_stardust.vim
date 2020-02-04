@@ -8,8 +8,22 @@ fun! PaperColor_stardust#register()
          \   'options' : {
          \       'transparent_background': 1,
          \       'allow_bold': 1
-         \    }
-         \}
+         \  }
+         \ }
+
+  let g:PaperColor_Theme_Options = {
+         \   'language': {
+         \     'python': {
+         \       'highlight_builtins' : 1
+         \     },
+         \     'cpp': {
+         \       'highlight_standard_library': 1
+         \     },
+         \     'c': {
+         \       'highlight_builtins' : 1
+         \     }
+         \   }
+         \ }
 
   let g:PaperColor_stardust.dark = {
          \ 'palette': {
@@ -32,8 +46,8 @@ fun! PaperColor_stardust#register()
          \   'color16' : ['#00afff', '39'],
          \   'color17' : [' #00ffff', '51'],
          \   'cursorline' : ['#262626', '235'],
-         \   'cursorlinenr_fg' : ['#0087ff', '33'],
-         \   'cursorlinenr_bg' : ['#262626', '235'],
+         \   'cursorlinenr_fg' : ['#0087ff', '39'],
+         \   'cursorlinenr_bg' : ['#1c1c1c', '234'],
          \   'popupmenu_fg' : ['#ffffff', '15'],
          \   'popupmenu_bg' : ['#262626', '235'],
          \   'search_fg' : ['#000000', '0'],
@@ -60,6 +74,6 @@ fun! PaperColor_stardust#register()
          \   'wildmenu_fg' : ['#ffffff', '15'],
          \   'wildmenu_bg' : ['#00afff', '39'],
          \  }
-        \ }
+         \ }
 endfun
 

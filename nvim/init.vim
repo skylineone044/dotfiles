@@ -205,7 +205,8 @@ if !exists('g:airline_symbols')
 endif
 
 " Various settings ----------------------------------------
-"set cursorline
+set cursorline
+set cursorcolumn
 set tabstop=4
 set showcmd
 set list
@@ -292,24 +293,13 @@ set t_Co=256
 set background=dark
 hi Normal ctermbg=none
 
-let g:PaperColor_Theme_Options = {
-  \   'language': {
-  \     'python': {
-  \       'highlight_builtins' : 1
-  \     },
-  \     'cpp': {
-  \       'highlight_standard_library': 1
-  \     },
-  \     'c': {
-  \       'highlight_builtins' : 1
-  \     }
-  \   }
-  \ }
-
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
 "colorscheme skylines
+
+hi CursorColumn ctermbg=234
+hi CursorLine ctermbg=234
 
 "make function calls blue and bold
 function ForceFuncCallColor()
