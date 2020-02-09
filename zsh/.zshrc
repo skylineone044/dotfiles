@@ -178,6 +178,8 @@ function chpwd() {
 #    fi
 #done
 
+##  ALIASES
+
 alias ls="lsd -l --color=auto"
 alias "lsd -a"="ls -la -- color=auto"
 
@@ -187,6 +189,9 @@ alias ":wq"="exit"
 alias ":WQ"="exit"
 
 alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
+
+alias "vim"="nvim"
+alias "vanillavim"="vim"
 
 export PATH=$PATH:~/ShellScripts
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
