@@ -190,7 +190,7 @@ alias ":WQ"="exit"
 
 alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
-alias "vanillavim"="vim"
+alias "vanillavim"="/bin/vim"
 alias "vim"="nvim"
 
 export PATH=$PATH:~/ShellScripts
