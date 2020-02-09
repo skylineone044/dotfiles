@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=skykonsole
-Font=Inconsolata Nerd Font [CYRE],12,-1,5,50,0,0,0,0,0,Regular
+Font=Inconsolata Nerd Font [PfEd],12,-1,5,57,0,0,0,0,0,Medium
 UseFontLineChararacters=true
 
 [Cursor Options]
