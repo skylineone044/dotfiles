@@ -7,9 +7,11 @@ printf "\n- setting up git..."
 git config --global user.email "tokodioli@gmail.com"
 git config --global user.name "skylineone044"
 
-printf "\n\n-- getting essentials: tmux, zsh, vim..." 
+printf "\n\n-- getting essentials: tmux, zsh, neovim..." 
 #sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
 sudo apt install -y tmux zsh neovim || sudo pacman -S --noconfirm tmux zsh neovim
+printf "\n- getting alacritty..."
+sudo apt install -y alacritty || sudo pacman -S --noconfirm alacritty
 
 printf "\n\n-- Starting..." 
 #printf "\n-- Cloning repos..." 
@@ -70,6 +72,8 @@ printf "\n- linking konsole..."
 ln -s ~/git/dotfiles/konsole/ZSH_FTW.profile ~/.local/share/konsole/ZSH_FTW.profile
 ln -s ~/git/dotfiles/konsole/skykonsole.colorscheme ~/.local/share/konsole/skykonsole.colorscheme
 
+printf "\n- linking alacritty"
+ln -s ~/git/dotfiles/alacritty ~/.config/alacritty
 
 printf "\n\n-- Getting dependencies..." 
 
