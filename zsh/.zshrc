@@ -190,8 +190,8 @@ alias ":WQ"="exit"
 
 alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
-alias "vim"="nvim"
 alias "vanillavim"="vim"
+alias "vim"="nvim"
 
 export PATH=$PATH:~/ShellScripts
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
