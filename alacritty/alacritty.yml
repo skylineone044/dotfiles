@@ -18,8 +18,8 @@
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
     dimensions:
-      columns: 125
-      lines: 35
+      columns: 100
+      lines: 30
 
   # Window position (changes require restart)
   #
@@ -182,7 +182,7 @@
 # If `true`, bold text is drawn using the bright color variants.
   draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
+# Colors ( Strardust  )
   colors:
   # Default colors
     primary:
@@ -374,7 +374,7 @@
   # Record all characters and escape sequences as test data.
   #ref_test: false
 
-#mouse:
+  mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -384,7 +384,7 @@
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: true
+    hide_when_typing: true
 
   #url:
     # URL launcher
@@ -396,7 +396,7 @@
     #
     # Default:
     #   - (macOS) open
-    #   - (Linux/BSD) xdg-open
+      #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
     #launcher:
       #program: xdg-open
