@@ -23,7 +23,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 printf "\n- getting POWERLEVEL10K..." 
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
-printf "\n\nUSE TPM AND VUNDLE COMMANDS TO GET PLUGINS\n\n" 
+printf "\n\nUSE TPM AND VIM-PLUG COMMANDS TO GET PLUGINS\n\n" 
 
 #printf "- linking vim..." 
 #ln -s ~/git/dotfiles/vim/.vim ~/.vim
