@@ -23,6 +23,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'dstein64/vim-startuptime'
+Plug 'DougBeney/pickachu'
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
@@ -274,6 +275,11 @@ nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
 " Cycling through buffers
 nnoremap <leader>j :bprevious<CR>
 nnoremap <leader>k :bnext<CR>
+
+" Pickachu settings ---------------------------------------
+let g:pickachu_default_color_format = "hex"
+let g:pickachu_default_date_format = "%Y.%m.%d."
+let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 
 " ALE settings --------------------------------------------
 "let g:ale_sign_error = '▶'
