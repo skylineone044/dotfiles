@@ -146,7 +146,7 @@ PreloadWeight=42
 animationLauncherBouncing=false
 animationWindowAddedInGroup=false
 animationWindowInAttention=false
-appletOrder=57;56;49;52;53;58;50;45;59
+appletOrder=57;56;49;52;53;58;50;45;59;115
 disablePanelShadowForMaximized=true
 dragActiveWindowEnabled=true
 durationTime=x1
@@ -210,18 +210,25 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][14][Applets][106][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][14][Applets][108]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][14][Applets][108][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][14][Applets][114]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][14][Applets][116]
+immutability=1
+plugin=org.kde.kscreen
+
+[Containments][14][Applets][116][Configuration]
+PreloadWeight=55
 
 [Containments][14][Applets][61]
 immutability=1
@@ -274,7 +281,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][14][Applets][69][Configuration]
-PreloadWeight=57
+PreloadWeight=62
 
 [Containments][14][Applets][70]
 immutability=1
@@ -288,10 +295,10 @@ DialogHeight=618
 DialogWidth=813
 
 [Containments][14][General]
-extraItems=org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol
-hiddenItems=MSM Notifier for Plasma5,Latte Dock_microphone,Plasma_microphone,Update Manager
+extraItems=org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,discord1,Microsoft Teams - Preview1,TelegramDesktop,org.kde.kscreen,Latte Dock_microphone
+hiddenItems=MSM Notifier for Plasma5,Plasma_microphone,Update Manager,Latte Dock_microphone
 knownItems=org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol
-shownItems=org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.keyboardindicator,KDE Daemon,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,SimpleScreenRecorder
+shownItems=org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.keyboardindicator,KDE Daemon,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,SimpleScreenRecorder,discord1,Microsoft Teams - Preview1,TelegramDesktop,org.kde.plasma.nightcolorcontrol
 
 [Containments][15]
 activityId=
@@ -433,7 +440,7 @@ PreloadWeight=92
 history=#ffbc48,#056ed1,#3b3c3d,#34383b,#18396f,#01a657,#0299e0,#f8c701,#fe220c
 
 [Containments][15][ConfigDialog]
-DialogHeight=903
+DialogHeight=909
 DialogWidth=539
 
 [Containments][15][Configuration]
@@ -702,6 +709,7 @@ inConfigureAppletsMode=true
 launchersGroup=Global
 leftClickAction=PreviewWindows
 modifierClickAction=ToggleMinimized
+panelPosition=10
 panelSize=100
 panelTransparency=20
 plasmaBackgroundForPopups=true
@@ -711,10 +719,11 @@ shadowSize=45
 shadows=None
 showGlow=false
 showWindowActions=true
+solidBackgroundForMaximized=true
 splitterPosition=0
 splitterPosition2=2
 titleTooltips=false
-zoomLevel=4
+zoomLevel=6
 
 [Containments][17][Indicator]
 customType=org.kde.latte.dashtopanel
@@ -833,6 +842,9 @@ PreloadWeight=42
 
 [Containments][19][General]
 advanced=false
+animationLauncherBouncing=false
+animationWindowAddedInGroup=false
+animationWindowInAttention=false
 appletOrder=93
 dragActiveWindowEnabled=true
 durationTime=x3
@@ -842,6 +854,7 @@ inConfigureAppletsMode=true
 launchersGroup=Global
 leftClickAction=PreviewWindows
 modifierClickAction=ToggleMinimized
+panelPosition=10
 panelSize=100
 panelTransparency=20
 plasmaBackgroundForPopups=true
@@ -851,8 +864,10 @@ shadowSize=45
 shadows=None
 showGlow=false
 showWindowActions=true
+solidBackgroundForMaximized=true
 splitterPosition=0
 splitterPosition2=2
+titleTooltips=false
 unifiedGlobalShortcuts=false
 zoomLevel=6
 
