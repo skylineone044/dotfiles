@@ -124,7 +124,7 @@
 
     # The `style` can be specified to pick a specific face.
       style: Bold
-
+  
   # Italic font face
   #italic:
     # Font family
