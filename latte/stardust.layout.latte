@@ -31,14 +31,15 @@ isInLatteDock=true
 launchers59=applications:firefox.desktop,applications:org.kde.dolphin.desktop
 
 [Containments][1][ConfigDialog]
-DialogHeight=779
+DialogHeight=737
 DialogWidth=539
 
 [Containments][1][General]
 advanced=false
-appletOrder=2;3
+appletOrder=2
 dragActiveWindowEnabled=true
 durationTime=x3
+hoverAction=PreviewAndHighlightWindows
 iconSize=32
 inConfigureAppletsMode=true
 launchersGroup=Global
@@ -50,7 +51,6 @@ shadowOpacity=60
 shadowSize=45
 shadows=None
 showGlow=false
-solidBackgroundForMaximized=true
 splitterPosition=0
 splitterPosition2=2
 titleTooltips=false
@@ -96,7 +96,7 @@ isInLatteDock=true
 launchers59=applications:firefox.desktop,applications:org.kde.dolphin.desktop
 
 [Containments][12][ConfigDialog]
-DialogHeight=779
+DialogHeight=917
 DialogWidth=539
 
 [Containments][12][General]
@@ -104,6 +104,7 @@ advanced=false
 appletOrder=40
 dragActiveWindowEnabled=true
 durationTime=x3
+hoverAction=PreviewAndHighlightWindows
 iconSize=32
 inConfigureAppletsMode=true
 launchersGroup=Global
@@ -115,7 +116,7 @@ shadowOpacity=60
 shadowSize=45
 shadows=None
 showGlow=false
-solidBackgroundForMaximized=true
+showWindowActions=true
 splitterPosition=0
 splitterPosition2=2
 titleTooltips=false
@@ -125,7 +126,7 @@ zoomLevel=7
 customType=org.kde.latte.dashtopanel
 enabled=true
 enabledForApplets=false
-padding=0.07999999821186066
+padding=0.07000000029802322
 type=org.kde.latte.dashtopanel
 
 [Containments][12][Indicator][org.kde.latte.dashtopanel][General]
@@ -211,6 +212,13 @@ plugin=org.kde.plasma.colorpicker
 [Containments][123][Applets][147]
 immutability=1
 plugin=org.kde.netspeedWidget
+
+[Containments][123][Applets][147][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][123][Applets][147][Configuration][General]
+swapDownUp=true
 
 [Containments][123][ConfigDialog]
 DialogHeight=737
@@ -317,6 +325,13 @@ showIcon=false
 immutability=1
 plugin=org.kde.netspeedWidget
 
+[Containments][13][Applets][46][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][13][Applets][46][Configuration][General]
+swapDownUp=true
+
 [Containments][13][Applets][47]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -326,7 +341,7 @@ PreloadWeight=80
 SystrayContainmentId=14
 
 [Containments][13][ConfigDialog]
-DialogHeight=737
+DialogHeight=917
 DialogWidth=539
 
 [Containments][13][General]
@@ -473,7 +488,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][14][Applets][51][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][14][Applets][52]
 immutability=1
@@ -532,11 +547,14 @@ knownItems=com.github.zren.alphablackcontrol,org.kde.plasma.networkmanagement,or
 shownItems=org.kde.plasma.volume,org.kde.plasma.battery,KDE Daemon,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol
 
 [LayoutSettings]
+activities=7ad23b77-3973-4189-8c44-4a0829768df3,201cff5f-f085-42fa-8a91-b4c531544690
 background=
 color=blue
+disableBordersForMaximizedWindows=false
 lastUsedActivity=201cff5f-f085-42fa-8a91-b4c531544690
 launchers=
 preferredForShortcutsTouched=false
+sharedLayout=
 showInMenu=true
 textColor=fcfcfc
 version=2
