@@ -192,6 +192,7 @@ alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
 alias "vanillavim"="/bin/vim"
 alias "vim"="nvim"
+alias "n"="nvim ~/notes"
 
 export PATH=$PATH:~/ShellScripts
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
@@ -203,8 +204,15 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)       # Include hidden files.
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# FZF setup
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name -o -name Code\ Cache -prune -o -name .nv -prune -o -name SoftMaker -prune -o -name .npm -prune -o -name discord -prune -o -name vivaldi -prune -o -name BraveSoftware -prune -o -name chromium -prune -o -name MCPE -prune -o -name .mozilla2 -prune -o -name .mozilla -prune -o -name Caprine -prune -o -name cache_fluid -prune -o -name tdata -prune -o -name node_modules -prune -o -name .wine -prune -o -name Games -prune -o -name .PyCharmCE2019.2 -prune -o -name Trash -prune -o -name coverage -prune -o -name var -prune -o -name timeshift -prune -o -name .var -prune  -o -name proton -prune -o -name .cargo -prune -o -name Steam -prune -o -name steam -prune -o -name lib -prune -o -name cache -prune -o -name .cache -prune -o -name Cache -prune -o -name icons -prune -o -name lutris -prune -o -name wine -prune -o -name wineprefixes -prune -o -name mcpelauncher -prune -o -type f -print'
+
 #this must be last
 source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
