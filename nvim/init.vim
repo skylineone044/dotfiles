@@ -27,6 +27,8 @@ Plug 'DougBeney/pickachu'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'ObserverOfTime/coloresque.vim'
+
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
@@ -237,7 +239,9 @@ let airline#extensions#ale#show_line_numbers = 1
 let airline#extensions#ale#open_lnum_symbol = " ⏵"
 " ale close_lnum_symbol
 let airline#extensions#ale#close_lnum_symbol = ''
-
+"
+"hi airline_c  ctermbg=NONE guibg=NONE
+"hi airline_tabfill ctermbg=NONE guibg=NONE
 
 set encoding=utf-8
 set ttyfast
@@ -386,5 +390,12 @@ highlight clear SignColumn
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
+
+" color preview plugin
+let g:coloresque_whitelist = [
+    \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
+    \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
+    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go']
+"let g:coloresque_blacklist = []
 
 "END
