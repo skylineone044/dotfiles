@@ -187,6 +187,7 @@ syntax on
 
 " Vim theme & bottom infobar ------------------------------
 let g:airline_theme='cool'
+" other themes to try: murmur, papercolor
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
