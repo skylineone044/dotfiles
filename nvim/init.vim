@@ -1,19 +1,19 @@
-"   _______________________________________________________________________________________        
-"    _______________________________________________________________________________________       
-"     __/\\\________________/\\\_____/\\\___________________________/\\\_____________________      
-"      _\///___/\\/\\\\\\___\///___/\\\\\\\\\\\________/\\\____/\\\_\///_____/\\\\\__/\\\\\___     
-"       __/\\\_\/\\\////\\\___/\\\_\////\\\////________\//\\\__/\\\___/\\\__/\\\///\\\\\///\\\_    
-"        _\/\\\_\/\\\__\//\\\_\/\\\____\/\\\_____________\//\\\/\\\___\/\\\_\/\\\_\//\\\__\/\\\_   
-"         _\/\\\_\/\\\___\/\\\_\/\\\____\/\\\_/\\__________\//\\\\\____\/\\\_\/\\\__\/\\\__\/\\\_  
-"          _\/\\\_\/\\\___\/\\\_\/\\\____\//\\\\\____/\\\____\//\\\_____\/\\\_\/\\\__\/\\\__\/\\\_ 
+"   _______________________________________________________________________________________
+"    _______________________________________________________________________________________
+"     __/\\\________________/\\\_____/\\\___________________________/\\\_____________________
+"      _\///___/\\/\\\\\\___\///___/\\\\\\\\\\\________/\\\____/\\\_\///_____/\\\\\__/\\\\\___
+"       __/\\\_\/\\\////\\\___/\\\_\////\\\////________\//\\\__/\\\___/\\\__/\\\///\\\\\///\\\_
+"        _\/\\\_\/\\\__\//\\\_\/\\\____\/\\\_____________\//\\\/\\\___\/\\\_\/\\\_\//\\\__\/\\\_
+"         _\/\\\_\/\\\___\/\\\_\/\\\____\/\\\_/\\__________\//\\\\\____\/\\\_\/\\\__\/\\\__\/\\\_
+"          _\/\\\_\/\\\___\/\\\_\/\\\____\//\\\\\____/\\\____\//\\\_____\/\\\_\/\\\__\/\\\__\/\\\_
 "           _\///__\///____\///__\///______\/////____\///______\///______\///__\///___\///___\///__
 
- 
+
 " vim-plug ------------------------------------------------
 call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
-Plug 'vim-airline/vim-airline' 
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'b3niup/numbers.vim'
 Plug 'dense-analysis/ale'
@@ -21,9 +21,12 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'hdima/python-syntax'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dstein64/vim-startuptime'
 Plug 'DougBeney/pickachu'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'davidhalter/jedi-vim'
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
@@ -92,7 +95,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
@@ -185,6 +188,55 @@ syntax on
 " Vim theme & bottom infobar ------------------------------
 let g:airline_theme='cool'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '⏵'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = ''
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.spell = 'Ꞩ'
+"let g:airline_symbols.notexists = 'Ɇ'
+"let g:airline_symbols.whitespace = 'Ξ'
+
+" make sure the items are separate, it is the only way to make part of it bold
+call airline#parts#define_accent(" ⏵%l", 'bold')
+let g:airline_section_z = airline#section#create(["%p%%", " ⏵%l", "/%L", ": %c"]) "(percentage, line number, column number)
+
+" coc integration
+let g:airline#extensions#coc#enabled = 1
+let airline#extensions#coc#error_symbol = '⛔'
+let airline#extensions#coc#warning_symbol = '◭ '
+"
+""enable/disable ale integration
+let g:airline#extensions#ale#enabled = 1
+" ale error_symbol
+let airline#extensions#ale#error_symbol = '⛔'
+" ale warning
+let airline#extensions#ale#warning_symbol = '◭ '
+
+" ale show_line_numbers
+let airline#extensions#ale#show_line_numbers = 1
+" ale open_lnum_symbol
+let airline#extensions#ale#open_lnum_symbol = " ⏵"
+" ale close_lnum_symbol
+let airline#extensions#ale#close_lnum_symbol = ''
+
 
 set encoding=utf-8
 set ttyfast
@@ -200,10 +252,9 @@ set lazyredraw
 "nnoremap tl  :tablast<CR>
 
 " Powerline font mode -------------------------------------
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+    "let g:airline_symbols = {}
+"endif
 
 " Various settings ----------------------------------------
 set cursorline
@@ -236,13 +287,13 @@ nnoremap k gk
 
 " Custom shortcuts ----------------------------------------
 augroup configgroup
-	autocmd!
-	autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
-	autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
-	autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
-	autocmd FileType python map <leader>c I#<esc>j
-	autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
-	autocmd FileType vim map <leader>c I"<esc>j<esc>
+  autocmd!
+  autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
+  autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
+  autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
+  autocmd FileType python map <leader>c I#<esc>j
+  autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
+  autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END
 
 nnoremap <leader>b :buffers<CR>:buffer<space>
@@ -262,10 +313,10 @@ map <CapsLock> <Esc>
 autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
 
 "Go shortcuts
-map gb :GoBuild<CR>
+"map gb :GoBuild<CR>
 
 "Cycle number schemes
-map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
+"map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
 "Reload vimrc
 nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
 
@@ -280,6 +331,13 @@ nnoremap <leader>k :bnext<CR>
 let g:pickachu_default_color_format = "hex"
 let g:pickachu_default_date_format = "%Y.%m.%d."
 let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
+
+" FZF key bindings ----------------------------------------
+nnoremap <C-f> :FZF<CR>
+"let g:fzf_action = {
+  "\ 'ctrl-t': 'tab split',
+  "\ 'ctrl-i': 'split',
+  "\ 'ctrl-v': 'vsplit' }
 
 " ALE settings --------------------------------------------
 "let g:ale_sign_error = '▶'

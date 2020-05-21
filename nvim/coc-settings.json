@@ -1,3 +1,4 @@
 {
-"suggest.autoTrigger": "always"
+"suggest.autoTrigger": "always",
+"python.autoComplete.addBrackets": true
 }
