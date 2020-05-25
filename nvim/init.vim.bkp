@@ -27,7 +27,7 @@ Plug 'dstein64/vim-startuptime'
 Plug 'DougBeney/pickachu'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'ObserverOfTime/coloresque.vim'
 
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -46,7 +46,7 @@ set hidden
 set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=100
+set updatetime=300
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
@@ -291,10 +291,10 @@ nnoremap k gk
 "autocmd FileType python let g:jedi#auto_initialization = 1
 "let g:jedi#usages_command = "<C-j>"
 
-"let g:jedi#auto_initialization = 1
-"let g:jedi#auto_vim_configuration = 1
-"let g:jedi#popup_on_dot = 1
-"let g:jedi#popup_select_first = 1
+let g:jedi#auto_initialization = 1
+let g:jedi#auto_vim_configuration = 1
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 1
 "autocmd FileType python call jedi#configure_call_signatures()
 
 
@@ -304,7 +304,7 @@ augroup configgroup
   autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
-  autocmd FileType python map <leader>c I# <esc>j
+  autocmd FileType python map <leader>c I#<esc>j
   autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
   autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END

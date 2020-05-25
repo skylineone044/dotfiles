@@ -1,0 +1,10 @@
+" vim-plug ------------------------------------------------
+call plug#begin('~/.config/nvim/plugins')
+" PLUGINS -------------------------------
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'davidhalter/jedi-vim'
+" ---------------------------------------
+call plug#end()
+set hidden
+"JEDI -----------------------------------------------------
+let g:jedi#auto_initialization = 1
