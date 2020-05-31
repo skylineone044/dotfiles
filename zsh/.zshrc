@@ -195,6 +195,7 @@ alias "vim"="nvim"
 alias "n"="nvim ~/notes"
 
 export PATH=$PATH:~/ShellScripts
+export PATH=$PATH:/usr/sbin
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
 
 # Basic auto/tab complete:
