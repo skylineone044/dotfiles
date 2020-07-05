@@ -1,22 +1,33 @@
 {
-"python.pythonPath": "/usr/bin/python",
-"python.jediPath": "/usr/lib/python3.8/site-packages",
-"python.jediEnabled": true,
-"suggest.autoTrigger": "always",
-"python.autoComplete.addBrackets": true,
-"suggest.noselect": false,
-"suggest.triggerAfterInsertEnter": true,
-"python.linting.pep8Enabled": true,
- "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         }
-       }
+    "python.pythonPath": "/usr/bin/python",
+    "python.jediPath": "/usr/lib/python3.8/site-packages",
+    "python.jediEnabled": true,
+    "suggest.autoTrigger": "always",
+    "python.autoComplete.addBrackets": true,
+    "suggest.noselect": false,
+    "suggest.triggerAfterInsertEnter": true,
+    "python.linting.pep8Enabled": true,
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
+        }
     }
-  }
 }
