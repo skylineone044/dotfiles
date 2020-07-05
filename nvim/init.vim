@@ -181,44 +181,19 @@ set number
 
 " syntax highlighting -------------------------------------
 syntax on
-"let g:go_highlight_types = 1
-"let g:go_highlight_fields = 1
-"let g:go_highlight_functions = 1
-"let g:go_highlight_function_calls = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_extra_types = 1
 
 " Vim theme & bottom infobar ------------------------------
 let g:airline_theme='cool'
 " other themes to try: murmur, papercolor
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" unicode symbols
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.crypt = '🔒'
 let g:airline_symbols.linenr = '⏵'
-"let g:airline_symbols.linenr = '␊'
-"let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.maxlinenr = ''
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.spell = 'Ꞩ'
-"let g:airline_symbols.notexists = 'Ɇ'
-"let g:airline_symbols.whitespace = 'Ξ'
 
 " make sure the items are separate, it is the only way to make part of it bold
 call airline#parts#define_accent(" ⏵%l", 'bold')
@@ -242,32 +217,19 @@ let airline#extensions#ale#show_line_numbers = 1
 let airline#extensions#ale#open_lnum_symbol = " ⏵"
 " ale close_lnum_symbol
 let airline#extensions#ale#close_lnum_symbol = ''
-"
-"hi airline_c  ctermbg=NONE guibg=NONE
-"hi airline_tabfill ctermbg=NONE guibg=NONE
 
 set encoding=utf-8
 set ttyfast
 set lazyredraw
 
-" Tab contros remap ---------------------------------------
-"nnoremap tn  :tabnew<Space>
-
-"nnoremap tk  :tabnext<CR>
-"nnoremap tj  :tabprev<CR>
-
-"nnoremap th  :tabfirst<CR>
-"nnoremap tl  :tablast<CR>
-
-" Powerline font mode -------------------------------------
-"if !exists('g:airline_symbols')
-    "let g:airline_symbols = {}
-"endif
-
 " Various settings ----------------------------------------
 set cursorline
 set cursorcolumn
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
 set showcmd
 set list
 set splitbelow
@@ -305,6 +267,7 @@ augroup configgroup
   autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
   autocmd FileType python map <leader>c I# <esc>j
+  autocmd FileType c  map <leader>c I// <esc>j
   autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
   autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END
@@ -325,20 +288,10 @@ map <CapsLock> <Esc>
 "nnn settup ---
 autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
 
-"Go shortcuts
-"map gb :GoBuild<CR>
-
 "Cycle number schemes
 "map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
 "Reload vimrc
 nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
-
-"Copy paste
-":let @+=@*<CR>
-
-" Cycling through buffers
-nnoremap <leader>j :bprevious<CR>
-nnoremap <leader>k :bnext<CR>
 
 " Pickachu settings ---------------------------------------
 let g:pickachu_default_color_format = "hex"
@@ -357,13 +310,6 @@ nnoremap <C-f> :FZF<CR>
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '●'
 "dot symbol: \u25CF
-
-"let g:OmniSharp_server_stdio = 1
-"let g:OmniSharp_server_path = '/home/skyline/OmniSharp/run'
-
-"The symbol highlighting is under the colorc=scheme otpions#
-
-"have to disable, completion is handled by coc
 let g:ale_completion_enabled = 0
 
 " PaperColor settings -------------------------------------
@@ -374,11 +320,11 @@ hi Normal ctermbg=none
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
-"colorscheme skylines
 
-hi CursorColumn ctermbg=234
 hi CursorLine ctermbg=234
 
+hi CursorColumn ctermbg=none
+"
 "make function calls blue and bold
 function ForceFuncCallColor()
   hi Function ctermfg=39 ctermbg=none cterm=none
@@ -386,7 +332,6 @@ function ForceFuncCallColor()
   hi def link pythonFunction Function
   hi link pythonBuiltin Function
 endfunction
-
 
 autocmd BufEnter * call ForceFuncCallColor()
 autocmd BufWritePost * call ForceFuncCallColor()
