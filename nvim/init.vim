@@ -24,15 +24,18 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dstein64/vim-startuptime'
-Plug 'DougBeney/pickachu'
+"Plug 'DougBeney/pickachu'   " doubles startup time, slow
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'davidhalter/jedi-vim'
 Plug 'ObserverOfTime/coloresque.vim'
+Plug 'tpope/vim-commentary'
 
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
+
+map <space> <Leader>
 
 " coc settings --------------------------------------------
 " if hidden is not set, TextEdit might fail.
@@ -224,7 +227,7 @@ set lazyredraw
 
 " Various settings ----------------------------------------
 set cursorline
-set cursorcolumn
+"set cursorcolumn  " this bad boi is slow AF
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -241,6 +244,8 @@ set incsearch
 set hlsearch
 set guicursor=
 set mouse=a
+set colorcolumn=100
+set timeoutlen=100
 
 " Set Marker character for whitespace ---------------------
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
@@ -248,6 +253,8 @@ set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 " move vertically by visual line --------------------------
 nnoremap j gj
 nnoremap k gk
+nmap <Leader>c gcc 
+vmap <Leader>c gc
 
 "JEDI -----------------------------------------------------
 "autocmd FileType python let g:jedi#auto_initialization = 1
@@ -266,10 +273,10 @@ augroup configgroup
   autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
-  autocmd FileType python map <leader>c I# <esc>j
-  autocmd FileType c  map <leader>c I// <esc>j
+  " autocmd FileType python map <leader>c I# <esc>j
+  " autocmd FileType c  map <leader>c I// <esc>j
   autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
-  autocmd FileType vim map <leader>c I"<esc>j<esc>
+  " autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END
 
 nnoremap <leader>b :buffers<CR>:buffer<space>
@@ -341,6 +348,7 @@ highlight ALEErrorSign ctermfg=196 ctermbg=NONE
 highlight ALEWarningSign ctermfg=214 ctermbg=NONE
 highlight SignColumn ctermbg=NONE
 highlight clear SignColumn
+hi ColorColumn ctermbg=236 guibg=236
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
