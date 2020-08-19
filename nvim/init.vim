@@ -30,6 +30,7 @@ Plug 'junegunn/fzf.vim'
 "Plug 'davidhalter/jedi-vim'
 Plug 'ObserverOfTime/coloresque.vim'
 Plug 'tpope/vim-commentary'
+Plug 'benmills/vimux'
 
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
@@ -256,7 +257,15 @@ nnoremap k gk
 nmap <Leader>c gcc 
 vmap <Leader>c gc
 
-"JEDI -----------------------------------------------------
+" vimux settings ----------------------------------------
+let g:VimuxHeight = "25"     " default is 20
+let g:VimuxOrientation = "v" " default is v
+let g:VimuxUseNearest = 1    " default is 1
+" autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
+" and even better: it's using vimux to rum the current python file ina tmux pane
+autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
+
+" JEDI -----------------------------------------------------
 "autocmd FileType python let g:jedi#auto_initialization = 1
 "let g:jedi#usages_command = "<C-j>"
 
@@ -270,12 +279,12 @@ vmap <Leader>c gc
 " Custom shortcuts ----------------------------------------
 augroup configgroup
   autocmd!
-  autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
+  " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
   " autocmd FileType python map <leader>c I# <esc>j
   " autocmd FileType c  map <leader>c I// <esc>j
-  autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
+  " autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
   " autocmd FileType vim map <leader>c I"<esc>j<esc>
 augroup END
 
