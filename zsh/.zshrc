@@ -165,10 +165,10 @@ alias sshpi="ssh pi@192.168.1.120"
 
 # Run ls after cd
 
-function chpwd() {
+# function chpwd() {
 #    emulate -L zsh
-    lsd -l
-}
+    # lsd -l
+# }
 
 #for key in ${(k)icons[@]}
 #do
@@ -181,6 +181,7 @@ function chpwd() {
 ##  ALIASES
 
 alias ls="lsd -l --color=auto"
+alias l="lsd -l --color=auto"
 alias "lsd -a"="ls -la -- color=auto"
 
 alias ":q"="exit"
