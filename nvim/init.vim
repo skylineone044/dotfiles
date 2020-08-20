@@ -258,12 +258,24 @@ nmap <Leader>c gcc
 vmap <Leader>c gc
 
 " vimux settings ----------------------------------------
+
+function! VimuxFollowPWD()
+    call VimuxSendText('cd ' . expand('%:p:h') . ' && clear')
+    call VimuxSendKeys("Enter")
+endfunction
+
 let g:VimuxHeight = "25"     " default is 20
 let g:VimuxOrientation = "v" " default is v
 let g:VimuxUseNearest = 1    " default is 1
+"
 " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
 " and even better: it's using vimux to rum the current python file ina tmux pane
 autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
+nnoremap <Leader>t :call VimuxRunCommand('cd ' . expand('%:p:h') . ' && clear')<CR>
+autocmd BufEnter * :call VimuxFollowPWD()<CR>
+map <Leader>T :VimuxCloseRunner<CR>
+" map <Leader>f :call VimuxFollowPWD()<CR>
+
 
 " JEDI -----------------------------------------------------
 "autocmd FileType python let g:jedi#auto_initialization = 1
