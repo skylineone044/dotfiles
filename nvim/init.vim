@@ -315,6 +315,7 @@ map :Q :q<CR>
 map <CapsLock> <Esc>
 "nnn settup ---
 autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
+map <Leader>F :Format<CR>
 
 "Cycle number schemes
 "map <silent> <Leader>r :call mappings#cycle_numbering()<CR>
