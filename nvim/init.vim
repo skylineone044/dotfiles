@@ -254,27 +254,32 @@ set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 " move vertically by visual line --------------------------
 nnoremap j gj
 nnoremap k gk
-nmap <Leader>c gcc 
+nmap <Leader>c gcc
 vmap <Leader>c gc
 
 " vimux settings ----------------------------------------
 
+" make the already open tmux terminal split follow the dir of the currently open file,
+" this function is rum wuth autocmd on BufEnter
 function! VimuxFollowPWD()
     call VimuxSendText('cd ' . expand('%:p:h') . ' && clear')
     call VimuxSendKeys("Enter")
 endfunction
 
-let g:VimuxHeight = "25"     " default is 20
-let g:VimuxOrientation = "v" " default is v
-let g:VimuxUseNearest = 1    " default is 1
+let g:VimuxHeight = "25"     " default is 20 (0-100%)
+let g:VimuxOrientation = "v" " default is v (v/h)
+let g:VimuxUseNearest = 1    " default is 1 (0/1)
 "
 " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
 " and even better: it's using vimux to rum the current python file ina tmux pane
-autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
-nnoremap <Leader>t :call VimuxRunCommand('cd ' . expand('%:p:h') . ' && clear')<CR>
-autocmd BufEnter * :call VimuxFollowPWD()<CR>
+augroup vimux1
+  autocmd!
+  autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
+  autocmd BufEnter * call VimuxFollowPWD()
+augroup END
 map <Leader>T :VimuxCloseRunner<CR>
 " map <Leader>f :call VimuxFollowPWD()<CR>
+nnoremap <Leader>t :call VimuxRunCommand('cd ' . expand('%:p:h') . ' && clear')<CR>
 
 
 " JEDI -----------------------------------------------------
@@ -294,6 +299,7 @@ augroup configgroup
   " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
+  autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
   " autocmd FileType python map <leader>c I# <esc>j
   " autocmd FileType c  map <leader>c I// <esc>j
   " autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>
@@ -313,8 +319,6 @@ map <space> <Leader>
 map :W :w<CR>
 map :Q :q<CR>
 map <CapsLock> <Esc>
-"nnn settup ---
-autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
 map <Leader>F :Format<CR>
 
 "Cycle number schemes
