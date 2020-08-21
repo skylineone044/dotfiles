@@ -178,6 +178,8 @@ alias sshpi="ssh pi@192.168.1.120"
 #        icons[$key]=" ${icons[$key]} "
 #    fi
 #done
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 ##  ALIASES
 
