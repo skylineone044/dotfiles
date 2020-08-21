@@ -185,7 +185,10 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 alias ls="lsd -l --color=auto"
 alias l="lsd -l --color=auto"
+alias sl="lsd -l --color=auto"
 alias "lsd -a"="ls -la -- color=auto"
+
+alias gs="git status"
 
 alias ":q"="exit"
 alias ":Q"="exit"
