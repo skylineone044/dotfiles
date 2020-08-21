@@ -4,7 +4,7 @@ printf "\n\n\n--- Started linker script..."
 printf "\n-- Getting git..."
 sudo apt install -y git curl || sudo pacman -S --noconfirm git curl
 printf "\n- setting up git..."
-git config --global user.email "tokodioli@gmail.com"
+git config --global user.email "skylineone044@gmail.com"
 git config --global user.name "skylineone044"
 
 printf "\n\n-- getting essentials: tmux, zsh, neovim..." 
@@ -22,6 +22,8 @@ printf "\n- getting oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 printf "\n- getting POWERLEVEL10K..." 
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+printf "\n- getting zsh-autosuggestions for oh-my-zsh..."
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 printf "\n\nUSE TPM AND VIM-PLUG COMMANDS TO GET PLUGINS\n\n" 
 
@@ -80,8 +82,10 @@ printf "\n\n-- Getting dependencies..."
 printf "\n-- getting vim python helpers..." 
 printf "\n- getting pylint..." 
 sudo apt install -y pylint pylint3 || sudo apt install -y python-pylint python3-pylint || sudo apt install -y python2-pylint python-pylint || sudo pacman -S --noconfirm pylint pylint3  || sudo pacman -S --noconfirm python-pylint python3-pylint || sudo pacman -S --noconfirm python2-pylint python-pylint
-printf "\n- getting python-jedi" 
-sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi python-jedi || sudo pacman -S  --noconfirm python-jedi python3-jedi || sudo pacman -S  --noconfirm python2-jedi python-jedi
+
+# Using CoC isntead now
+# printf "\n- getting python-jedi" 
+# sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi python-jedi || sudo pacman -S  --noconfirm python-jedi python3-jedi || sudo pacman -S  --noconfirm python2-jedi python-jedi
 
 #printf "\n\n-- getting chromium" 
 #sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
