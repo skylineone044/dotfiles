@@ -260,7 +260,7 @@ vmap <Leader>c gc
 " guard for distributions lacking the 'persistent_undo' feature.
 if has('persistent_undo')
     " define a path to store persistent undo files.
-    let target_path = expand('~/.config/vim-persisted-undo/')    " create the directory and any parent directories
+    let target_path = expand('~/.cache/vim_undo_history')    " create the directory and any parent directories
     " if the location does not exist.
     if !isdirectory(target_path)
         call system('mkdir -p ' . target_path)
