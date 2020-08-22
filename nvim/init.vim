@@ -257,6 +257,18 @@ nnoremap k gk
 nmap <Leader>c gcc
 vmap <Leader>c gc
 
+" guard for distributions lacking the 'persistent_undo' feature.
+if has('persistent_undo')
+    " define a path to store persistent undo files.
+    let target_path = expand('~/.config/vim-persisted-undo/')    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call system('mkdir -p ' . target_path)
+    endif    " point Vim to the defined undo directory.
+    let &undodir = target_path    " finally, enable undo persistence.
+    set undofile
+endif
+
 " vimux settings ----------------------------------------
 
 " make the already open tmux terminal split follow the dir of the currently open file,
