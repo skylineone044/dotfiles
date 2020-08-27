@@ -243,7 +243,8 @@ set wildmenu
 set showmatch
 set incsearch
 set hlsearch
-set guicursor=
+" set guicursor=   "Uncommenting this disables the cursor syle change (block/I beam/underline)
+"                   that is the default when changing ebtween nvim modes (Normal/Insert/Replace)
 set mouse=a
 set colorcolumn=100
 set timeoutlen=100
