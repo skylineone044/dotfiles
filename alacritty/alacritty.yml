@@ -327,7 +327,7 @@
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
   shell:
-    program: /usr/bin/tmux
+    program: /usr/bin/tmux    # in my dotfiles, I start zsh from tmux automatically
     # args:
     # -
 
