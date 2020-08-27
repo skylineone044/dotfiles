@@ -8,6 +8,8 @@
     "suggest.noselect": false,
     "suggest.triggerAfterInsertEnter": true,
     "python.linting.pep8Enabled": true,
+    "lua.commandPath": "/usr/bin/lua-lsp",
+    "lua.enable": true,
     "languageserver": {
         "ccls": {
             "command": "ccls",
