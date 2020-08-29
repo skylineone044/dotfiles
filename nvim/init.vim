@@ -246,7 +246,7 @@ set hlsearch
 " set guicursor=   "Uncommenting this disables the cursor syle change (block/I beam/underline)
 "                   that is the default when changing ebtween nvim modes (Normal/Insert/Replace)
 set mouse=a
-set colorcolumn=100
+set colorcolumn=79
 set timeoutlen=100
 
 " Set Marker character for whitespace ---------------------
@@ -277,10 +277,12 @@ endif
 function! VimuxFollowPWD()
     call VimuxSendText('cd ' . expand('%:p:h') . ' && clear')
     call VimuxSendKeys("Enter")
+    redraw!
 endfunction
 
-let g:VimuxHeight = "25"     " default is 20 (0-100%)
-let g:VimuxOrientation = "v" " default is v (v/h)
+
+let g:VimuxHeight = "40"     " default is 20 (0-100%)
+let g:VimuxOrientation = "h" " default is v (v/h)
 let g:VimuxUseNearest = 1    " default is 1 (0/1)
 "
 " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
@@ -291,9 +293,15 @@ augroup vimux1
   autocmd BufEnter * call VimuxFollowPWD()
 augroup END
 map <Leader>T :VimuxCloseRunner<CR>
+
 " map <Leader>f :call VimuxFollowPWD()<CR>
 nnoremap <Leader>t :call VimuxRunCommand('cd ' . expand('%:p:h') . ' && clear')<CR>
 
+silent !VimuxSendKeys
+silent !VimuxSendText
+silent !VimuxRunCommand
+silent !VimuxRunCommandInDir
+silent !VimuxCloseRunner
 
 " JEDI -----------------------------------------------------
 "autocmd FileType python let g:jedi#auto_initialization = 1
@@ -320,6 +328,8 @@ augroup configgroup
 augroup END
 
 nnoremap <leader>b :buffers<CR>:buffer<space>
+nnoremap <Leader>h :bnext<CR>
+nnoremap <Leader>l :bprevious<CR>
 
 noremap <leader>y "+y
 noremap <leader>p "+p
