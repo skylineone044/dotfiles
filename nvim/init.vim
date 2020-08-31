@@ -14,24 +14,26 @@ call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
 "Plug 'ervandew/supertab'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'b3niup/numbers.vim'
-Plug 'dense-analysis/ale'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'hdima/python-syntax'
-Plug 'sheerun/vim-polyglot'
-Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dstein64/vim-startuptime'
-"Plug 'DougBeney/pickachu'   " doubles startup time, slow
+Plug 'vim-airline/vim-airline'                  " bottom statusline
+Plug 'vim-airline/vim-airline-themes'           " bottom statusline theme
+Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
+Plug 'dense-analysis/ale'                       " code linting
+Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
+Plug 'hdima/python-syntax'                      " pyhon synax highlighting
+Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
+Plug 'jiangmiao/auto-pairs'                     " parenthesys and quote sighn auto pairing
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork support and LSP
+Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-"Plug 'davidhalter/jedi-vim'
-Plug 'ObserverOfTime/coloresque.vim'
-Plug 'tpope/vim-commentary'
-Plug 'benmills/vimux'
+Plug 'junegunn/fzf.vim'                         " fuzzy file search
+Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
+Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
+Plug 'benmills/vimux'                           " vim-tmux interface
+Plug 'wsdjeg/FlyGrep.vim'                       " Project wide find and repalce
 
+" older, unused plugins
+"Plug 'davidhalter/jedi-vim'                    " python only autocompletion, now use coc intead
+"Plug 'DougBeney/pickachu'                      " color and date picker, use with :pick<CR>    doubles startup time, slow
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " ---------------------------------------
 call plug#end()
