@@ -46,7 +46,7 @@ fun! PaperColor_stardust#register()
          \   'color16' : ['#00afff', '39'],
          \   'color17' : [' #00ffff', '51'],
          \   'cursorline' : ['#262626', '235'],
-         \   'cursorlinenr_fg' : ['#0087ff', '39'],
+         \   'cursorlinenr_fg' : ['#ffffff', '15'],
          \   'cursorlinenr_bg' : ['#1c1c1c', '234'],
          \   'popupmenu_fg' : ['#ffffff', '15'],
          \   'popupmenu_bg' : ['#262626', '235'],
