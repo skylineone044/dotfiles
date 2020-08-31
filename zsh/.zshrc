@@ -201,6 +201,9 @@ alias "vanillavim"="/bin/vim"
 alias "vim"="nvim"
 alias "n"="nvim ~/notes"
 
+# needs to be eparately installed
+eval $(thefuck --alias)
+
 export PATH=$PATH:~/ShellScripts
 export PATH=$PATH:/usr/sbin
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
