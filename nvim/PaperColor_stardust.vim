@@ -59,7 +59,7 @@ fun! PaperColor_stardust#register()
          \   'statusline_active_fg' : ['#ffffff', '15'],
          \   'statusline_active_bg' : ['#000000', '0'],
          \   'statusline_inactive_fg' : ['#767676', '243'],
-         \   'statusline_inactive_bg' : ['#303030', '236'],
+         \   'statusline_inactive_bg' : ['#262626', '235'],
          \   'todo_bg' : ['#ff00ff', '201'],
          \   'todo_fg' : ['#ffffff', '15'],
          \   'error_fg' : ['#ffffff', '15'],
