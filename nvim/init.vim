@@ -29,9 +29,9 @@ Plug 'junegunn/fzf.vim'                         " fuzzy file search
 Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'benmills/vimux'                           " vim-tmux interface
-Plug 'wsdjeg/FlyGrep.vim'                       " Project wide find and repalce
 
-" older, unused plugins
+" older and unused plugins
+" Plug 'wsdjeg/FlyGrep.vim'                     " Project wide find and repalce
 "Plug 'davidhalter/jedi-vim'                    " python only autocompletion, now use coc intead
 "Plug 'DougBeney/pickachu'                      " color and date picker, use with :pick<CR>    doubles startup time, slow
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
