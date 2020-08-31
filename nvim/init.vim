@@ -250,6 +250,7 @@ set hlsearch
 set mouse=a
 set colorcolumn=79
 set timeoutlen=100
+set nowrap
 
 " Set Marker character for whitespace ---------------------
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
@@ -380,10 +381,11 @@ let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
 
 hi CursorLine ctermbg=234
-
 hi CursorColumn ctermbg=none
-"
-"make function calls blue and bold
+hi NonText ctermfg=250                                                                                        "
+" hi NonText ctermfg=229  " bright, slightly yellow
+
+" make function calls blue and bold
 function ForceFuncCallColor()
   hi Function ctermfg=39 ctermbg=none cterm=none
   syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
