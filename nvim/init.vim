@@ -251,6 +251,22 @@ set mouse=a
 set colorcolumn=79
 set timeoutlen=100
 set nowrap
+" set spellang=en_gb,hu
+" set spell
+" let g:lang_var='en'
+
+" " spellang settings
+" function! Spell_lang_switch()
+"     ehco 'switching spell language'
+"     if lang_var == 'hu'
+"         set spellang=en_gb
+"         let lang_var='en'
+"     else
+"         set spellang=hu_HU
+"         let lang_var='hu'
+"     endif
+" endfunction
+" map <Leader>m call Spell_lang_switch()
 
 " Set Marker character for whitespace ---------------------
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
