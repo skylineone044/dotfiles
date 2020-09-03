@@ -199,7 +199,7 @@ alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
 alias "vanillavim"="/bin/vim"
 alias "vim"="nvim"
-alias "n"="nvim ~/notes"
+alias "n"="nvim ~/notes.md"
 
 # needs to be eparately installed
 eval $(thefuck --alias)
