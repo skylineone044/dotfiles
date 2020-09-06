@@ -10,27 +10,5 @@
     "python.linting.pep8Enabled": true,
     "lua.commandPath": "/usr/bin/lua-lsp",
     "lua.enable": true,
-    "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": [
-                "c",
-                "cpp",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls",
-                "compile_commands.json",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                }
-            }
-        }
-    }
+    "clangd.semanticHighlighting": true
 }

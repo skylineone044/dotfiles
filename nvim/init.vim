@@ -29,6 +29,7 @@ Plug 'junegunn/fzf.vim'                         " fuzzy file search
 Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'benmills/vimux'                           " vim-tmux interface
+Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
 
 " older and unused plugins
 " Plug 'wsdjeg/FlyGrep.vim'                     " Project wide find and repalce
