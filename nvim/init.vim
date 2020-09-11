@@ -338,7 +338,7 @@ silent !VimuxCloseRunner
 augroup configgroup
   autocmd!
   " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
-  autocmd FileType python map ## ggi#!/usr/bin/env python3<CR><esc>
+  autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
   autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
   " autocmd FileType python map <leader>c I# <esc>j

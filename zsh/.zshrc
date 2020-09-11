@@ -229,3 +229,4 @@ export FZF_DEFAULT_COMMAND='find ~/ -name .git -prune -o -name -o -name Code\ Ca
 #this must be last
 source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
