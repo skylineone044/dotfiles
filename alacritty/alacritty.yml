@@ -109,9 +109,9 @@
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-      family: RobotoMono Nerd Font
+      family: InconsolataLGC Nerd Font
     # The `style` can be specified to pick a specific face.
-      style: Light
+      style: Medium
 
   # Bold font face
     bold:
@@ -122,7 +122,7 @@
       family: RobotoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-      style: Medium
+      style: Bold
   
   # Italic font face
     italic:
@@ -130,10 +130,10 @@
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-      family: RobotoMono Nerd Font
+      family: Hack Nerd Font
 
     # The `style` can be specified to pick a specific face.
-      style: Light Italic
+      style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -141,10 +141,10 @@
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Roboto Mono Nerd Font
+    family: RobotoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Bold Italic
 
   # Point size
     size: 10.0
