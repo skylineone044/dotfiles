@@ -66,7 +66,7 @@ ln -s ~/git/dotfiles/latte ~/.config/latte
 printf "\n- installing fonts..." 
 mkdir ~/.local/share/fonts
 printf "copying..." 
-cp ~/git/dotfiles/"Inconsolata Nerd Font Complete.otf" ~/.local/share/fonts/
+cp ~/git/dotfiles/fonts/* ~/.local/share/fonts/
 printf "refreshing font cache..." 
 fc-cache -f -v
 
