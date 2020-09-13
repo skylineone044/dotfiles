@@ -7,7 +7,8 @@ fun! PaperColor_stardust#register()
          \   'description' : 'Dark & vibrant',
          \   'options' : {
          \       'transparent_background': 1,
-         \       'allow_bold': 1
+         \       'allow_bold': 1,
+         \       'allow_italic': 1
          \  }
          \ }
 

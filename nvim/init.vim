@@ -252,6 +252,10 @@ set mouse=a
 set colorcolumn=79
 set timeoutlen=100
 set nowrap
+
+set t_ZH=^[[3m
+set t_ZR=^[[23m
+highlight Comment cterm=italic
 " set spellang=en_gb,hu
 " set spell
 " let g:lang_var='en'
@@ -348,8 +352,8 @@ augroup configgroup
 augroup END
 
 nnoremap <leader>b :buffers<CR>:buffer<space>
-nnoremap <Leader>h :bnext<CR>
-nnoremap <Leader>l :bprevious<CR>
+nnoremap <Leader>l :bnext<CR>
+nnoremap <Leader>h :bprevious<CR>
 
 noremap <leader>y "+y
 noremap <leader>p "+p
