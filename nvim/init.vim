@@ -94,7 +94,7 @@ inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<
 "nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
-"nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -235,6 +235,8 @@ set cursorline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set autoindent
+set smartindent
 set expandtab
 set smarttab
 set showcmd
@@ -249,9 +251,11 @@ set hlsearch
 " set guicursor=   "Uncommenting this disables the cursor syle change (block/I beam/underline)
 "                   that is the default when changing ebtween nvim modes (Normal/Insert/Replace)
 set mouse=a
-set colorcolumn=79
+set colorcolumn=80
 set timeoutlen=100
 set nowrap
+" set foldmethod=syntax
+" set nofoldenable
 
 set t_ZH=^[[3m
 set t_ZR=^[[23m
@@ -345,6 +349,10 @@ augroup configgroup
   autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
   autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
+
+  " autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
+  " autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+  " autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
   " autocmd FileType python map <leader>c I# <esc>j
   " autocmd FileType c  map <leader>c I// <esc>j
   " autocmd FileType go nnoremap <F5> <esc>:w<CR>:GoRun<CR>

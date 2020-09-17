@@ -50,7 +50,7 @@ fun! PaperColor_stardust#register()
          \   'cursorlinenr_fg' : ['#ffffff', '15'],
          \   'cursorlinenr_bg' : ['#1c1c1c', '234'],
          \   'popupmenu_fg' : ['#ffffff', '15'],
-         \   'popupmenu_bg' : ['#262626', '235'],
+         \   'popupmenu_bg' : ['#3a3a3a', '237'],
          \   'search_fg' : ['#000000', '0'],
          \   'search_bg' : ['#ffff00', '226'],
          \   'linenumber_fg' : ['#808080', '244'],
