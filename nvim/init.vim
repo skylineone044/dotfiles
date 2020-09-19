@@ -30,6 +30,7 @@ Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
+Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more 
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'jiangmiao/auto-pairs'                     " parenthesys and quote sighn auto pairing
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
@@ -98,6 +99,8 @@ nmap <leader>rn <Plug>(coc-rename)
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>F  <Plug>CocAction('format')
+nmap <leader>F  <Plug>CocAction('format')
 
 augroup mygroup
   autocmd!
@@ -238,7 +241,7 @@ set hlsearch
 set mouse=a
 
 set colorcolumn=80
-set timeoutlen=100
+set timeoutlen=450
 set nowrap
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 
