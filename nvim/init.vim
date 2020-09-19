@@ -195,6 +195,7 @@ let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 
 " FZF key bindings ----------------------------------------
 nnoremap <C-f> :FZF<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
@@ -210,7 +211,7 @@ let g:coloresque_whitelist = [
 set encoding=utf-8
 set ttyfast
 set lazyredraw
-syntax on
+syntax enable
 
 set number
 set cursorline
@@ -296,6 +297,11 @@ vmap <Leader>c gc
 nnoremap <leader>b :buffers<CR>:buffer<space>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
+
+" use sytem clipborad
+" noremap <Leader>Y "+y
+" noremap <Leader>P "+p
+set clipboard+=unnamedplus
 
 " PaperColor settings -------------------------------------
 set t_Co=256
