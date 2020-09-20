@@ -122,6 +122,12 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nmap <leader>e :CocCommand explorer<CR>
+augroup cocexplorer
+    autocmd!
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+augroup END
 " Vim theme & bottom infobar
 let g:airline_theme='cool'
 let g:airline_powerline_fonts=1
@@ -210,6 +216,9 @@ let g:coloresque_whitelist = [
     \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go']
 "let g:coloresque_blacklist = []
 
+let g:numbers_exclude = ['coc-explorer', 'CoC Explorer', 'minibufexpl', 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m']
+" fint out more modes to be excuded, by entering them and running :echo &ft
+"
 " base vim settings ----------------------------------------
 set encoding=utf-8
 set ttyfast
@@ -218,6 +227,7 @@ syntax enable
 
 set number
 set cursorline
+set wildoptions=pum
 
 set tabstop=4
 set shiftwidth=4
@@ -232,7 +242,8 @@ set list
 
 set splitbelow
 set splitright
-set wildmode=longest,list,full
+" set wildmode=longest,list,full
+set wildmode=full
 set wildmenu
 set showmatch
 
@@ -340,5 +351,6 @@ hi ColorColumn ctermbg=236 guibg=236
 set t_ZH=^[[3m
 set t_ZR=^[[23m
 highlight Comment cterm=italic
+hi HighlightedyankRegion ctermbg=236
 
 " END
