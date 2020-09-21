@@ -128,6 +128,11 @@ augroup cocexplorer
     autocmd!
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 augroup END
+
+let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
+            \"coc-vimlsp", "coc-yank", "coc-clangd", "coc-lua", "coc-markdownlint",
+            \"coc-python"]
+
 " Vim theme & bottom infobar
 let g:airline_theme='cool'
 let g:airline_powerline_fonts=1
@@ -216,8 +221,10 @@ let g:coloresque_whitelist = [
     \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go']
 "let g:coloresque_blacklist = []
 
-let g:numbers_exclude = ['coc-explorer', 'CoC Explorer', 'minibufexpl', 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m']
 " fint out more modes to be excuded, by entering them and running :echo &ft
+let g:numbers_exclude = ['fzf', 'coc-explorer', 'minibufexpl',
+            \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
+            \'w3m']
 "
 " base vim settings ----------------------------------------
 set encoding=utf-8
