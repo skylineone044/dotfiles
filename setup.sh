@@ -9,7 +9,7 @@ git config --global user.name "skylineone044"
 
 printf "\n\n-- getting essentials: tmux, zsh, neovim..." 
 #sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
-sudo apt install -y tmux zsh neovim || sudo pacman -S --noconfirm tmux zsh neovim
+sudo apt install -y tmux zsh neovim fd || sudo pacman -S --noconfirm tmux zsh neovim fd
 printf "\n- getting alacritty..."
 sudo apt install -y alacritty || sudo pacman -S --noconfirm alacritty
 
@@ -59,6 +59,8 @@ printf "\n-! USE PREFIX+U TO UPDATE TMUX PLUGINS"
 printf "\n- linking zsh..." 
 rm ~/.zshrc
 ln -s ~/git/dotfiles/zsh/.zshrc ~/.zshrc
+printf "\n- linking fd..."
+ln -s ~/git/dotfiles/fd ~/.config/fd
 
 printf "\n- linking latte layout..." 
 ln -s ~/git/dotfiles/latte ~/.config/latte
