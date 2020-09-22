@@ -31,6 +31,7 @@ Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, require
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more 
+Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'jiangmiao/auto-pairs'                     " parenthesys and quote sighn auto pairing
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
@@ -359,5 +360,9 @@ set t_ZH=^[[3m
 set t_ZR=^[[23m
 highlight Comment cterm=italic
 hi HighlightedyankRegion ctermbg=236
+
+highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
+highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 
 " END
