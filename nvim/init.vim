@@ -30,10 +30,12 @@ Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
-Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more 
+Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
+Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'jiangmiao/auto-pairs'                     " parenthesys and quote sighn auto pairing
+
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 " ---------------------------------------
 call plug#end()
