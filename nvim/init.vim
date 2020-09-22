@@ -338,6 +338,14 @@ augroup autocd
     autocmd!
     autocmd BufEnter * silent! lcd %:p:h
 augroup END
+" Return to last edit position when opening files (You want this!)
+augroup continueWhereYouLeftOff
+    autocmd!
+    autocmd BufReadPost *
+         \ if line("'\"") > 0 && line("'\"") <= line("$") |
+         \   exe "normal! g`\"" |
+         \ endif
+augroup END
 
 " PaperColor settings -------------------------------------
 set t_Co=256
