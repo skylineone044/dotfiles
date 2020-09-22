@@ -224,7 +224,14 @@ let g:coloresque_whitelist = [
     \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go']
 "let g:coloresque_blacklist = []
 
-" fint out more modes to be excuded, by entering them and running :echo &ft
+let g:signify_sign_show_text = 1  " main on/off swtich for signify
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '-'
+let g:signify_sign_delete_first_line = '-'
+let g:signify_sign_change            = '~'
+let g:signify_sign_show_count = 0
+
+" find out more modes to be excuded, by entering them and running :echo &ft
 let g:numbers_exclude = ['fzf', 'coc-explorer', 'minibufexpl',
             \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
             \'w3m']
@@ -326,6 +333,11 @@ nnoremap <Leader>h :bprevious<CR>
 " noremap <Leader>Y "+y
 " noremap <Leader>P "+p
 set clipboard+=unnamedplus
+
+augroup autocd
+    autocmd!
+    autocmd BufEnter * silent! lcd %:p:h
+augroup END
 
 " PaperColor settings -------------------------------------
 set t_Co=256
