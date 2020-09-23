@@ -41,7 +41,7 @@ fun! PaperColor_stardust#register()
          \   'color10' : ['#ff005f', '197'],
          \   'color11' : ['#00ff00', '46'],
          \   'color12' : ['#00afff', '39'],
-         \   'color13' : ['#ff00ff', '201'],
+         \   'color13' : ['#d75fff', '171'],
          \   'color14' : ['#00afff', '39'],
          \   'color15' : ['#ffff00', '226'],
          \   'color16' : ['#00afff', '39'],

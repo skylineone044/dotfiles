@@ -221,7 +221,7 @@ let python_highlight_all = 1
 let g:coloresque_whitelist = [
     \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
     \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
-    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go']
+    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml']
 "let g:coloresque_blacklist = []
 
 let g:signify_sign_show_text = 1  " main on/off swtich for signify
@@ -266,6 +266,8 @@ set showmatch
 
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set mouse=a
 
 set colorcolumn=80
