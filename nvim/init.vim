@@ -20,6 +20,7 @@ Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 
 Plug 'vim-airline/vim-airline'                  " bottom statusline
 Plug 'vim-airline/vim-airline-themes'           " bottom statusline theme
+Plug 'ryanoasis/vim-webdevicons'                " fancy idons everywhere, mostly for just airline though
 Plug 'dense-analysis/ale'                       " code linting
 
 Plug 'benmills/vimux'                           " vim-tmux interface
