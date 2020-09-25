@@ -361,7 +361,7 @@ colorscheme PaperColor
 
 hi CursorLine ctermbg=234
 hi CursorColumn ctermbg=none
-hi NonText ctermfg=250
+hi NonText ctermfg=238
 hi statusline ctermbg=250 ctermfg=235
 
 " make function calls blue and bold
