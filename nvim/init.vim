@@ -348,6 +348,10 @@ nnoremap <leader>b :buffers<CR>:buffer<space>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
 
+" better find and replace
+vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
+nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
 " use sytem clipborad
 " noremap <Leader>Y "+y
 " noremap <Leader>P "+p
