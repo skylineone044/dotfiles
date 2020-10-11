@@ -11,7 +11,8 @@ printf "\n\n-- getting essentials: tmux, zsh, neovim..."
 #sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
 sudo apt install -y tmux zsh neovim fd || sudo pacman -S --noconfirm tmux zsh neovim fd
 printf "\n- getting alacritty..."
-sudo apt install -y alacritty || sudo pacman -S --noconfirm alacritty
+sudo apt install -y alacritty || spdo pacman -S --noconfirm alacritty
+sudo apt install -y ripgrep || spdo pacman -S --noconfirm ripgrep 
 
 printf "\n\n-- Starting..." 
 #printf "\n-- Cloning repos..." 
