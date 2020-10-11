@@ -214,6 +214,15 @@ let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 " FZF key bindings ----------------------------------------
 nnoremap <C-f> :FZF<CR>
 let g:fzf_layout = { 'down': '~40%' }
+"
+" Bind "//" to a fzf-powered buffer search
+nmap // :BLines!<CR>
+" Bind "??" to a fzf-powered project search
+nmap ?? :Rg!<CR>
+" Bind "<leader>p" to a fzf-powered filename search
+nmap <leader>p :Files!<CR>
+" Bind "cc" to a fzf-powered command search
+nmap cc :Commands!<CR>
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
