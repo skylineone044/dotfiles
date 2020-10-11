@@ -19,6 +19,9 @@ TerminalRows=32
 [Interaction Options]
 CopyTextAsHTML=false
 
+[Keyboard]
+KeyBindings=linux
+
 [Scrolling]
 HistoryMode=2
 ScrollBarPosition=2
