@@ -414,6 +414,7 @@ set background=dark
 hi Normal ctermbg=none
 
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
+highlight Visual term=reverse cterm=reverse guibg=Grey
 let g:PaperColor_Theme = 'stardust'
 colorscheme PaperColor
 
@@ -447,5 +448,6 @@ hi HighlightedyankRegion ctermbg=236
 highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
 highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
 highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+" highlight Visual term=reverse cterm=reverse guibg=Grey
 
 " END
