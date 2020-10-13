@@ -10,6 +10,15 @@
 
 
 " vim-plug ------------------------------------------------
+
+" autoinstall vim plug if the plugin dir is empty
+let need_to_install_plugins = 0
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent  !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let need_to_install_plugins = 1
+endif
+
 call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
