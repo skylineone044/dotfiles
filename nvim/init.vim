@@ -29,6 +29,7 @@ Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
 Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
+Plug 'mhinz/vim-startify'                       " start screen
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
@@ -170,6 +171,9 @@ augroup END
 let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
             \"coc-vimlsp", "coc-yank", "coc-clangd", "coc-lua", "coc-markdownlint",
             \"coc-python"]
+
+" let g:vimspector_enable_mappings = 'HUMAN'
+" packadd! vimspector
 
 " Vim theme & bottom infobar
 let g:airline_theme='cool'

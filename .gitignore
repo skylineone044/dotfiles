@@ -11,4 +11,5 @@ vim/.vim/bundle/*`
 .*bundle*
 tmux/.tmux/plugins/*
 *plugins*
+*pack*
 
