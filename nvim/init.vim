@@ -268,12 +268,18 @@ let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 " FZF key bindings ----------------------------------------
 nnoremap <C-f> :FZF<CR>
 let g:fzf_layout = { 'down': '~40%' }
-"
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+
 " Bind "//" to a fzf-powered buffer search
 nmap // :BLines!<CR>
 " Bind "??" to a fzf-powered project search
 nmap ?? :Rg!<CR>
-" Bind "<leader>p" to a fzf-powered filename search
+" Bind "<leader>p " to a fzf-powered filename search
 nmap <leader>p :Files!<CR>
 " Bind "cc" to a fzf-powered command search
 nmap cc :Commands!<CR>
@@ -299,7 +305,8 @@ let g:signify_sign_show_count = 0
 let g:numbers_exclude = ['fzf', 'coc-explorer', 'minibufexpl',
             \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
             \'w3m']
-"
+let g:numbers_enable = 1
+
 " base vim settings ----------------------------------------
 set encoding=utf-8
 set ttyfast
@@ -338,6 +345,7 @@ set colorcolumn=80
 set timeoutlen=450
 set nowrap
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
+set relativenumber
 
 " set foldmethod=syntax
 " set nofoldenable
@@ -364,7 +372,6 @@ augroup configgroup
   " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
-  autocmd VimEnter * map <leader>n :vsplit<CR><C-W>r:Np<CR>
 augroup END
 
 map <space> <Leader>
