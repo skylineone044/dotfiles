@@ -93,6 +93,7 @@ Color=252,252,252
 
 [General]
 Blur=true
+ColorRandomization=false
 Description=skykonsole
-Opacity=0.45
+Opacity=0.55
 Wallpaper=
