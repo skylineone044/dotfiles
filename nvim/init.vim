@@ -384,10 +384,10 @@ map <Leader>F :Format<CR>
 nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
 
 "navigations
-nnoremap <leader>J <C-W><C-J>
-nnoremap <leader>K <C-W><C-K>
-nnoremap <leader>L <C-W><C-L>
-nnoremap <leader>H <C-W><C-H>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>. :split<CR>
 nnoremap <leader>, :vsplit<CR>
 "
@@ -405,9 +405,9 @@ vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
 
 " buffer navigation
-nnoremap <leader>b :buffers<CR>:buffer<space>
-nnoremap <Leader>l :bnext<CR>
-nnoremap <Leader>h :bprevious<CR>
+nnoremap <C-b> :buffers<CR>:buffer<space>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
 
 " better find and replace
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
