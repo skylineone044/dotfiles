@@ -346,6 +346,7 @@ set timeoutlen=450
 set nowrap
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 set relativenumber
+set clipboard+=unnamedplus
 
 " set foldmethod=syntax
 " set nofoldenable
@@ -412,11 +413,6 @@ nnoremap <C-h> :bprevious<CR>
 " better find and replace
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
 nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
-
-" use sytem clipborad
-" noremap <Leader>Y "+y
-" noremap <Leader>P "+p
-set clipboard+=unnamedplus
 
 augroup autocd
     autocmd!
