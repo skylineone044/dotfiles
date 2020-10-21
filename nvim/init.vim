@@ -342,7 +342,7 @@ set smartcase
 set mouse=a
 
 set colorcolumn=80
-set timeoutlen=450
+set timeoutlen=400
 set nowrap
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 set relativenumber
@@ -419,7 +419,7 @@ nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
 tnoremap <esc> <C-\><C-n>
 
 " git fugitive
-nnoremap <Leader>g :G<CR>
+nnoremap <Leader>G :G<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gp :Gpush<CR>
 
