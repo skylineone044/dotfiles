@@ -38,7 +38,7 @@ Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
 Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
-Plug 'mhinz/vim-startify'                       " start screen
+ Plug 'mhinz/vim-startify'                       " start screen
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
@@ -249,7 +249,7 @@ augroup vimux1
   autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
   autocmd BufEnter * call VimuxFollowPWD()
 augroup END
-map <Leader>T :VimuxCloseRunner<CR>
+" map <Leader>T :VimuxCloseRunner<CR>
 
 " map <Leader>f :call VimuxFollowPWD()<CR>
 nnoremap <Leader>t :call VimuxRunCommand('cd ' . expand('%:p:h') . ' && clear')<CR>
@@ -414,6 +414,15 @@ nnoremap <C-h> :bprevious<CR>
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
 nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
+" terminal
+nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
+tnoremap <esc> <C-\><C-n>
+
+" git fugitive
+nnoremap <Leader>g :G<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gp :Gpush<CR>
+
 augroup autocd
     autocmd!
     autocmd BufEnter * silent! lcd %:p:h
@@ -449,9 +458,13 @@ function ForceFuncCallColor()
   hi def link pythonFunction Function
   hi link pythonBuiltin Function
 endfunction
-autocmd BufEnter * call ForceFuncCallColor()
-autocmd BufWritePost * call ForceFuncCallColor()
-autocmd InsertLeave * call ForceFuncCallColor()
+
+augroup blue_function_calls
+    autocmd!
+    autocmd BufEnter * call ForceFuncCallColor()
+    autocmd BufWritePost * call ForceFuncCallColor()
+    autocmd InsertLeave * call ForceFuncCallColor()
+augroup END
 
 highlight ALEErrorSign ctermfg=196 ctermbg=NONE
 highlight ALEWarningSign ctermfg=214 ctermbg=NONE
