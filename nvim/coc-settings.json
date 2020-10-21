@@ -22,7 +22,8 @@
     "yank.highlight.duration": 1000,
     "snippets.ultisnips.directories": [
         "UltiSnips", 
-        "~/.config/nvim/plugins/vim-snippets/UltiSnips"
+        "~/.config/nvim/plugins/vim-snippets/UltiSnips",
+        "~/.config/nvim/plugins/vim-unicode-snippets/UltiSnips"
     ],
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
