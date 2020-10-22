@@ -194,7 +194,12 @@ let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
 " packadd! vimspector
 
 " Vim theme & bottom infobar
-let g:airline_theme='cool'
+if $USER == 'root'
+    let g:airline_theme='simple'
+else
+    let g:airline_theme='cool' 
+endif
+
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
