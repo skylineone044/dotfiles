@@ -423,7 +423,7 @@ nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 " terminal
 nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
-tnoremap <esc> <C-\><C-n>
+tnoremap <C-\> <C-\><C-n>
 
 " git fugitive
 nnoremap <Leader>G :G<CR>
