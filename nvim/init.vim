@@ -40,7 +40,7 @@ Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
 Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
- Plug 'mhinz/vim-startify'                       " start screen
+Plug 'mhinz/vim-startify'                       " start screen
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
