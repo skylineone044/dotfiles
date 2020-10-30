@@ -209,6 +209,7 @@ eval $(thefuck --alias)
 export PATH=$PATH:~/ShellScripts
 export PATH=$PATH:/usr/sbin
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
+set -o HIST_FIND_NO_DUPS
 
 # Basic auto/tab complete:
 autoload -U compinit
