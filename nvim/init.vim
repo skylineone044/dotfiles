@@ -47,7 +47,6 @@ Plug 'tpope/vim-surround'                       " surround text with quotes, {},
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
-" Plug 'jiangmiao/auto-pairs'                     " parenthesys and quote sighn auto pairing
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 " ---------------------------------------
