@@ -109,7 +109,7 @@
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-      family: Hack Nerd Font
+      family: JetBrainsMonoSlashed Nerd Font
     # The `style` can be specified to pick a specific face.
       style: Regular
 
@@ -119,10 +119,10 @@
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-      family: Hack Nerd Font
+      family: JetBrainsMonoSlashed Nerd Font
 
     # The `style` can be specified to pick a specific face.
-      style: Bold
+      style: Extra Bold
   
   # Italic font face
     italic:
@@ -130,10 +130,10 @@
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-      family: Hack Nerd Font
+      family: JetBrainsMonoSlashed Nerd Font
 
     # The `style` can be specified to pick a specific face.
-      style: Italic
+      style: Light Italic
 
   # Bold italic font face
   bold_italic:
@@ -141,26 +141,26 @@
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font
+    family: JetBrainsMonoSlashed Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    style: Extra Bold Italic
 
   # Point size
-    size: 12.0
+    size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-    offset:
-      x: 0
-      y: 0
+  offset:
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
-  #glyph_offset:
-  #  x: 0
-  #  y: 0
+  glyph_offset:
+    x: -1
+    y: 0
 
   # Thin stroke font rendering (macOS only)
   #
