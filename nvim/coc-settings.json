@@ -14,7 +14,7 @@
     "python.formatting.provider": "black",
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
-    "python.formatting.blackArgs": ["--line-length", "80"],
+    "python.formatting.blackArgs": ["--line-length", "79"],
     "suggest.autoTrigger": "always",
     "python.autoComplete.addBrackets": true,
     "suggest.noselect": false,
