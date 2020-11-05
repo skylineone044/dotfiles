@@ -196,7 +196,7 @@ let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
 if $USER == 'root'
     let g:airline_theme='simple'
 else
-    let g:airline_theme='cool' 
+    let g:airline_theme='cool'
 endif
 
 let g:airline_powerline_fonts=1
@@ -308,7 +308,7 @@ let g:signify_sign_change            = '~'
 let g:signify_sign_show_count = 0
 
 " find out more modes to be excuded, by entering them and running :echo &ft
-let g:numbers_exclude = ['fzf', 'coc-explorer', 'minibufexpl',
+let g:numbers_exclude = ['coc-pyright', 'fzf', 'coc-explorer', 'minibufexpl',
             \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
             \'w3m']
 let g:numbers_enable = 1
@@ -403,7 +403,7 @@ nnoremap j gj
 nnoremap k gk
 nmap <Leader>c gcc
 vmap <Leader>c gc
-  
+
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
 inoremap <c-j> <Esc>:m .+1<CR>==gi
