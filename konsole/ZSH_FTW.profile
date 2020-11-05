@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=skykonsole
-Font=JetBrainsMonoSlashed Nerd Font,11,-1,5,50,0,0,0,0,0
+Font=Hack,11,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [Cursor Options]
