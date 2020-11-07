@@ -228,7 +228,8 @@ bindkey -M vicmd '^R' history-incremental-search-backward
 export FZF_DEFAULT_COMMAND='fd . ~ --type f --hidden --follow --color=always'
 export FZF_DEFAULT_OPTS="--ansi"
 
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+alias "c"='cd $(fd . ~ --type directory --hidden --follow --no-ignore-vcs | fzf)'
+
 #this must be last
 source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
