@@ -190,7 +190,12 @@ let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
             \"coc-python", "coc-pairs"]
 
 " let g:vimspector_enable_mappings = 'HUMAN'
-" packadd! vimspector
+packadd! vimspector
+nmap <leader>dd <Plug>VimspectorContinue
+nmap <leader>ds <Plug>VimspectorStop
+nmap <leader>b <Plug>VimspectorToggleBreakpoint
+nmap <F8> <Plug>VimspectorStepInto
+nmap <F9> <Plug>VimspectorStepOver
 
 " Vim theme & bottom infobar
 if $USER == 'root'
