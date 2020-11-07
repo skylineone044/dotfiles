@@ -192,7 +192,7 @@ let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
 " let g:vimspector_enable_mappings = 'HUMAN'
 packadd! vimspector
 nmap <leader>dd <Plug>VimspectorContinue
-nmap <leader>ds <Plug>VimspectorStop
+nmap <leader>ds :VimspectorReset<CR>
 nmap <leader>b <Plug>VimspectorToggleBreakpoint
 nmap <F8> <Plug>VimspectorStepInto
 nmap <F9> <Plug>VimspectorStepOver
@@ -234,8 +234,8 @@ let airline#extensions#ale#close_lnum_symbol = ''
 
 " ALE settings --------------------------------------------
 "let g:ale_sign_error = '▶'
-let g:ale_sign_error = '▶'
-let g:ale_sign_warning = '▶'
+let g:ale_sign_error = '🢂'
+let g:ale_sign_warning = '🢂'
 "dot symbol: \u25CF
 let g:ale_completion_enabled = 0
 
