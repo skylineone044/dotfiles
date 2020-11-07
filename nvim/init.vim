@@ -27,7 +27,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 Plug 'honza/vim-snippets'                       " snippet collection
-Plug 'danielwe/vim-unicode-snippets'            " unicode symbols in snippets
+" Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
 
 Plug 'vim-airline/vim-airline'                  " bottom statusline
 Plug 'vim-airline/vim-airline-themes'           " bottom statusline theme
