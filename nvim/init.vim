@@ -196,6 +196,7 @@ nmap <leader>ds :VimspectorReset<CR>
 nmap <leader>b <Plug>VimspectorToggleBreakpoint
 nmap <F8> <Plug>VimspectorStepInto
 nmap <F9> <Plug>VimspectorStepOver
+nmap <F10> <Plug>VimspectorRunToCursor
 
 " Vim theme & bottom infobar
 if $USER == 'root'
@@ -302,7 +303,8 @@ let python_highlight_all = 1
 let g:coloresque_whitelist = [
     \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
     \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
-    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml']
+    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml'
+    \'colors']
 "let g:coloresque_blacklist = []
 
 let g:signify_sign_show_text = 1  " main on/off swtich for signify
