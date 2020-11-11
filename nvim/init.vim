@@ -187,7 +187,7 @@ augroup END
 
 let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
             \"coc-vimlsp", "coc-yank", "coc-clangd", "coc-lua", "coc-markdownlint",
-            \"coc-python", "coc-pairs"]
+            \"coc-pairs"]
 
 " let g:vimspector_enable_mappings = 'HUMAN'
 packadd! vimspector
