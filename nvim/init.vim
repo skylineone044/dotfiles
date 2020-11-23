@@ -47,6 +47,7 @@ Plug 'tpope/vim-surround'                       " surround text with quotes, {},
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
+Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 " ---------------------------------------
@@ -319,6 +320,21 @@ let g:numbers_exclude = ['coc-pyright', 'fzf', 'coc-explorer', 'minibufexpl',
             \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
             \'w3m']
 let g:numbers_enable = 1
+
+" sidewas.vim
+" useing alt key
+nnoremap <A-h> :SidewaysLeft<cr>
+nnoremap <A-l> :SidewaysRight<cr>
+
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
+nmap <leader>si <Plug>SidewaysArgumentInsertBefore
+nmap <leader>sa <Plug>SidewaysArgumentAppendAfter
+nmap <leader>sI <Plug>SidewaysArgumentInsertFirst
+nmap <leader>sA <Plug>SidewaysArgumentAppendLast
 
 " base vim settings ----------------------------------------
 set encoding=utf-8
