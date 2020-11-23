@@ -259,7 +259,7 @@ let g:VimuxUseNearest = 1    " default is 1 (0/1)
 augroup vimux1
   autocmd!
   autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
-  autocmd BufEnter * call VimuxFollowPWD()
+  " autocmd BufEnter * call VimuxFollowPWD()
 augroup END
 " map <Leader>T :VimuxCloseRunner<CR>
 
