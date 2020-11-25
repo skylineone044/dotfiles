@@ -46,6 +46,7 @@ Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects 
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
+Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 
@@ -314,6 +315,9 @@ let g:signify_sign_delete            = '-'
 let g:signify_sign_delete_first_line = '-'
 let g:signify_sign_change            = '~'
 let g:signify_sign_show_count = 0
+
+" indentLine
+let g:indentLine_char = '⎟'
 
 " find out more modes to be excuded, by entering them and running :echo &ft
 let g:numbers_exclude = ['coc-pyright', 'fzf', 'coc-explorer', 'minibufexpl',
