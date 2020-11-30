@@ -8,15 +8,12 @@ git config --global user.email "skylineone044@gmail.com"
 git config --global user.name "skylineone044"
 
 printf "\n\n-- getting essentials: tmux, zsh, neovim..." 
-#sudo apt install -y tmux zsh vim || sudo pacman -S --noconfirm tmux zsh vim
 sudo apt install -y tmux zsh neovim fd || sudo pacman -S --noconfirm tmux zsh neovim fd
 printf "\n- getting alacritty..."
 sudo apt install -y alacritty || spdo pacman -S --noconfirm alacritty
 sudo apt install -y ripgrep || spdo pacman -S --noconfirm ripgrep 
 
 printf "\n\n-- Starting..." 
-#printf "\n-- Cloning repos..." 
-#git clone --recurse-submodules https://gitlab.com/skylineone044/dotfiles.git
 printf "\n- getting Dotfiles" 
 git clone https://gitlab.com/skylineone044/dotfiles.git ~/git/dotfiles
 printf "\n- getting oh-my-zsh" 
@@ -28,10 +25,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 printf "\n\nUSE TPM AND VIM-PLUG COMMANDS TO GET PLUGINS\n\n" 
 
-#printf "- linking vim..." 
-#ln -s ~/git/dotfiles/vim/.vim ~/.vim
-#ln -s ~/git/dotfiles/vim/.vimrc ~/.vimrc
-
 printf "- linking neovim..." 
 ln -s ~/git/dotfiles/nvim/ ~/.config/nvim
 
@@ -41,11 +34,6 @@ ln -s ~/git/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 printf "\n- getting TPM" 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# VUNDLE DEPRECATED
-#printf "\n- getting Vundle" 
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 
 printf "\n- getting vim-plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -86,12 +74,6 @@ printf "\n-- getting vim python helpers..."
 printf "\n- getting pylint..." 
 sudo apt install -y pylint pylint3 || sudo apt install -y python-pylint python3-pylint || sudo apt install -y python2-pylint python-pylint || sudo pacman -S --noconfirm pylint pylint3  || sudo pacman -S --noconfirm python-pylint python3-pylint || sudo pacman -S --noconfirm python2-pylint python-pylint
 
-# Using CoC isntead now
-# printf "\n- getting python-jedi" 
-# sudo apt install -y python-jedi python3-jedi || sudo apt install -y python2-jedi python-jedi || sudo pacman -S  --noconfirm python-jedi python3-jedi || sudo pacman -S  --noconfirm python2-jedi python-jedi
-
-#printf "\n\n-- getting chromium" 
-#sudo apt install -y chromium-browser || sudo pacman -S --noconfirm chromium-browser
 printf "\n\n-- getting lsd" 
 sudo pacman -S --noconfirm lsd || sudo snap install lsd
 
