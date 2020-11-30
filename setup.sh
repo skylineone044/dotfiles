@@ -54,6 +54,8 @@ ln -s ~/git/dotfiles/fd ~/.config/fd
 printf "\n- linking latte layout..." 
 ln -s ~/git/dotfiles/latte ~/.config/latte
 
+printf "\n- linking KDE colorschemes..." 
+ln -s ~/git/stardust/color-schemes/ ~/.local/share/ || rmdir ~/.local/share/color-schemes && ln -s ~/git/stardust/color-schemes/ ~/.local/share/
 printf "\n- installing fonts..." 
 mkdir ~/.local/share/fonts
 printf "copying..." 
