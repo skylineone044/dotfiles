@@ -193,7 +193,7 @@
     # The dimmed foreground color is calculated automatically if it is not present.
     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
     # is `false`, the normal foreground color will be used.
-      dim_foreground: '0x9a9a9a'
+      # dim_foreground: '0x9a9a9a'
       bright_foreground: '0xffffff'
 
   # Cursor colors
@@ -221,8 +221,8 @@
       yellow:  '0xf6c100'
       blue:    '0x10a4ff'
       magenta: '0xff4faa'
-      cyan:    '0x17a083'
-      white:   '0xeff0f1'
+      cyan:    '0x22bcb7'
+      white:   '0xd2d2d2'
 
   # Bright colors
     bright:
@@ -232,7 +232,7 @@
       yellow:  '0xffdf25'
       blue:    '0x58caff'
       magenta: '0xff8ffa'
-      cyan:    '0x22bcb7'
+      cyan:    '0x49e0db'
       white:   '0xffffff'
 
   # Dim colors
