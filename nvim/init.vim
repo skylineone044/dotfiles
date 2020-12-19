@@ -51,6 +51,9 @@ Plug 'b3niup/numbers.vim'                       " changing relative and absolute
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
+
+" ------ Nvim 0.5 nightly required
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
 " ---------------------------------------
 call plug#end()
 
