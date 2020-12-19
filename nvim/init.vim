@@ -482,28 +482,15 @@ highlight Visual term=reverse cterm=reverse guibg=Grey
 " colorscheme PaperColor
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
-hi Normal ctermbg=none  " overwrite highlite settings, because it seems it cant do NONE as background
+hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
 
-hi CursorLine ctermbg=234
-hi CursorColumn ctermbg=none
-hi NonText ctermfg=238
-hi statusline ctermbg=250 ctermfg=235
-
-highlight ALEErrorSign ctermfg=196 ctermbg=NONE
-highlight ALEWarningSign ctermfg=214 ctermbg=NONE
-highlight SignColumn ctermbg=NONE
 highlight clear SignColumn
 hi ColorColumn ctermbg=236 guibg=236
 
 set t_ZH=^[[3m
 set t_ZR=^[[23m
-highlight Comment cterm=italic
 hi HighlightedyankRegion ctermbg=236
 
-highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
-highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
-highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
-" highlight Visual term=reverse cterm=reverse guibg=Grey
 " ---------------------- TRESITTER
 
 lua <<EOF
