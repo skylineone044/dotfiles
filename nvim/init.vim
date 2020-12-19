@@ -475,7 +475,6 @@ augroup END
 " PaperColor settings -------------------------------------
 set t_Co=256
 set background=dark
-hi Normal ctermbg=none
 
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 highlight Visual term=reverse cterm=reverse guibg=Grey
@@ -483,6 +482,7 @@ highlight Visual term=reverse cterm=reverse guibg=Grey
 " colorscheme PaperColor
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
+hi Normal ctermbg=none  " overwrite highlite settings, because it seems it cant do NONE as background
 
 hi CursorLine ctermbg=234
 hi CursorColumn ctermbg=none
