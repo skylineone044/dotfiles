@@ -16,6 +16,7 @@ sudo apt install -y ripgrep || spdo pacman -S --noconfirm ripgrep
 printf "\n\n-- Starting..." 
 printf "\n- getting Dotfiles" 
 git clone https://gitlab.com/skylineone044/dotfiles.git ~/git/dotfiles
+git clone https://github.com/skylineone044/nvim-highlite.git ~/git/nvim-highlite
 printf "\n- getting oh-my-zsh" 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 printf "\n- getting POWERLEVEL10K..." 
