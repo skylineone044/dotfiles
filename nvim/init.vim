@@ -53,7 +53,9 @@ Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
 " ------ Nvim 0.5 nightly required
+if haas('nvim-0.5')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
+endif
 " ---------------------------------------
 call plug#end()
 
@@ -472,11 +474,11 @@ augroup continueWhereYouLeftOff
          \ endif
 augroup END
 
-" PaperColor settings -------------------------------------
+" Colorscheme settings -------------------------------------
 set t_Co=256
 set background=dark
 
-" SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
+if haas('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
 highlight Visual term=reverse cterm=reverse guibg=Grey
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
@@ -503,5 +505,48 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+else " old setup, for fallback
+" SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
+hi Normal ctermbg=none
+highlight Visual term=reverse cterm=reverse guibg=Grey
+let g:PaperColor_Theme = 'stardust'
+colorscheme PaperColor
+
+hi CursorLine ctermbg=234
+hi CursorColumn ctermbg=none
+hi NonText ctermfg=238
+hi statusline ctermbg=250 ctermfg=235
+
+" make function calls blue and bold
+function ForceFuncCallColor()
+  hi Function ctermfg=39 ctermbg=none cterm=none
+  syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
+  hi def link pythonFunction Function
+  hi link pythonBuiltin Function
+endfunction
+
+augroup blue_function_calls
+    autocmd!
+    autocmd BufEnter * call ForceFuncCallColor()
+    autocmd BufWritePost * call ForceFuncCallColor()
+    autocmd InsertLeave * call ForceFuncCallColor()
+augroup END
+
+highlight ALEErrorSign ctermfg=196 ctermbg=NONE
+highlight ALEWarningSign ctermfg=214 ctermbg=NONE
+highlight SignColumn ctermbg=NONE
+highlight clear SignColumn
+hi ColorColumn ctermbg=236 guibg=236
+
+set t_ZH=^[[3m
+set t_ZR=^[[23m
+highlight Comment cterm=italic
+hi HighlightedyankRegion ctermbg=236
+
+highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
+highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+
+endif
 
 " END
