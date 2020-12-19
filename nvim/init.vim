@@ -479,28 +479,15 @@ hi Normal ctermbg=none
 
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 highlight Visual term=reverse cterm=reverse guibg=Grey
-let g:PaperColor_Theme = 'stardust'
-colorscheme PaperColor
+" let g:PaperColor_Theme = 'stardust'
+" colorscheme PaperColor
+set rtp+=/home/skyline/git/nvim-highlite
+colorscheme stardust_TS
 
 hi CursorLine ctermbg=234
 hi CursorColumn ctermbg=none
 hi NonText ctermfg=238
 hi statusline ctermbg=250 ctermfg=235
-
-" make function calls blue and bold
-function ForceFuncCallColor()
-  hi Function ctermfg=39 ctermbg=none cterm=none
-  syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
-  hi def link pythonFunction Function
-  hi link pythonBuiltin Function
-endfunction
-
-augroup blue_function_calls
-    autocmd!
-    autocmd BufEnter * call ForceFuncCallColor()
-    autocmd BufWritePost * call ForceFuncCallColor()
-    autocmd InsertLeave * call ForceFuncCallColor()
-augroup END
 
 highlight ALEErrorSign ctermfg=196 ctermbg=NONE
 highlight ALEWarningSign ctermfg=214 ctermbg=NONE
@@ -517,5 +504,20 @@ highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
 highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
 highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 " highlight Visual term=reverse cterm=reverse guibg=Grey
+" ---------------------- TRESITTER
+
+lua <<EOF
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = {},  -- list of language that will be disabled
+  },
+  indent = {
+    enable = true
+  },
+}
+EOF
 
 " END
