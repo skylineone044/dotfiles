@@ -478,8 +478,6 @@ set background=dark
 
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 highlight Visual term=reverse cterm=reverse guibg=Grey
-" let g:PaperColor_Theme = 'stardust'
-" colorscheme PaperColor
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
 hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
@@ -492,7 +490,6 @@ set t_ZR=^[[23m
 hi HighlightedyankRegion ctermbg=236
 
 " ---------------------- TRESITTER
-
 lua <<EOF
 
 require'nvim-treesitter.configs'.setup {
