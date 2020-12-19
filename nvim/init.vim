@@ -53,7 +53,7 @@ Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
 " ------ Nvim 0.5 nightly required
-if haas('nvim-0.5')
+if has('nvim-0.5')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
 endif
 " ---------------------------------------
@@ -478,7 +478,7 @@ augroup END
 set t_Co=256
 set background=dark
 
-if haas('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
+if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
 highlight Visual term=reverse cterm=reverse guibg=Grey
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
@@ -505,6 +505,7 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
 else " old setup, for fallback
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
 hi Normal ctermbg=none
