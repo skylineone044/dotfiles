@@ -52,6 +52,10 @@ ln -s ~/git/dotfiles/zsh/.zshrc ~/.zshrc
 printf "\n- linking fd..."
 ln -s ~/git/dotfiles/fd ~/.config/fd
 
+printf "\n- linking touchedd config..."
+mkdir ~/.config/touchegg
+ln -s ~/git/dotfiles/touchegg/touchegg.conf ~/.config/touchegg/touchegg.conf
+
 printf "\n- linking latte layout..." 
 ln -s ~/git/dotfiles/latte ~/.config/latte
 
