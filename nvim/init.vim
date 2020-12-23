@@ -26,6 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork suppor
 Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
+Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
 " Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
 
