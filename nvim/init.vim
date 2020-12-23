@@ -411,7 +411,7 @@ augroup configgroup
   autocmd!
   " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
   autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
-  autocmd FileType shell map <leader># ggi#!/usr/bin/sh<CR><esc>
+  autocmd FileType sh map <leader># ggi#!/usr/bin/sh<CR><esc>
   autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
 augroup END
 
