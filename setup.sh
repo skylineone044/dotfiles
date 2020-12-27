@@ -59,6 +59,9 @@ ln -s ~/git/dotfiles/touchegg/touchegg.conf ~/.config/touchegg/touchegg.conf
 printf "\n- linking latte layout..." 
 ln -s ~/git/dotfiles/latte ~/.config/latte
 
+printf "\n- linking PulseEffects presets..." 
+ln -s ~/git/dotfiles/EQ/PulseEffects/output ~/.config/PulseEffects/
+
 printf "\n- linking KDE colorschemes..." 
 ln -s ~/git/stardust/color-schemes/ ~/.local/share/ || rmdir ~/.local/share/color-schemes && ln -s ~/git/stardust/color-schemes/ ~/.local/share/
 printf "\n- installing fonts..." 
