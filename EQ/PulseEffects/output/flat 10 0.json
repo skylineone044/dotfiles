@@ -114,9 +114,9 @@
         "equalizer": {
             "state": "true",
             "mode": "IIR",
-            "num-bands": "21",
+            "num-bands": "10",
             "input-gain": "0",
-            "output-gain": "-6.5",
+            "output-gain": "0",
             "split-channels": "false",
             "left": {
                 "band0": {
@@ -125,9 +125,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "20",
-                    "q": "1.28"
+                    "gain": "0",
+                    "frequency": "29.952623149688797",
+                    "q": "1.5047602375372451"
                 },
                 "band1": {
                     "type": "Bell",
@@ -135,9 +135,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "51",
-                    "q": "1.0900000000000001"
+                    "gain": "0",
+                    "frequency": "59.763340205038524",
+                    "q": "1.5047602375372453"
                 },
                 "band2": {
                     "type": "Bell",
@@ -145,9 +145,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
-                    "frequency": "137",
-                    "q": "1.29"
+                    "gain": "0",
+                    "frequency": "119.24354052777788",
+                    "q": "1.5047602375372451"
                 },
                 "band3": {
                     "type": "Bell",
@@ -155,9 +155,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
-                    "frequency": "260",
-                    "q": "2.2799999999999998"
+                    "gain": "0",
+                    "frequency": "237.92214271853953",
+                    "q": "1.5047602375372451"
                 },
                 "band4": {
                     "type": "Bell",
@@ -165,9 +165,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-1",
-                    "frequency": "443",
-                    "q": "1.1899999999999999"
+                    "gain": "0",
+                    "frequency": "474.71708526294935",
+                    "q": "1.5047602375372453"
                 },
                 "band5": {
                     "type": "Bell",
@@ -175,9 +175,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-4",
-                    "frequency": "2218",
-                    "q": "0.90000000000000002"
+                    "gain": "0",
+                    "frequency": "947.18511049703125",
+                    "q": "1.5047602375372451"
                 },
                 "band6": {
                     "type": "Bell",
@@ -185,9 +185,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "3690",
-                    "q": "1.1399999999999999"
+                    "gain": "0",
+                    "frequency": "1889.8827562743609",
+                    "q": "1.5047602375372449"
                 },
                 "band7": {
                     "type": "Bell",
@@ -195,9 +195,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "6",
-                    "frequency": "5188",
-                    "q": "2"
+                    "gain": "0",
+                    "frequency": "3770.8118433037489",
+                    "q": "1.5047602375372449"
                 },
                 "band8": {
                     "type": "Bell",
@@ -205,9 +205,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-4",
-                    "frequency": "12934",
-                    "q": "1.03"
+                    "gain": "0",
+                    "frequency": "7523.7587677823067",
+                    "q": "1.5047602375372453"
                 },
                 "band9": {
                     "type": "Bell",
@@ -215,119 +215,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "1",
-                    "frequency": "17107",
-                    "q": "0.90000000000000002"
-                },
-                "band10": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "2",
-                    "frequency": "25",
-                    "q": "1.0900000000000001"
-                },
-                "band11": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "3043",
-                    "q": "4.9299999999999997"
-                },
-                "band12": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "2",
-                    "frequency": "3443",
-                    "q": "2.8799999999999999"
-                },
-                "band13": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-2",
-                    "frequency": "3900",
-                    "q": "7.9800000000000004"
-                },
-                "band14": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "1",
-                    "frequency": "6536",
-                    "q": "5.7199999999999998"
-                },
-                "band15": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-2",
-                    "frequency": "7685",
-                    "q": "2.5800000000000001"
-                },
-                "band16": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "8114",
-                    "q": "1.48"
-                },
-                "band17": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
                     "gain": "0",
-                    "frequency": "9035",
-                    "q": "5.0800000000000001"
-                },
-                "band18": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "10729",
-                    "q": "0.97999999999999998"
-                },
-                "band19": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "0",
-                    "frequency": "13041",
-                    "q": "2.4300000000000002"
-                },
-                "band20": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "22050",
-                    "q": "1.45"
+                    "frequency": "15011.872336272731",
+                    "q": "1.5047602375372451"
                 }
             },
             "right": {
@@ -337,9 +227,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "20",
-                    "q": "1.28"
+                    "gain": "0",
+                    "frequency": "29.952623149688797",
+                    "q": "1.5047602375372451"
                 },
                 "band1": {
                     "type": "Bell",
@@ -347,9 +237,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "51",
-                    "q": "1.0900000000000001"
+                    "gain": "0",
+                    "frequency": "59.763340205038524",
+                    "q": "1.5047602375372453"
                 },
                 "band2": {
                     "type": "Bell",
@@ -357,9 +247,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
-                    "frequency": "137",
-                    "q": "1.29"
+                    "gain": "0",
+                    "frequency": "119.24354052777788",
+                    "q": "1.5047602375372451"
                 },
                 "band3": {
                     "type": "Bell",
@@ -367,9 +257,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
-                    "frequency": "260",
-                    "q": "2.2799999999999998"
+                    "gain": "0",
+                    "frequency": "237.92214271853953",
+                    "q": "1.5047602375372451"
                 },
                 "band4": {
                     "type": "Bell",
@@ -377,9 +267,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-1",
-                    "frequency": "443",
-                    "q": "1.1899999999999999"
+                    "gain": "0",
+                    "frequency": "474.71708526294935",
+                    "q": "1.5047602375372453"
                 },
                 "band5": {
                     "type": "Bell",
@@ -387,9 +277,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-4",
-                    "frequency": "2218",
-                    "q": "0.90000000000000002"
+                    "gain": "0",
+                    "frequency": "947.18511049703125",
+                    "q": "1.5047602375372451"
                 },
                 "band6": {
                     "type": "Bell",
@@ -397,9 +287,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
-                    "frequency": "3690",
-                    "q": "1.1399999999999999"
+                    "gain": "0",
+                    "frequency": "1889.8827562743609",
+                    "q": "1.5047602375372449"
                 },
                 "band7": {
                     "type": "Bell",
@@ -407,9 +297,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "6",
-                    "frequency": "5188",
-                    "q": "2"
+                    "gain": "0",
+                    "frequency": "3770.8118433037489",
+                    "q": "1.5047602375372449"
                 },
                 "band8": {
                     "type": "Bell",
@@ -417,9 +307,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "-4",
-                    "frequency": "12934",
-                    "q": "1.03"
+                    "gain": "0",
+                    "frequency": "7523.7587677823067",
+                    "q": "1.5047602375372453"
                 },
                 "band9": {
                     "type": "Bell",
@@ -427,119 +317,9 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "1",
-                    "frequency": "17107",
-                    "q": "0.90000000000000002"
-                },
-                "band10": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "2",
-                    "frequency": "25",
-                    "q": "1.0900000000000001"
-                },
-                "band11": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "3043",
-                    "q": "4.9299999999999997"
-                },
-                "band12": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "2",
-                    "frequency": "3443",
-                    "q": "2.8799999999999999"
-                },
-                "band13": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-2",
-                    "frequency": "3900",
-                    "q": "7.9800000000000004"
-                },
-                "band14": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "1",
-                    "frequency": "6536",
-                    "q": "5.7199999999999998"
-                },
-                "band15": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-2",
-                    "frequency": "7685",
-                    "q": "2.5800000000000001"
-                },
-                "band16": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "8114",
-                    "q": "1.48"
-                },
-                "band17": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
                     "gain": "0",
-                    "frequency": "9035",
-                    "q": "5.0800000000000001"
-                },
-                "band18": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "10729",
-                    "q": "0.97999999999999998"
-                },
-                "band19": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "0",
-                    "frequency": "13041",
-                    "q": "2.4300000000000002"
-                },
-                "band20": {
-                    "type": "Bell",
-                    "mode": "APO (DR)",
-                    "slope": "x1",
-                    "solo": "false",
-                    "mute": "false",
-                    "gain": "-1",
-                    "frequency": "22050",
-                    "q": "1.45"
+                    "frequency": "15011.872336272731",
+                    "q": "1.5047602375372451"
                 }
             }
         },
