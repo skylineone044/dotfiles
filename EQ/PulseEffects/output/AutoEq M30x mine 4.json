@@ -125,7 +125,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "20",
                     "q": "1.28"
                 },
@@ -135,7 +135,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "51",
                     "q": "1.0900000000000001"
                 },
@@ -225,7 +225,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "25",
                     "q": "1.0900000000000001"
                 },
@@ -337,7 +337,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "20",
                     "q": "1.28"
                 },
@@ -347,7 +347,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "51",
                     "q": "1.0900000000000001"
                 },
@@ -437,7 +437,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "2",
+                    "gain": "3",
                     "frequency": "25",
                     "q": "1.0900000000000001"
                 },
