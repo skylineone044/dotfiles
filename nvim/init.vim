@@ -485,7 +485,7 @@ highlight Visual term=reverse cterm=reverse guibg=Grey
 set rtp+=/home/skyline/git/nvim-highlite
 colorscheme stardust_TS
 hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
-hi CocHighlightText term=reverse cterm=reverse
+hi CocHighlightText ctermbg=239
 
 highlight clear SignColumn
 hi ColorColumn ctermbg=236 guibg=236
