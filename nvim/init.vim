@@ -384,6 +384,7 @@ set colorcolumn=80
 set timeoutlen=400
 set nowrap
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
+set completeopt+=noinsert,menuone,preview
 set relativenumber
 set clipboard+=unnamedplus
 
