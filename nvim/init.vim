@@ -190,7 +190,7 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 nmap <leader>e :CocCommand explorer<CR>
 augroup cocexplorer
     autocmd!
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+    autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 augroup END
 
 let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
