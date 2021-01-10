@@ -50,7 +50,8 @@
             "loudness",
             "maximizer",
             "filter",
-            "pitch"
+            "pitch",
+            "rnnoise"
         ],
         "bass_enhancer": {
             "state": "false",
@@ -125,7 +126,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "20",
                     "q": "1.28"
                 },
@@ -135,7 +136,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "51",
                     "q": "1.0900000000000001"
                 },
@@ -145,7 +146,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "137",
                     "q": "1.29"
                 },
@@ -225,7 +226,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "25",
                     "q": "1.0900000000000001"
                 },
@@ -337,7 +338,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "20",
                     "q": "1.28"
                 },
@@ -347,7 +348,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "51",
                     "q": "1.0900000000000001"
                 },
@@ -357,7 +358,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "137",
                     "q": "1.29"
                 },
@@ -437,7 +438,7 @@
                     "slope": "x1",
                     "solo": "false",
                     "mute": "false",
-                    "gain": "3",
+                    "gain": "4",
                     "frequency": "25",
                     "q": "1.0900000000000001"
                 },
@@ -677,6 +678,7 @@
             "state": "false",
             "fft": "4096",
             "std": "ISO226-2003",
+            "input": "0",
             "volume": "0"
         },
         "multiband_gate": {
@@ -852,6 +854,12 @@
             "output-gain": "0",
             "time-l": "0",
             "time-r": "0"
+        },
+        "rnnoise": {
+            "state": "false",
+            "input-gain": "0",
+            "output-gain": "0",
+            "model-path": "Standard RNNoise Model"
         }
     }
 }
