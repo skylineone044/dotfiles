@@ -478,7 +478,8 @@ fun! TrimWhitespace()
 endfun
 
 augroup whitespace
-  autocmd BufWritePre * :call TrimWhitespace()
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
 " Return to last edit position when opening files (You want this!)
