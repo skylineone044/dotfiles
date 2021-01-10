@@ -469,6 +469,18 @@ augroup autocd
     autocmd!
     autocmd BufEnter * silent! lcd %:p:h
 augroup END
+
+" trim whitespace on write
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup whitespace
+  autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
 " Return to last edit position when opening files (You want this!)
 augroup continueWhereYouLeftOff
     autocmd!
