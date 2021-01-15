@@ -23,11 +23,12 @@ call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork support and LSP
-Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
+" Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
+Plug 'sbdchd/neoformat'                         " autoformatting in many filetypes
 " Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
 
 Plug 'vim-airline/vim-airline'                  " bottom statusline
@@ -139,8 +140,8 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-xmap <leader>F  <Plug>(coc-format)
-nmap <leader>F  <Plug>(coc-format)
+xmap <leader>F  :Neoformat<CR>
+nmap <leader>F  :Neoformat<CR>
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -205,6 +206,18 @@ nmap <leader>b <Plug>VimspectorToggleBreakpoint
 nmap <F8> <Plug>VimspectorStepInto
 nmap <F9> <Plug>VimspectorStepOver
 nmap <F10> <Plug>VimspectorRunToCursor
+
+" neoformat
+let g:neoformat_enabled_python = ['black', 'autopep8']
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
 
 " Vim theme & bottom infobar
 if $USER == 'root'
@@ -422,7 +435,7 @@ map <space> <Leader>
 map :W :w<CR>
 map :Q :q<CR>
 map <CapsLock> <Esc>
-map <Leader>F :Format<CR>
+map <Leader>F :Neoformat<CR>
 
 "Reload vimrc
 nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
