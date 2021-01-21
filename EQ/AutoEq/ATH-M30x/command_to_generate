@@ -1,4 +1,4 @@
 #!/bin/sh
 
-python autoeq.py --input_dir="measurements/rtings/data/onear/Audio-Technica ATH-M30x/" --compensation="measurements/rtings/resources/rtings_harman_over-ear_2018.csv" --output_dir="my_results/ATH-M30x/" --equalize --show_plot --parametric_eq --max_filters=15+15
+python3.8 autoeq.py --input_dir="measurements/rtings/data/onear/Audio-Technica ATH-M30x/" --compensation="measurements/rtings/resources/rtings_harman_over-ear_2018.csv" --output_dir="my_results/ATH-M30x/" --sound_signature="my_data/bb.csv"  --equalize --parametric_eq --max_filters=15+15
 # plus some manual tunig, and see the md file as weel for manual Q values and preamp
