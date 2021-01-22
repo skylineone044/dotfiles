@@ -30,13 +30,17 @@
     "java.format.onType.enabled": true,
     "java.configuration.runtimes": [
         {
-            "name": "JavaSE-11",
-            "path": "/etc/java11-openjdk/",
-            "default": true
-        },
-        {
             "name": "JavaSE-8",
             "path": "/etc/java8-openjdk/",
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/etc/java11-openjdk/",
+        },
+        {
+            "name": "JavaSE-15",
+            "path": "/etc/java-openjdk/",
+            "default": true
         },
     ],
     "java.saveActions.organizeImports": false,
