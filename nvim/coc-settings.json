@@ -23,24 +23,24 @@
     "lua.commandPath": "/usr/bin/lua-lsp",
     "lua.enable": true,
     "clangd.semanticHighlighting": true,
-    "java.home": "/etc/java11-openjdk/",
+    "java.home": "/usr/lib/jvm/java-15-openjdk",
     "java.completion.overwrite": true,
     "java.completion.enabled": true,
     "java.foldingRange.enabled": true,
     "java.format.onType.enabled": true,
     "java.configuration.runtimes": [
         {
-            "name": "JavaSE-8",
-            "path": "/etc/java8-openjdk/",
+            "name": "JavaSE-1.8",
+            "path": "/usr/lib/jvm/java-8-openjdk",
         },
         {
             "name": "JavaSE-11",
-            "path": "/etc/java11-openjdk/",
+            "path": "/usr/lib/jvm/java-11-openjdk",
+            "default": true
         },
         {
-            "name": "JavaSE-15",
-            "path": "/etc/java-openjdk/",
-            "default": true
+            "name": "JavaSE-14",
+            "path": "/usr/lib/jvm/java-15-openjdk",
         },
     ],
     "java.saveActions.organizeImports": false,
