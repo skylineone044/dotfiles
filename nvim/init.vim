@@ -140,8 +140,8 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-xmap <leader>F  :Neoformat<CR>
-nmap <leader>F  :Neoformat<CR>
+xmap <leader>F  :Format<CR>
+nmap <leader>F  :Format<CR>
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -436,6 +436,10 @@ map :W :w<CR>
 map :Q :q<CR>
 map <CapsLock> <Esc>
 map <Leader>F :Neoformat<CR>
+augroup formating
+    autocmd!
+    autocmd FileType java nmap <Leader>F :Format<CR>
+augroup END
 
 "Reload vimrc
 nnoremap <F6> :w<CR>:source ~/.config/nvim/init.vim<CR>
