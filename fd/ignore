@@ -86,5 +86,5 @@ CachedData
 *.pyi
 *.tdb
 *.db
-*.png 
-
+*.png
+dosdevices

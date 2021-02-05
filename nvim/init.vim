@@ -26,7 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork suppor
 " Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
-Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
+" Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
 Plug 'sbdchd/neoformat'                         " autoformatting in many filetypes
 " Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
@@ -89,19 +89,19 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
+" use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <c-space> to trigger completion.
 if has('nvim')
