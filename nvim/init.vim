@@ -15,7 +15,7 @@
 let need_to_install_plugins = 0
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent  !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     let need_to_install_plugins = 1
 endif
 
@@ -56,7 +56,7 @@ Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, broce
 
 " ------ Nvim 0.5 nightly required
 if has('nvim-0.5')
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
 endif
 " ---------------------------------------
 call plug#end()
@@ -84,35 +84,35 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
+    " Recently vim can merge signcolumn and number column into one
+    set signcolumn=number
 else
-  set signcolumn=yes
+    set signcolumn=yes
 endif
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
 inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<Tab>" :
+            \ coc#refresh()
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -127,11 +127,11 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocActionAsync('doHover')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocActionAsync('doHover')
+    endif
 endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -143,11 +143,11 @@ nmap <leader>f  <Plug>(coc-format-selected)
 xmap <leader>F  :Format<CR>
 nmap <leader>F  :Format<CR>
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder.
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
@@ -194,9 +194,14 @@ augroup cocexplorer
     autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 augroup END
 
-let g:coc_global_extensions = ["coc-explorer", "coc-json", "coc-snippets",
-            \"coc-vimlsp", "coc-yank", "coc-clangd", "coc-java", "coc-lua", "coc-markdownlint",
-            \"coc-pairs"]
+let g:coc_global_extensions = [
+            \"coc-pyright", "coc-sh",
+            \"coc-clangd", "coc-java", "coc-lua",
+            \"coc-html", "coc-css", "coc-phpls",
+            \"coc-explorer", "coc-json", "coc-snippets",
+            \"coc-vimlsp", "coc-yank",
+            \"coc-markdownlint", "coc-pairs"
+            \]
 
 " let g:vimspector_enable_mappings = 'HUMAN'
 packadd! vimspector
@@ -278,9 +283,9 @@ let g:VimuxUseNearest = 1    " default is 1 (0/1)
 " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
 " and even better: it's using vimux to rum the current python file ina tmux pane
 augroup vimux1
-  autocmd!
-  autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
-  " autocmd BufEnter * call VimuxFollowPWD()
+    autocmd!
+    autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
+    " autocmd BufEnter * call VimuxFollowPWD()
 augroup END
 " map <Leader>T :VimuxCloseRunner<CR>
 
@@ -303,9 +308,9 @@ nnoremap <C-f> :FZF<CR>
 let g:fzf_layout = { 'down': '~40%' }
 
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
-  \   fzf#vim#with_preview(), <bang>0)
+            \ call fzf#vim#grep(
+            \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
+            \   fzf#vim#with_preview(), <bang>0)
 
 
 " Bind "//" to a fzf-powered buffer search
@@ -322,10 +327,10 @@ let python_highlight_all = 1
 
 " color preview plugin
 let g:coloresque_whitelist = [
-    \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
-    \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
-    \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml'
-    \'colors']
+            \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
+            \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
+            \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml'
+            \'colors']
 "let g:coloresque_blacklist = []
 
 let g:signify_sign_show_text = 1  " main on/off swtich for signify
@@ -424,11 +429,11 @@ endif
 
 " Custom shortcuts ----------------------------------------
 augroup configgroup
-  autocmd!
-  " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
-  autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
-  autocmd FileType sh map <leader># ggi#!/usr/bin/sh<CR><esc>
-  autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
+    autocmd!
+    " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
+    autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
+    autocmd FileType sh map <leader># ggi#!/usr/bin/sh<CR><esc>
+    autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
 augroup END
 
 map <space> <Leader>
@@ -504,9 +509,9 @@ augroup END
 augroup continueWhereYouLeftOff
     autocmd!
     autocmd BufReadPost *
-         \ if line("'\"") > 0 && line("'\"") <= line("$") |
-         \   exe "normal! g`\"" |
-         \ endif
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
 augroup END
 
 " Colorscheme settings -------------------------------------
@@ -514,76 +519,76 @@ set t_Co=256
 set background=dark
 
 if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
-highlight Visual term=reverse cterm=reverse guibg=Grey
-set rtp+=/home/skyline/git/nvim-highlite
-colorscheme stardust_TS
-hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
-hi CocHighlightText ctermbg=239
+    highlight Visual term=reverse cterm=reverse guibg=Grey
+    set rtp+=/home/skyline/git/nvim-highlite
+    colorscheme stardust_TS
+    hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
+    hi CocHighlightText ctermbg=239
 
-highlight clear SignColumn
-hi ColorColumn ctermbg=236 guibg=236
+    highlight clear SignColumn
+    hi ColorColumn ctermbg=236 guibg=236
 
-set t_ZH=^[[3m
-set t_ZR=^[[23m
-hi HighlightedyankRegion ctermbg=236
+    set t_ZH=^[[3m
+    set t_ZR=^[[23m
+    hi HighlightedyankRegion ctermbg=236
 
-" ---------------------- TRESITTER
-lua <<EOF
+    " ---------------------- TRESITTER
+    lua <<EOF
 
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
+    require'nvim-treesitter.configs'.setup {
+ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+highlight = {
     enable = true,              -- false will disable the whole extension
     disable = {},  -- list of language that will be disabled
-  },
-  indent = {
-    enable = true
-  },
+    },
+    indent = {
+enable = true
+},
 }
 EOF
 
 else " old setup, for fallback
-" SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
-hi Normal ctermbg=none
-highlight Visual term=reverse cterm=reverse guibg=Grey
-let g:PaperColor_Theme = 'stardust'
-colorscheme PaperColor
+    " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
+    hi Normal ctermbg=none
+    highlight Visual term=reverse cterm=reverse guibg=Grey
+    let g:PaperColor_Theme = 'stardust'
+    colorscheme PaperColor
 
-hi CursorLine ctermbg=234
-hi CursorColumn ctermbg=none
-hi NonText ctermfg=238
-hi statusline ctermbg=250 ctermfg=235
+    hi CursorLine ctermbg=234
+    hi CursorColumn ctermbg=none
+    hi NonText ctermfg=238
+    hi statusline ctermbg=250 ctermfg=235
 
-" make function calls blue and bold
-function ForceFuncCallColor()
-  hi Function ctermfg=39 ctermbg=none cterm=none
-  syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
-  hi def link pythonFunction Function
-  hi link pythonBuiltin Function
-endfunction
+    " make function calls blue and bold
+    function ForceFuncCallColor()
+        hi Function ctermfg=39 ctermbg=none cterm=none
+        syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
+        hi def link pythonFunction Function
+        hi link pythonBuiltin Function
+    endfunction
 
-augroup blue_function_calls
-    autocmd!
-    autocmd BufEnter * call ForceFuncCallColor()
-    autocmd BufWritePost * call ForceFuncCallColor()
-    autocmd InsertLeave * call ForceFuncCallColor()
-augroup END
+    augroup blue_function_calls
+        autocmd!
+        autocmd BufEnter * call ForceFuncCallColor()
+        autocmd BufWritePost * call ForceFuncCallColor()
+        autocmd InsertLeave * call ForceFuncCallColor()
+    augroup END
 
-highlight ALEErrorSign ctermfg=196 ctermbg=NONE
-highlight ALEWarningSign ctermfg=214 ctermbg=NONE
-highlight SignColumn ctermbg=NONE
-highlight clear SignColumn
-hi ColorColumn ctermbg=236 guibg=236
+    highlight ALEErrorSign ctermfg=196 ctermbg=NONE
+    highlight ALEWarningSign ctermfg=214 ctermbg=NONE
+    highlight SignColumn ctermbg=NONE
+    highlight clear SignColumn
+    hi ColorColumn ctermbg=236 guibg=236
 
-set t_ZH=^[[3m
-set t_ZR=^[[23m
-highlight Comment cterm=italic
-hi HighlightedyankRegion ctermbg=236
-hi CocHighlightText term=reverse cterm=reverse
+    set t_ZH=^[[3m
+    set t_ZR=^[[23m
+    highlight Comment cterm=italic
+    hi HighlightedyankRegion ctermbg=236
+    hi CocHighlightText term=reverse cterm=reverse
 
-highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
-highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
-highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+    highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
+    highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
+    highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 
 endif
 
