@@ -194,9 +194,11 @@ augroup cocexplorer
     autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 augroup END
 
+nmap <leader>f :CocFix<CR>
+
 let g:coc_global_extensions = [
             \"coc-pyright", "coc-sh",
-            \"coc-clangd", "coc-java", "coc-lua",
+            \"coc-clangd", "coc-java", "coc-java-debug", "coc-lua",
             \"coc-html", "coc-css", "coc-phpls",
             \"coc-explorer", "coc-json", "coc-snippets",
             \"coc-vimlsp", "coc-yank",
@@ -440,10 +442,11 @@ map <space> <Leader>
 map :W :w<CR>
 map :Q :q<CR>
 map <CapsLock> <Esc>
-map <Leader>F :Neoformat<CR>
+map <Leader>F :Format<CR>
 augroup formating
     autocmd!
     autocmd FileType java nmap <Leader>F :Format<CR>
+    autocmd FileType html nmap <Leader>F :Format<CR>
 augroup END
 
 "Reload vimrc
