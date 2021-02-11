@@ -216,6 +216,8 @@ nmap <F10> <Plug>VimspectorRunToCursor
 
 " neoformat
 let g:neoformat_enabled_python = ['black', 'autopep8']
+let g:neoformat_enabled_css = ['cssbeautify', 'prettier']
+let g:neoformat_enabled_html = ['htmlbeautify']
 " Enable alignment
 let g:neoformat_basic_format_align = 1
 
@@ -443,10 +445,12 @@ map :W :w<CR>
 map :Q :q<CR>
 map <CapsLock> <Esc>
 map <Leader>F :Format<CR>
+map <Leader>N :Neoformat<CR>
 augroup formating
     autocmd!
     autocmd FileType java nmap <Leader>F :Format<CR>
-    autocmd FileType html nmap <Leader>F :Format<CR>
+    autocmd FileType html nmap <Leader>F :Neoformat<CR>
+    autocmd FileType css nmap <Leader>F :Neoformat<CR>
 augroup END
 
 "Reload vimrc
