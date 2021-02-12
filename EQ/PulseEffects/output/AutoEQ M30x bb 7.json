@@ -2,7 +2,7 @@
     "spectrum": {
         "show": "true",
         "n-points": "1000",
-        "height": "300",
+        "height": "350",
         "use-custom-color": "false",
         "fill": "true",
         "show-bar-border": "true",
