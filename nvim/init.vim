@@ -411,6 +411,7 @@ set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 set completeopt+=noinsert,menuone,preview
 set relativenumber
 set clipboard+=unnamedplus
+set termguicolors
 
 " set foldmethod=syntax
 " set nofoldenable
@@ -522,22 +523,22 @@ augroup continueWhereYouLeftOff
 augroup END
 
 " Colorscheme settings -------------------------------------
-set t_Co=256
+" set t_Co=256
 set background=dark
 
 if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
     highlight Visual term=reverse cterm=reverse guibg=Grey
     set rtp+=/home/skyline/git/nvim-highlite
     colorscheme stardust_TS
-    hi Normal ctermbg=none  "overwrite highlite settings, because it seems it cant do NONE as background
-    hi CocHighlightText ctermbg=239
+    hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
+    hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
     highlight clear SignColumn
-    hi ColorColumn ctermbg=236 guibg=236
+    hi ColorColumn ctermbg=236 guibg=#303030
 
     set t_ZH=^[[3m
     set t_ZR=^[[23m
-    hi HighlightedyankRegion ctermbg=236
+    hi HighlightedyankRegion ctermbg=236 guibg=#303030
 
     " ---------------------- TRESITTER
     lua <<EOF
@@ -561,10 +562,10 @@ else " old setup, for fallback
     let g:PaperColor_Theme = 'stardust'
     colorscheme PaperColor
 
-    hi CursorLine ctermbg=234
-    hi CursorColumn ctermbg=none
-    hi NonText ctermfg=238
-    hi statusline ctermbg=250 ctermfg=235
+    hi CursorLine ctermbg=234 guibg=#1c1c1c
+    hi CursorColumn ctermbg=none guibg=NONE
+    hi NonText ctermfg=238 guibg=#444444
+    hi statusline ctermbg=250 ctermfg=235 guibg=#bcbcbc guifg=#262626
 
     " make function calls blue and bold
     function ForceFuncCallColor()
@@ -581,17 +582,17 @@ else " old setup, for fallback
         autocmd InsertLeave * call ForceFuncCallColor()
     augroup END
 
-    highlight ALEErrorSign ctermfg=196 ctermbg=NONE
-    highlight ALEWarningSign ctermfg=214 ctermbg=NONE
-    highlight SignColumn ctermbg=NONE
+    highlight ALEErrorSign ctermfg=196 ctermbg=NONE guibg=NONE
+    highlight ALEWarningSign ctermfg=214 ctermbg=NONE guibg=NONE
+    highlight SignColumn ctermbg=NONE guibg=NONE
     highlight clear SignColumn
-    hi ColorColumn ctermbg=236 guibg=236
+    hi ColorColumn ctermbg=236 guibg=#303030
 
     set t_ZH=^[[3m
     set t_ZR=^[[23m
     highlight Comment cterm=italic
-    hi HighlightedyankRegion ctermbg=236
-    hi CocHighlightText term=reverse cterm=reverse
+    hi HighlightedyankRegion ctermbg=236 guibg=#303030
+    hi CocHighlightText term=reverse cterm=reverse gui=reverse
 
     highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
     highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
