@@ -40,7 +40,7 @@ Plug 'benmills/vimux'                           " vim-tmux interface
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
-Plug 'ObserverOfTime/coloresque.vim'            " highlight colorcodes and words in the said color
+Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
 Plug 'mhinz/vim-startify'                       " start screen
 
@@ -329,14 +329,6 @@ nmap cc :Commands!<CR>
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
 
-" color preview plugin
-let g:coloresque_whitelist = [
-            \'css', 'haml', 'html', 'htmldjango', 'javascript', 'jsx', 'less', 'php',
-            \'postcss', 'pug', 'qml', 'sass', 'scss', 'sh', 'stylus', 'svg',
-            \'typescript', 'vim', 'vue', 'xml', 'python', 'py', '', 'go', 'yml'
-            \'colors']
-"let g:coloresque_blacklist = []
-
 let g:signify_sign_show_text = 1  " main on/off swtich for signify
 let g:signify_sign_add               = '+'
 let g:signify_sign_delete            = '-'
@@ -412,6 +404,8 @@ set completeopt+=noinsert,menuone,preview
 set relativenumber
 set clipboard+=unnamedplus
 set termguicolors
+" coloriser
+lua require'colorizer'.setup()
 
 " set foldmethod=syntax
 " set nofoldenable
