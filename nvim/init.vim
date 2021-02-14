@@ -528,6 +528,8 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
     highlight clear SignColumn
+    highlight ALEErrorSign ctermfg=196 ctermbg=NONE guibg=NONE guifg=#ff0000
+    highlight ALEWarningSign ctermfg=214 ctermbg=NONE guibg=NONE guifg=#ffaf00
     hi ColorColumn ctermbg=236 guibg=#303030
 
     set t_ZH=^[[3m
