@@ -203,7 +203,7 @@ alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
 alias "vanillavim"="/bin/vim"
 alias "vim"="nvim"
-alias "n"="nvim ~/notes.md"
+alias "n"="nvim ~/git/PrivateStuff/notes.md"
 
 alias "webcam"="vlc v4l2:///dev/video0 & ; clear"
 
