@@ -487,8 +487,8 @@ tnoremap <C-\> <C-\><C-n>
 
 " git fugitive
 nnoremap <Leader>G :G<CR>
-nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>gp :Gpush<CR>
+nnoremap <Leader>gc :Git commit<CR>
+nnoremap <Leader>gp :Git push<CR>
 
 augroup autocd
     autocmd!
