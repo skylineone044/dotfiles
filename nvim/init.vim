@@ -51,8 +51,9 @@ Plug 'mhinz/vim-signify'                        " show vsc file changes in the s
 Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
+Plug 'arecarn/vim-crunch'                       " easier math
 
-Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
+Plug 'dstein64/vim-startuptime'                 " Measure vimarecarn/vim-crunch startuptime, brocen down into components
 
 " ------ Nvim 0.5 nightly required
 if has('nvim-0.5')
