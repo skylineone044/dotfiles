@@ -270,5 +270,7 @@ _fzf_comprun() {
 
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 
+export PATH=$PATH:$HOME/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/
+
 #this must be last
 source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
