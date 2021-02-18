@@ -202,7 +202,7 @@ let g:coc_global_extensions = [
             \"coc-clangd", "coc-java", "coc-java-debug", "coc-lua",
             \"coc-html", "coc-css", "coc-phpls",
             \"coc-explorer", "coc-json", "coc-snippets",
-            \"coc-vimlsp", "coc-yank",
+            \"coc-vimlsp", "coc-yank", "coc-calc", "coc-diagnostic",
             \"coc-markdownlint", "coc-pairs"
             \]
 
