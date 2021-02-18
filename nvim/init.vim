@@ -26,6 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork suppor
 " Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
+Plug 'Shirk/vim-gas'
 " Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
 Plug 'sbdchd/neoformat'                         " autoformatting in many filetypes
@@ -447,7 +448,7 @@ augroup formating
     autocmd FileType java nmap <Leader>F :Format<CR>
     autocmd FileType html nmap <Leader>F :Neoformat<CR>
     autocmd FileType css nmap <Leader>F :Neoformat<CR>
-    autocmd FileType r set ft=ia64
+    autocmd FileType r set ft=gas
 augroup END
 
 "Reload vimrc
