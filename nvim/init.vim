@@ -38,8 +38,10 @@ Plug 'ryanoasis/vim-webdevicons'                " fancy idons everywhere, mostly
 Plug 'dense-analysis/ale'                       " code linting
 
 Plug 'benmills/vimux'                           " vim-tmux interface
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'                         " fuzzy file search
+if !has('nvim-0.5')
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'                         " fuzzy file search
+endif
 
 Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
@@ -59,7 +61,10 @@ Plug 'dstein64/vim-startuptime'                 " Measure vimarecarn/vim-crunch 
 " ------ Nvim 0.5 nightly required
 if has('nvim-0.5')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
-
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
 endif
 " ---------------------------------------
 call plug#end()
@@ -311,23 +316,25 @@ let g:pickachu_default_date_format = "%Y.%m.%d."
 let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 
 " FZF key bindings ----------------------------------------
-nnoremap <C-f> :FZF<CR>
-let g:fzf_layout = { 'down': '~40%' }
+if !has('nvim-0.5')
+    nnoremap <C-f> :FZF<CR>
+    let g:fzf_layout = { 'down': '~40%' }
 
-command! -bang -nargs=* Rg
-            \ call fzf#vim#grep(
-            \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
-            \   fzf#vim#with_preview(), <bang>0)
+    command! -bang -nargs=* Rg
+                \ call fzf#vim#grep(
+                \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
+                \   fzf#vim#with_preview(), <bang>0)
 
 
-" Bind "//" to a fzf-powered buffer search
-nmap // :BLines!<CR>
-" Bind "??" to a fzf-powered project search
-nmap ?? :Rg!<CR>
-" Bind "<leader>p " to a fzf-powered filename search
-nmap <leader>p :Files!<CR>
-" Bind "cc" to a fzf-powered command search
-nmap cc :Commands!<CR>
+    " Bind "//" to a fzf-powered buffer search
+    nmap // :BLines!<CR>
+    " Bind "??" to a fzf-powered project search
+    nmap ?? :Rg!<CR>
+    " Bind "<leader>p " to a fzf-powered filename search
+    nmap <leader>p :Files!<CR>
+    " Bind "cc" to a fzf-powered command search
+    nmap cc :Commands!<C    R>
+endif
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
