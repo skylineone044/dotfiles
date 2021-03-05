@@ -65,6 +65,7 @@ if has('nvim-0.5')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
+    Plug 'nvim-telescope/telescope-media-files.nvim'
 endif
 " ---------------------------------------
 call plug#end()
@@ -335,6 +336,31 @@ if !has('nvim-0.5')
     " Bind "cc" to a fzf-powered command search
     nmap cc :Commands!<C    R>
 endif
+
+" telescope.nvim
+lua << EOF
+require('telescope').setup{
+    defaults = {
+        file_sorter = require('telescope.sorters').get_fzy_sorter,
+        color_devicons = true,
+        file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+        set_env = { ['COLORTERM'] = 'truecolor' },
+    },
+    extensions = {
+        fzy_native = {
+        override_genric_sorter = false,
+        override_file_sorter = true,
+        }
+    }
+}
+require('telescope').load_extension('fzy_native')
+require('telescope').load_extension('media_files')
+EOF
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>cd ~<cr><cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
