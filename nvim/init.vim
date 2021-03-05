@@ -59,6 +59,7 @@ Plug 'dstein64/vim-startuptime'                 " Measure vimarecarn/vim-crunch 
 " ------ Nvim 0.5 nightly required
 if has('nvim-0.5')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
+
 endif
 " ---------------------------------------
 call plug#end()
@@ -433,7 +434,7 @@ augroup configgroup
     autocmd!
     " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
     autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
-    autocmd FileType sh map <leader># ggi#!/usr/bin/sh<CR><esc>
+    autocmd FileType sh map <leader># ggi#!/bin/bash<CR><esc>
     autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
 augroup END
 
@@ -448,7 +449,7 @@ augroup formating
     autocmd FileType java nmap <Leader>F :Format<CR>
     autocmd FileType html nmap <Leader>F :Neoformat<CR>
     autocmd FileType css nmap <Leader>F :Neoformat<CR>
-    autocmd FileType r set ft=gas
+    autocmd FileType r set ft=ia64
 augroup END
 
 "Reload vimrc
