@@ -356,8 +356,15 @@ require('telescope').setup{
 require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('media_files')
 EOF
+
+fun! ProjectSearch()
+:cd %:h | cd `git rev-parse --show-toplevel`
+Telescope find_files
+endfun
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>cd ~<cr><cmd>Telescope find_files<cr>
+nnoremap <leader>fp :<C-U>call ProjectSearch()<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
