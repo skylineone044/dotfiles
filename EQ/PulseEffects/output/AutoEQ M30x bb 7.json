@@ -3,16 +3,16 @@
         "show": "true",
         "n-points": "1000",
         "height": "350",
-        "use-custom-color": "false",
+        "use-custom-color": "true",
         "fill": "true",
         "show-bar-border": "true",
         "sampling-freq": "144",
         "line-width": "0.10000000000000001",
         "type": "Lines",
         "color": [
-            "1",
-            "1",
-            "1",
+            "0.3843137254901961",
+            "0.62745098039215685",
+            "0.91764705882352937",
             "1"
         ],
         "color-axis-labels": [
@@ -22,9 +22,9 @@
             "1"
         ],
         "gradient-color": [
-            "0",
-            "0",
-            "0",
+            "0.10980392156862745",
+            "0.44313725490196076",
+            "0.84705882352941175",
             "1"
         ]
     },
