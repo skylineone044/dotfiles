@@ -437,7 +437,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set mouse=a
-set scrolloff=8
+set scrolloff=4
 
 set colorcolumn=80
 set timeoutlen=400
