@@ -187,7 +187,6 @@ UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 
 ##  ALIASES
 
-alias ls="lsd -l --color=auto"
 alias l="lsd -l --color=auto"
 alias sl="lsd -l --color=auto"
 alias "lsd -a"="ls -la -- color=auto"
