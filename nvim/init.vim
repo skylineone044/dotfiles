@@ -27,7 +27,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork suppor
 Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 Plug 'Shirk/vim-gas'
-" Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
+Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
 Plug 'sbdchd/neoformat'                         " autoformatting in many filetypes
 " Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
