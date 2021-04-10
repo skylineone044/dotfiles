@@ -24,8 +24,8 @@ call plug#begin('~/.config/nvim/plugins')
 " PLUGINS -------------------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork support and LSP
 " Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
-Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
-Plug 'hdima/python-syntax'                      " pyhon synax highlighting
+" Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
+" Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 Plug 'Shirk/vim-gas'
 Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
@@ -66,6 +66,7 @@ if has('nvim-0.5')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
+    Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 endif
 " ---------------------------------------
 call plug#end()
@@ -387,6 +388,15 @@ let g:numbers_exclude = ['coc-pyright', 'fzf', 'coc-explorer', 'minibufexpl',
             \ 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell',
             \'w3m']
 let g:numbers_enable = 1
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+  }
+}
+EOF
 
 " sidewas.vim
 " useing alt key
