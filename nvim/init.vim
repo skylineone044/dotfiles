@@ -366,6 +366,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" fugitive ----------------------
+nnoremap <leader>G :Git<CR>
+nnoremap <leader>gp :Git push<CR>
+
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
 
