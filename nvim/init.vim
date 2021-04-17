@@ -23,11 +23,10 @@ call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork support and LSP
-" Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
-" Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
-" Plug 'hdima/python-syntax'                      " pyhon synax highlighting
-Plug 'Shirk/vim-gas'
-Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
+Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
+Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
+Plug 'hdima/python-syntax'                      " pyhon synax highlighting
+" Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
 Plug 'honza/vim-snippets'                       " snippet collection
 Plug 'sbdchd/neoformat'                         " autoformatting in many filetypes
 " Plug 'danielwe/vim-unicode-snippets'          " unicode symbols in snippets
@@ -38,10 +37,8 @@ Plug 'ryanoasis/vim-webdevicons'                " fancy idons everywhere, mostly
 Plug 'dense-analysis/ale'                       " code linting
 
 Plug 'benmills/vimux'                           " vim-tmux interface
-if !has('nvim-0.5')
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'                         " fuzzy file search
-endif
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
 Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
@@ -54,15 +51,12 @@ Plug 'mhinz/vim-signify'                        " show vsc file changes in the s
 Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
-Plug 'arecarn/vim-crunch'                       " easier math
 
-Plug 'dstein64/vim-startuptime'                 " Measure vimarecarn/vim-crunch startuptime, brocen down into components
+Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
 " ------ Nvim 0.5 nightly required
 if has('nvim-0.5')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
@@ -520,61 +514,12 @@ nmap <Leader>c gcc
 vmap <Leader>c gc
 
 nnoremap <c-j> :m .+1<CR>==
-nnoremap <c-k> :m .-2<CR>==
-" inoremap <c-j> <Esc>:m .+1<CR>==gi
-" inoremap <c-k> <Esc>:m .-2<CR>==gi
-vnoremap <c-j> :m '>+1<CR>gv=gv
-vnoremap <c-k> :m '<-2<CR>gv=gv
-
-
-" buffer navigation
-nnoremap <C-b> :buffers<CR>:buffer<space>
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprevious<CR>
-
-" better find and replace
-vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
-nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
-
-" terminal
-nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
-tnoremap <C-\> <C-\><C-n>
-
-" git fugitive
-nnoremap <Leader>G :G<CR>
-nnoremap <Leader>gc :Git commit<CR>
-nnoremap <Leader>gp :Git push<CR>
-
-augroup autocd
-    autocmd!
-    autocmd BufEnter * silent! lcd %:p:h
-augroup END
-
-" trim whitespace on write
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-
-augroup whitespace
-    autocmd!
-    autocmd BufWritePre * :call TrimWhitespace()
-augroup END
-
-" Return to last edit position when opening files (You want this!)
-augroup continueWhereYouLeftOff
-    autocmd!
-    autocmd BufReadPost *
-                \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                \   exe "normal! g`\"" |
-                \ endif
-augroup END
-
-" Colorscheme settings -------------------------------------
-" set t_Co=256
-set background=dark
-
+if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
+    highlight Visual term=reverse cterm=reverse guibg=Grey
+    set rtp+=/home/skyline/git/nvim-highlite
+    colorscheme stardust_TS
+    hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
+    hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
     highlight Visual term=reverse cterm=reverse guibg=Grey
     set rtp+=/home/skyline/git/nvim-highlite
@@ -583,8 +528,6 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
     highlight clear SignColumn
-    highlight ALEErrorSign ctermfg=196 ctermbg=NONE guibg=NONE guifg=#ff0000
-    highlight ALEWarningSign ctermfg=214 ctermbg=NONE guibg=NONE guifg=#ffaf00
     hi ColorColumn ctermbg=236 guibg=#303030
 
     set t_ZH=^[[3m
