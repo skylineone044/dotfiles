@@ -520,12 +520,6 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     colorscheme stardust_TS
     hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
     hi CocHighlightText ctermbg=239 guibg=#4e4e4e
-if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
-    highlight Visual term=reverse cterm=reverse guibg=Grey
-    set rtp+=/home/skyline/git/nvim-highlite
-    colorscheme stardust_TS
-    hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
-    hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
     highlight clear SignColumn
     hi ColorColumn ctermbg=236 guibg=#303030
@@ -534,18 +528,17 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     set t_ZR=^[[23m
     hi HighlightedyankRegion ctermbg=236 guibg=#303030
 
-    " ---------------------- TRESITTER
-    lua <<EOF
-
-    require'nvim-treesitter.configs'.setup {
-ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = {},  -- list of language that will be disabled
+" ---------------------- TRESITTER
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    highlight = {
+        enable = true,              -- false will disable the whole extension
+        disable = {},  -- list of language that will be disabled
     },
     indent = {
-enable = true
-},
+        enable = true
+    },
 }
 EOF
 
