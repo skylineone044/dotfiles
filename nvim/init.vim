@@ -1,4 +1,4 @@
-"   _______________________________________________________________________________________
+init.vim"   _______________________________________________________________________________________
 "    _______________________________________________________________________________________
 "     __/\\\________________/\\\_____/\\\___________________________/\\\_____________________
 "      _\///___/\\/\\\\\\___\///___/\\\\\\\\\\\________/\\\____/\\\_\///_____/\\\\\__/\\\\\___
@@ -462,7 +462,7 @@ lua require'colorizer'.setup()
 
 " set foldmethod=syntax
 " set nofoldenable
-"set cursorcolumn  " this bad boi is slow AF
+" set cursorcolumn  " this bad boi is slow AF
 " set guicursor=   "Uncommenting this disables the cursor syle change (block/I beam/underline)
 "                   that is the default when changing ebtween nvim modes (Normal/Insert/Replace)
 
@@ -520,6 +520,55 @@ nmap <Leader>c gcc
 vmap <Leader>c gc
 
 nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
+" inoremap <c-j> <Esc>:m .+1<CR>==gi
+" inoremap <c-k> <Esc>:m .-2<CR>==gi
+vnoremap <c-j> :m '>+1<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
+
+
+" buffer navigation
+nnoremap <C-b> :buffers<CR>:buffer<space>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
+
+" better find and replace
+vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
+nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
+" terminal
+nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
+tnoremap <C-\> <C-\><C-n>
+
+augroup autocd
+    autocmd!
+    autocmd BufEnter * silent! lcd %:p:h
+augroup END
+
+" trim whitespace on write
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup whitespace
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
+" Return to last edit position when opening files (You want this!)
+augroup continueWhereYouLeftOff
+    autocmd!
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
+augroup END
+
+" Colorscheme settings -------------------------------------
+" set t_Co=256
+set background=dark
 if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
     highlight Visual term=reverse cterm=reverse guibg=Grey
     set rtp+=/home/skyline/git/nvim-highlite
@@ -527,7 +576,6 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
     hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
-    highlight clear SignColumn
     hi ColorColumn ctermbg=236 guibg=#303030
 
     set t_ZH=^[[3m
