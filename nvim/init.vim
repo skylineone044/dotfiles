@@ -63,7 +63,7 @@ if has('nvim-0.5')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
-    Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
+    " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 endif
 " ---------------------------------------
 call plug#end()
@@ -279,8 +279,8 @@ let g:ale_completion_enabled = 0
 
 " indent blankline -------
 let g:indent_blankline_enabled = v:true
-" let g:indent_blankline_use_treesitter = v:true
-" let g:indent_blankline_show_current_context = v:true
+let g:indent_blankline_use_treesitter = v:true
+let g:indent_blankline_show_current_context = v:true
 let g:indent_blankline_char = '│'
 
 " vimux settings ----------------------------------------
@@ -459,7 +459,7 @@ set scrolloff=4
 set colorcolumn=80
 set timeoutlen=400
 set nowrap
-set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
+set listchars=tab:›\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 set completeopt+=noinsert,menuone,preview
 set relativenumber
 set clipboard+=unnamedplus
@@ -588,6 +588,8 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     set t_ZH=^[[3m
     set t_ZR=^[[23m
     hi HighlightedyankRegion ctermbg=236 guibg=#303030
+    highlight IndentBlanklineChar guifg=#505050 gui=nocombine
+    highlight IndentBlanklineContextChar guifg=#f1f1f1 gui=nocombine
 
 " ---------------------- TRESITTER
 lua <<EOF
