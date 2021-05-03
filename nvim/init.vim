@@ -48,7 +48,8 @@ Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects 
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
-Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
+" Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
+Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}  " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 
@@ -275,6 +276,12 @@ let g:ale_sign_error = '🢂'
 let g:ale_sign_warning = '🢂'
 "dot symbol: \u25CF
 let g:ale_completion_enabled = 0
+
+" indent blankline -------
+let g:indent_blankline_enabled = v:true
+" let g:indent_blankline_use_treesitter = v:true
+" let g:indent_blankline_show_current_context = v:true
+let g:indent_blankline_char = '│'
 
 " vimux settings ----------------------------------------
 " make the already open tmux terminal split follow the dir of the currently open file,
