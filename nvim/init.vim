@@ -272,8 +272,10 @@ let airline#extensions#ale#close_lnum_symbol = ''
 
 " ALE settings --------------------------------------------
 "let g:ale_sign_error = '▶'
-let g:ale_sign_error = '🢂'
-let g:ale_sign_warning = '🢂'
+" let g:ale_sign_error = '🢂'
+" let g:ale_sign_warning = '🢂'
+let g:ale_sign_error = '⛔'
+let g:ale_sign_warning = '⚠'
 "dot symbol: \u25CF
 let g:ale_completion_enabled = 0
 
