@@ -508,7 +508,7 @@ augroup formating
     autocmd FileType java nmap <Leader>F :Format<CR>
     autocmd FileType html nmap <Leader>F :Neoformat<CR>
     autocmd FileType css nmap <Leader>F :Neoformat<CR>
-    autocmd FileType r set ft=gas
+    autocmd FileType r set ft=ia64
 augroup END
 
 "Reload vimrc
