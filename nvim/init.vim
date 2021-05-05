@@ -41,6 +41,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                         " fuzzy file search
 
 Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
+Plug 'lambdalisue/glyph-palette.vim'            " colors for nerdfont icons
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
 Plug 'mhinz/vim-startify'                       " start screen
 
