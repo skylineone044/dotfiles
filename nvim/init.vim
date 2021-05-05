@@ -256,13 +256,13 @@ let g:airline_section_z = airline#section#create(["%p%%", " ⏵%l", "/%L", ": %c
 " coc integration
 let g:airline#extensions#coc#enabled = 1
 let airline#extensions#coc#error_symbol = '⛔'
-let airline#extensions#coc#warning_symbol = '◭ '
+let airline#extensions#coc#warning_symbol = '⚠ '
 ""enable/disable ale integration
 let g:airline#extensions#ale#enabled = 1
 " ale error_symbol
 let airline#extensions#ale#error_symbol = '⛔'
 " ale warning
-let airline#extensions#ale#warning_symbol = '◭ '
+let airline#extensions#ale#warning_symbol = '⚠ '
 " ale show_line_numbers
 let airline#extensions#ale#show_line_numbers = 1
 " ale open_lnum_symbol
