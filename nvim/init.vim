@@ -409,6 +409,7 @@ let g:numbers_enable = 1
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true
   },
@@ -618,19 +619,6 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     highlight IndentBlanklineChar guifg=#505050 gui=nocombine
     highlight IndentBlanklineContextChar guifg=#f1f1f1 gui=nocombine
 
-" ---------------------- TRESITTER
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-    highlight = {
-        enable = true,              -- false will disable the whole extension
-        disable = {},  -- list of language that will be disabled
-    },
-    indent = {
-        enable = true
-    },
-}
-EOF
 
 else " old setup, for fallback
     " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
