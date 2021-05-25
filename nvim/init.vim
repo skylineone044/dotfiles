@@ -212,7 +212,8 @@ let g:coc_global_extensions = [
             \"coc-html", "coc-css", "coc-phpls",
             \"coc-explorer", "coc-json", "coc-snippets",
             \"coc-vimlsp", "coc-yank", "coc-calc", "coc-diagnostic",
-            \"coc-markdownlint", "coc-pairs"
+            \"coc-markdownlint", "coc-pairs", "coc-lines", "coc-emoji",
+            \"coc-syntax"
             \]
 
 " let g:vimspector_enable_mappings = 'HUMAN'
