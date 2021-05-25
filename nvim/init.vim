@@ -274,12 +274,9 @@ let airline#extensions#ale#open_lnum_symbol = " ⏵"
 let airline#extensions#ale#close_lnum_symbol = ''
 
 " ALE settings --------------------------------------------
-"let g:ale_sign_error = '▶'
-" let g:ale_sign_error = '🢂'
-" let g:ale_sign_warning = '🢂'
 let g:ale_sign_error = '⛔'
 let g:ale_sign_warning = '⚠'
-"dot symbol: \u25CF
+
 let g:ale_completion_enabled = 0
 
 " indent blankline -------
@@ -618,7 +615,6 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     hi HighlightedyankRegion ctermbg=236 guibg=#303030
     highlight IndentBlanklineChar guifg=#505050 gui=nocombine
     highlight IndentBlanklineContextChar guifg=#f1f1f1 gui=nocombine
-
 
 else " old setup, for fallback
     " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
