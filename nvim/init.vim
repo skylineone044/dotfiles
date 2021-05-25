@@ -65,6 +65,7 @@ if has('nvim-0.5')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'nvim-telescope/telescope-media-files.nvim'
+    " Plug 'romgrk/nvim-treesitter-context'
     " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 endif
 " ---------------------------------------
@@ -283,9 +284,13 @@ let g:ale_completion_enabled = 0
 
 " indent blankline -------
 let g:indent_blankline_enabled = v:true
-" let g:indent_blankline_use_treesitter = v:true
-" let g:indent_blankline_show_current_context = v:true
+
+let g:indent_blankline_use_treesitter = v:true
+let g:indent_blankline_show_current_context = v:true
 let g:indent_blankline_char = '│'
+let g:indent_blankline_indent_level = 20
+" let g:indent_blankline_context_patterns = ['class', 'function', 'method', 'if', 'for', 'while', 'swtich', 'case', 'try']
+let g:indent_blankline_context_patterns = ['%S+']
 
 " vimux settings ----------------------------------------
 " make the already open tmux terminal split follow the dir of the currently open file,
