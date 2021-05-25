@@ -285,11 +285,13 @@ let g:ale_completion_enabled = 0
 " indent blankline -------
 let g:indent_blankline_enabled = v:true
 
+let g:indent_blankline_char = '│'
+
+let g:indent_blankline_indent_level = 20
+let g:indent_blankline_viewport_buffer = 20
+
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_show_current_context = v:true
-let g:indent_blankline_char = '│'
-let g:indent_blankline_indent_level = 20
-" let g:indent_blankline_context_patterns = ['class', 'function', 'method', 'if', 'for', 'while', 'swtich', 'case', 'try']
 let g:indent_blankline_context_patterns = ['%S+']
 
 " vimux settings ----------------------------------------
