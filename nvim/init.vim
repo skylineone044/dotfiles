@@ -552,6 +552,9 @@ nnoremap k gk
 nmap <Leader>c gcc
 vmap <Leader>c gc
 
+nnoremap ; :
+nnoremap : ;
+
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
 " inoremap <c-j> <Esc>:m .+1<CR>==gi
