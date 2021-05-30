@@ -54,6 +54,7 @@ Plug 'mhinz/vim-signify'                        " show vsc file changes in the s
 Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}  " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
+Plug 'zirrostig/vim-schlepp'                    " move visual blocks around
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
@@ -556,11 +557,19 @@ nnoremap ; :
 
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
-" inoremap <c-j> <Esc>:m .+1<CR>==gi
-" inoremap <c-k> <Esc>:m .-2<CR>==gi
 vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
 
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
+
+vmap <unique> D <Plug>SchleppDup
+
+let g:Schlepp#allowSquishingLines = 1
+let g:Schlepp#allowSquishingBlock = 1
+let g:Schlepp#trimWS = 0
 
 " buffer navigation
 nnoremap <C-b> :buffers<CR>:buffer<space>
