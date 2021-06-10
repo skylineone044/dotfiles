@@ -585,6 +585,8 @@ com! -nargs=1 Search :let @/='\V'.escape(<q-args>, '\\')| normal! n
 com! -nargs=1 LitSearch :let @/='\V'.escape(<q-args>, '\\')| normal! n
 com! -nargs=1 Lits :let @/='\V'.escape(<q-args>, '\\')| normal! n
 
+nnoremap <leader>q :Search<space>
+
 " terminal
 nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
 tnoremap <C-\> <C-\><C-n>
