@@ -465,6 +465,11 @@ set smartindent
 set expandtab
 set smarttab
 
+set wrap
+set linebreak
+set breakindent
+set showbreak=↳
+
 set showcmd
 set list
 
@@ -484,7 +489,6 @@ set scrolloff=4
 
 set colorcolumn=80
 set timeoutlen=400
-set nowrap
 set listchars=tab:›\ ,nbsp:␣,trail:⸱,eol:¬,extends:»,precedes:«
 set completeopt+=noinsert,menuone,preview
 set relativenumber
