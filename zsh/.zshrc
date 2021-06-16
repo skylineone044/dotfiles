@@ -187,9 +187,8 @@ UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 
 ##  ALIASES
 
-alias l="lsd -l --color=auto"
-alias sl="lsd -l --color=auto"
-alias "lsd -a"="ls -la -- color=auto"
+alias l="exa --oneline --classify --long --icons --color=auto --git"
+alias sl="exa --oneline --classify --long --icons --color=auto --git"
 
 alias gs="git status"
 
@@ -200,8 +199,6 @@ alias ":WQ"="exit"
 
 alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
-alias "vanillavim"="/bin/vim"
-alias "vim"="nvim"
 alias "n"="nvim ~/git/PrivateStuff/notes.md"
 
 alias "webcam"="vlc v4l2:///dev/video0 & ; clear"

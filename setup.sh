@@ -87,7 +87,7 @@ printf "\n- getting pylint..."
 sudo apt install -y pylint pylint3 || sudo apt install -y python-pylint python3-pylint || sudo apt install -y python2-pylint python-pylint || sudo pacman -S --noconfirm pylint pylint3  || sudo pacman -S --noconfirm python-pylint python3-pylint || sudo pacman -S --noconfirm python2-pylint python-pylint
 
 printf "\n\n-- getting lsd"
-sudo pacman -S --noconfirm lsd || sudo snap install lsd
+sudo pacman -S --noconfirm exa || sudo apt install -y exa
 
 
 printf "\n\n\n--- Done!\n\n\n"
