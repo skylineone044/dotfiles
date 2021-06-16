@@ -187,8 +187,8 @@ UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 
 ##  ALIASES
 
-alias l="exa --oneline --classify --long --icons --color=auto --git"
-alias sl="exa --oneline --classify --long --icons --color=auto --git"
+alias l="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
+alias sl="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
 
 alias gs="git status"
 
