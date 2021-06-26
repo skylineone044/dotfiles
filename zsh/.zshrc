@@ -190,6 +190,9 @@ UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 alias l="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
 alias sl="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
 
+alias cp='rsync -vhae ssh --progress'
+alias cpa='rsync -vhae ssh --progress --append'
+
 alias gs="git status"
 
 alias ":q"="exit"
