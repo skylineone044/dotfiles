@@ -78,7 +78,10 @@ ln -s ~/git/dotfiles/konsole/ZSH_FTW.profile ~/.local/share/konsole/ZSH_FTW.prof
 ln -s ~/git/dotfiles/konsole/skykonsole.colorscheme ~/.local/share/konsole/skykonsole.colorscheme
 
 printf "\n- linking alacritty"
-ln -s ~/git/dotfiles/alacritty ~/.config/alacritty
+ln -s ~/git/dotfiles/alacritty ~/.config/
+
+printf "\n- linking kitty"
+ln -s ~/git/dotfiles/kitty ~/.config/
 
 printf "\n\n-- Getting dependencies..."
 
