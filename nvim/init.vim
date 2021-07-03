@@ -51,7 +51,7 @@ Plug 'tpope/vim-surround'                       " surround text with quotes, {},
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 " Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
-Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}  " show vertical lines on indents
+Plug 'lukas-reineke/indent-blankline.nvim'      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
 Plug 'zirrostig/vim-schlepp'                    " move visual blocks around
