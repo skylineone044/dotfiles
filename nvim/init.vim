@@ -48,9 +48,10 @@ Plug 'mhinz/vim-startify'                       " start screen
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
+Plug 'tpope/vim-repeat'                         " repeat plugin actions
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
-" Plug 'Yggdroot/indentLine'                      " show vertical lines on indents
+Plug 'justinmk/vim-sneak'                       " move around the screen
 Plug 'lukas-reineke/indent-blankline.nvim'      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
@@ -557,7 +558,7 @@ nnoremap k gk
 nmap <Leader>c gcc
 vmap <Leader>c gc
 
-nnoremap ; :
+" nnoremap ; :
 
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
