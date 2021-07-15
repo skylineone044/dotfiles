@@ -86,7 +86,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": -9.93,
+                    "gain": -6.82,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -96,7 +96,7 @@
                 },
                 "band9": {
                     "frequency": 15011.87233627273,
-                    "gain": -18.33,
+                    "gain": -16.73,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -107,7 +107,7 @@
             },
             "mode": "IIR",
             "num-bands": 10,
-            "output-gain": 14.0,
+            "output-gain": 0.0,
             "right": {
                 "band0": {
                     "frequency": 29.952623149688797,
@@ -191,7 +191,7 @@
                 },
                 "band8": {
                     "frequency": 7523.758767782307,
-                    "gain": -9.93,
+                    "gain": -6.82,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -201,7 +201,7 @@
                 },
                 "band9": {
                     "frequency": 15011.87233627273,
-                    "gain": -18.33,
+                    "gain": -16.73,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.504760237537245,
@@ -226,7 +226,7 @@
             "balance-in": 0.0,
             "balance-out": 0.0,
             "delay": 0.0,
-            "input-gain": 0.0,
+            "input-gain": 36.0,
             "middle-level": 0.0,
             "middle-panorama": 0.0,
             "mode": "LR > L+R (Mono Sum L+R)",
