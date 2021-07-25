@@ -332,25 +332,23 @@ let g:pickachu_default_date_format = "%Y.%m.%d."
 let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 
 " FZF key bindings ----------------------------------------
-if !has('nvim-0.5')
-    nnoremap <C-f> :FZF<CR>
-    let g:fzf_layout = { 'down': '~40%' }
+nnoremap <C-f> :FZF<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
-    command! -bang -nargs=* Rg
-                \ call fzf#vim#grep(
-                \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
-                \   fzf#vim#with_preview(), <bang>0)
+command! -bang -nargs=* Rg
+            \ call fzf#vim#grep(
+            \   'rg --column --line-number --no-heading --color=always --smart-case "" ~', 1,
+            \   fzf#vim#with_preview(), <bang>0)
 
 
-    " Bind "//" to a fzf-powered buffer search
-    nmap // :BLines!<CR>
-    " Bind "??" to a fzf-powered project search
-    nmap ?? :Rg!<CR>
-    " Bind "<leader>p " to a fzf-powered filename search
-    nmap <leader>p :Files!<CR>
-    " Bind "cc" to a fzf-powered command search
-    nmap cc :Commands!<C    R>
-endif
+" Bind "//" to a fzf-powered buffer search
+nmap // :BLines!<CR>
+" Bind "??" to a fzf-powered project search
+nmap ?? :Rg!<CR>
+" Bind "<leader>p " to a fzf-powered filename search
+nmap <leader>p :Files!<CR>
+" Bind "cc" to a fzf-powered command search
+nmap cc :Commands!<C    R>
 
 " telescope.nvim
 lua << EOF
