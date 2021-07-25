@@ -348,7 +348,7 @@ nmap ?? :Rg!<CR>
 " Bind "<leader>p " to a fzf-powered filename search
 nmap <leader>p :Files!<CR>
 " Bind "cc" to a fzf-powered command search
-nmap cc :Commands!<C    R>
+nmap cc :Commands!<CR>
 
 " telescope.nvim
 lua << EOF
