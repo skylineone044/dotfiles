@@ -468,6 +468,7 @@ set wrap
 set linebreak
 set breakindent
 set showbreak=↳
+set virtualedit=all
 
 set showcmd
 set list
