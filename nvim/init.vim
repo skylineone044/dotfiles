@@ -469,6 +469,8 @@ set linebreak
 set breakindent
 set showbreak=↳
 set virtualedit=all
+set conceallevel=2
+set concealcursor=""
 
 set showcmd
 set list
