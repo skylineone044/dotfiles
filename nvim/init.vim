@@ -536,6 +536,12 @@ map <Leader>N :Neoformat<CR>
 
 nnoremap Y y$
 
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ; ;<c-g>u
+
 augroup formating
     autocmd!
     autocmd FileType java nmap <Leader>F :Format<CR>
