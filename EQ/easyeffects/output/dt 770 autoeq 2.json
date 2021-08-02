@@ -196,7 +196,7 @@
                 },
                 "band9": {
                     "frequency": 5284.0,
-                    "gain": -35.0,
+                    "gain": -36.2,
                     "mode": "APO (DR)",
                     "mute": false,
                     "q": 0.31,
