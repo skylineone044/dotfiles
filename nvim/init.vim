@@ -432,8 +432,8 @@ EOF
 
 " sidewas.vim
 " useing alt key
-nnoremap <A-h> :SidewaysLeft<cr>
-nnoremap <A-l> :SidewaysRight<cr>
+nnoremap gh :SidewaysLeft<cr>
+nnoremap gl :SidewaysRight<cr>
 
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
