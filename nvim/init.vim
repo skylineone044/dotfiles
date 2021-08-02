@@ -55,6 +55,7 @@ Plug 'justinmk/vim-sneak'                       " move around the screen
 Plug 'lukas-reineke/indent-blankline.nvim'      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
+Plug 'matze/vim-move'                           " move selected text arond
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
