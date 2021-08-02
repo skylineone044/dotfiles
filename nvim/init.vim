@@ -533,6 +533,9 @@ map :Q :q<CR>
 map <CapsLock> <Esc>
 map <Leader>F :Format<CR>
 map <Leader>N :Neoformat<CR>
+
+nnoremap Y y$
+
 augroup formating
     autocmd!
     autocmd FileType java nmap <Leader>F :Format<CR>
