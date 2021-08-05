@@ -51,7 +51,7 @@ Plug 'tpope/vim-surround'                       " surround text with quotes, {},
 Plug 'tpope/vim-repeat'                         " repeat plugin actions
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
-Plug 'justinmk/vim-sneak'                       " move around the screen
+Plug 'ggandor/lightspeed.nvim'                  " move around the screen
 Plug 'lukas-reineke/indent-blankline.nvim'      " show vertical lines on indents
 Plug 'b3niup/numbers.vim'                       " changing relative and absolute line numbering based in vim modes
 Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
