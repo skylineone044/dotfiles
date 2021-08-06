@@ -633,7 +633,7 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     highlight Visual term=reverse cterm=reverse guibg=Grey
     set rtp+=/home/skyline/git/nvim-highlite
     colorscheme stardust_TS
-    hi Normal ctermbg=none guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
+    hi Normal ctermbg=NONE guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
     hi CocHighlightText ctermbg=239 guibg=#4e4e4e
 
     hi ColorColumn ctermbg=236 guibg=#303030
@@ -658,7 +658,7 @@ else " old setup, for fallback
 
     " make function calls blue and bold
     function ForceFuncCallColor()
-        hi Function ctermfg=39 ctermbg=none cterm=none
+        hi Function ctermfg=39 ctermbg=NONE cterm=NONE
         syntax match pythonFunction /\v[[:alpha:]_.*]+\ze(\s?\()/
         hi def link pythonFunction Function
         hi link pythonBuiltin Function
