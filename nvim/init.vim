@@ -583,6 +583,9 @@ nnoremap <C-h> :bprevious<CR>
 nnoremap H 0
 nnoremap L $
 
+" hide search results with <leader>/
+noremap <leader>/ :nohls<CR><leader>/
+
 " better find and replace
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
 nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
