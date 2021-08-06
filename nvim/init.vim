@@ -451,7 +451,6 @@ set ttyfast
 set lazyredraw
 syntax enable
 
-set number
 set cursorline
 set wildoptions=pum
 

@@ -21,6 +21,37 @@ set timeoutlen=100
 set nowrap
 set relativenumber
 
+map <space> <Leader>
+
+set clipboard+=unnamed
+nnoremap Y y$
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ; ;<c-g>u
+
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
+vnoremap <c-j> :m '>+1<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
+
+nnoremap H 0
+nnoremap L $
+
+" hide search results with <leader>/
+set hlsearch
+noremap <leader>/ :nohls<CR><leader>/
+
+set incsearch
+set ignorecase
+set smartcase
+
+nnoremap gh :action MoveElementLeft<CR>
+nnoremap gl :action MoveElementRight<cr>
+
+
 syntax on
 set listchars=tab:⎟\ ,nbsp:␣,trail:˙,eol:¬,extends:»,precedes:«
 
