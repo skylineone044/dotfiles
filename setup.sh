@@ -29,6 +29,12 @@ printf "\n\nUSE TPM AND VIM-PLUG COMMANDS TO GET PLUGINS\n\n"
 printf "- linking neovim..."
 ln -s ~/git/dotfiles/nvim/ ~/.config/nvim
 
+printf "- linking legacy vim..."
+ln -s ~/git/dotfiles/vim/.vimrc ~/.vimrc
+
+printf "- linking idevim..."
+ln -s ~/git/dotfiles/vim/.ideavimrc ~/.ideavimrc
+
 printf "\n- linking tmux..."
 ln -s ~/git/dotfiles/tmux/.tmux ~/.tmux
 ln -s ~/git/dotfiles/tmux/.tmux.conf ~/.tmux.conf
