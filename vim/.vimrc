@@ -5,7 +5,6 @@ syntax enable
 
 set relativenumber
 set cursorline
-set wildoptions=pum
 
 set tabstop=4
 set shiftwidth=4
@@ -47,6 +46,15 @@ set listchars=tab:›\ ,nbsp:␣,trail:⸱,eol:¬,extends:»,precedes:«
 set completeopt+=noinsert,menuone,preview
 set clipboard+=unnamedplus
 set termguicolors
+
+set background=dark
+colorscheme slate
+highlight Normal ctermbg=NONE guibg=NONE
+highlight ColorColumn ctermbg=236 guibg=#303030
+highlight CursorLine ctermbg=238 guibg=#444444 cterm=NONE gui=NONE
+highlight CursorLineNr ctermbg=238 guibg=#444444 ctermfg=39 guifg=#ffffff cterm=NONE gui=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+
 
 map <space> <Leader>
 
