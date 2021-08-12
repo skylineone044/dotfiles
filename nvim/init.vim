@@ -8,7 +8,8 @@
 "          _\/\\\_\/\\\___\/\\\_\/\\\____\//\\\\\____/\\\____\//\\\_____\/\\\_\/\\\__\/\\\__\/\\\_
 "           _\///__\///____\///__\///______\/////____\///______\///______\///__\///___\///___\///__
 
-
+ if !exists('g:vscode')
+" ordinary neovim
 " vim-plug ------------------------------------------------
 
 " autoinstall vim plug if the plugin dir is empty
@@ -686,7 +687,62 @@ else " old setup, for fallback
     highlight SignifySignAdd    ctermfg=green  guifg=#00ff00 cterm=NONE gui=NONE
     highlight SignifySignDelete ctermfg=red    guifg=#ff0000 cterm=NONE gui=NONE
     highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
-
 endif
 
-" END
+else
+" minimal-ish setup for the VSCode extension
+map <space> <Leader>
+nnoremap Y y$
+
+nnoremap H 0
+nnoremap L $
+" vim-plug ------------------------------------------------
+
+" autoinstall vim plug if the plugin dir is empty
+let need_to_install_plugins = 0
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+    silent  !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let need_to_install_plugins = 1
+endif
+
+call plug#begin('~/.config/nvim/plugins')
+
+" PLUGINS -------------------------------
+Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
+Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
+Plug 'tpope/vim-repeat'                         " repeat plugin actions
+Plug 'ggandor/lightspeed.nvim'                  " move around the screen
+Plug 'AndrewRadev/sideways.vim'                 " move arguments sidewas
+" ---------------------------------------
+call plug#end()
+
+if need_to_install_plugins == 1
+    echo "Installing plugins..."
+    silent! PlugInstall
+    echo "Done!"
+    q
+endif
+
+" persistent undo
+" guard for distributions lacking the 'persistent_undo' feature.
+if has('persistent_undo')
+    " define a path to store persistent undo files.
+    let target_path = expand('~/.cache/vim_undo_history')    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call system('mkdir -p ' . target_path)
+    endif    " point Vim to the defined undo directory.
+    let &undodir = target_path    " finally, enable undo persistence.
+    set undofile
+endif
+
+" sidewas.vim
+nnoremap gh :SidewaysLeft<cr>
+nnoremap gl :SidewaysRight<cr>
+
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
+vnoremap <c-j> :m '>+1<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
+endif
