@@ -627,6 +627,11 @@ augroup continueWhereYouLeftOff
                 \ endif
 augroup END
 
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{timeout=250}
+augroup END
+
 " Colorscheme settings -------------------------------------
 " set t_Co=256
 set background=dark
