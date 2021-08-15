@@ -193,7 +193,7 @@ alias sl="exa --oneline --classify --group-directories-first --long --icons --co
 alias cp='rsync -vhae ssh --progress'
 alias cpa='rsync -vhae ssh --progress --append'
 
-alias cat='bat'
+alias cat='bat --paging=never'
 
 alias gs="git status"
 
