@@ -637,6 +637,11 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{timeout=250}
 augroup END
 
+augroup folding
+    " start with all folds opened
+    autocmd BufWinEnter * normal zR
+augroup END
+
 " Colorscheme settings -------------------------------------
 " set t_Co=256
 set background=dark
