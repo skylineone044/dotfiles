@@ -471,6 +471,7 @@ set showbreak=↳
 set virtualedit=all
 set conceallevel=2
 set concealcursor=""
+set foldmethod=indent
 
 set showcmd
 set list
@@ -492,6 +493,7 @@ set scrolloff=4
 set colorcolumn=80
 set timeoutlen=400
 set listchars=tab:›\ ,nbsp:␣,trail:⸱,eol:¬,extends:»,precedes:«
+set backspace=indent,eol,start
 set completeopt+=noinsert,menuone,preview
 set relativenumber
 set clipboard+=unnamedplus
@@ -626,6 +628,9 @@ augroup continueWhereYouLeftOff
                 \   exe "normal! g`\"" |
                 \ endif
 augroup END
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 augroup highlight_yank
     autocmd!
