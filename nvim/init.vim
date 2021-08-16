@@ -638,9 +638,17 @@ augroup highlight_yank
 augroup END
 
 augroup folding
+    autocmd!
     " start with all folds opened
     autocmd BufWinEnter * normal zR
 augroup END
+
+ augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 
 " Colorscheme settings -------------------------------------
 " set t_Co=256
