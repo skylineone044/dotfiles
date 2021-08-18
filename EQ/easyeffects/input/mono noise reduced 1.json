@@ -220,7 +220,7 @@
         "rnnoise": {
             "input-gain": 0.0,
             "model-path": "/home/skyline/.config/easyeffects/rnnoise/sh.rnnn",
-            "output-gain": 0.0
+            "output-gain": 4.0
         },
         "stereo_tools": {
             "balance-in": 0.0,
