@@ -220,13 +220,13 @@
         "rnnoise": {
             "input-gain": 0.0,
             "model-path": "/home/skyline/.config/easyeffects/rnnoise/sh.rnnn",
-            "output-gain": 4.0
+            "output-gain": 0.1
         },
         "stereo_tools": {
             "balance-in": 0.0,
             "balance-out": 0.0,
             "delay": 0.0,
-            "input-gain": 36.0,
+            "input-gain": 17.8,
             "middle-level": 0.0,
             "middle-panorama": 0.0,
             "mode": "LR > L+R (Mono Sum L+R)",
