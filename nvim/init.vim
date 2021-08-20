@@ -41,6 +41,7 @@ Plug 'dense-analysis/ale'                       " code linting
 Plug 'benmills/vimux'                           " vim-tmux interface
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                         " fuzzy file search
+Plug 'chengzeyi/fzf-preview.vim'                " file preview for fzf
 
 Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'lambdalisue/glyph-palette.vim'            " colors for nerdfont icons
@@ -334,7 +335,7 @@ let g:pickachu_default_command = "qarma"   " REQUIRES QARMA TO BE INSTALLED
 
 " FZF key bindings ----------------------------------------
 nnoremap <C-f> :FZF<CR>
-let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 command! -bang -nargs=* Rg
             \ call fzf#vim#grep(
@@ -643,11 +644,12 @@ augroup folding
     autocmd BufWinEnter * normal zR
 augroup END
 
- augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
+ " augroup remember_folds
+ "  autocmd!
+ "  let ftToIgnore = ['FILES']
+ "  autocmd BufWinLeave * if index(ftToIgnore, &ft) < 0 | mkview
+ "  autocmd BufWinEnter * if index(ftToIgnore, &ft) < 0 | silent! loadview
+" augroup END
 
 
 " Colorscheme settings -------------------------------------
