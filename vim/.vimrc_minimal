@@ -1,0 +1,99 @@
+set encoding=utf-8
+set ttyfast
+set lazyredraw
+syntax enable
+
+set relativenumber
+set cursorline
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set shiftround
+set autoindent
+set smartindent
+set expandtab
+set smarttab
+
+set wrap
+set linebreak
+set breakindent
+set showbreak=↳
+set virtualedit=all
+set conceallevel=2
+set concealcursor=""
+
+set showcmd
+set list
+
+set splitbelow
+set splitright
+" set wildmode=longest,list,full
+set wildmode=full
+set wildmenu
+set showmatch
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set mouse=a
+set scrolloff=4
+
+set colorcolumn=80
+set timeoutlen=400
+set listchars=tab:›\ ,nbsp:␣,trail:⸱,eol:¬,extends:»,precedes:«
+set completeopt+=noinsert,menuone,preview
+set clipboard+=unnamedplus
+set termguicolors
+
+set background=dark
+colorscheme slate
+highlight Normal ctermbg=NONE guibg=NONE
+highlight ColorColumn ctermbg=236 guibg=#303030
+highlight CursorLine ctermbg=238 guibg=#444444 cterm=NONE gui=NONE
+highlight CursorLineNr ctermbg=238 guibg=#444444 ctermfg=39 guifg=#ffffff cterm=NONE gui=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+
+
+map <space> <Leader>
+
+nnoremap Y y$
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ; ;<c-g>u
+
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
+vnoremap <c-j> :m '>+1<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
+
+nnoremap H 0
+nnoremap L $
+
+" hide search results with <leader>/
+set hlsearch
+noremap <leader>/ :nohls<CR><leader>/
+
+
+nnoremap <leader>J <C-W><C-J>
+nnoremap <leader>K <C-W><C-K>
+nnoremap <leader>L <C-W><C-L>
+nnoremap <leader>H <C-W><C-H>
+nnoremap <leader>. :split<CR>
+nnoremap <leader>, :vsplit<CR>
+
+nnoremap j gj
+nnoremap k gk
+
+nnoremap <leader>b :buffers<CR>:buffer<space>
+nnoremap <Leader>h :bnext<CR>
+nnoremap <Leader>l :bprevious<CR>
+
+hi CursorLine ctermbg=234
+hi CursorColumn ctermbg=234 ctermfg=234
+hi NonText ctermfg=250
+hi statusline ctermbg=250 ctermfg=235
