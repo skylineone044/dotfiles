@@ -388,6 +388,10 @@ augroup END
 
 
 " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
+if empty(glob('~/.vim/autoload/PaperColor_stardust.vim'))
+    silent !curl -fLo ~/.vim/autoload/PaperColor_stardust.vim --create-dirs
+        \ https://gitlab.com/skylineone044/dotfiles/-/raw/master/vim/PaperColor_stardust.vim
+endif
 hi Normal ctermbg=none
 highlight Visual term=reverse cterm=reverse guibg=Grey
 let g:PaperColor_Theme = 'stardust'
