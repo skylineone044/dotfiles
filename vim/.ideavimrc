@@ -3,16 +3,10 @@ map <space> <Leader>
 set clipboard+=unnamed
 nnoremap Y y$
 
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-inoremap ; ;<c-g>u
-
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
-vnoremap <c-j> :m '>+1<CR>gv=gv
-vnoremap <c-k> :m '<-2<CR>gv=gv
+vnoremap <c-j> :m '>+1<CR>gv=gv<CR>
+vnoremap <c-k> :m '<-2<CR>gv=gv<CR>
 
 nnoremap H 0
 nnoremap L $
