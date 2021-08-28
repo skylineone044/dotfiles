@@ -62,17 +62,14 @@ Plug 'matze/vim-move'                           " move selected text arond
 
 Plug 'dstein64/vim-startuptime'                 " Measure vim startuptime, brocen down into components
 
-" ------ Nvim 0.5 nightly required
-if has('nvim-0.5')
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'
-    Plug 'nvim-telescope/telescope-media-files.nvim'
-    " Plug 'romgrk/nvim-treesitter-context'
-    " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
-endif
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " semantic code goodies
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
+" Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
+"
 " ---------------------------------------
 call plug#end()
 
