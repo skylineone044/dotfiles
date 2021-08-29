@@ -47,8 +47,12 @@ set completeopt+=noinsert,menuone,preview
 set clipboard+=unnamedplus
 set termguicolors
 
+" change cursor on mode change
+set t_ZH=^[[3m
+set t_ZR=^[[23m
+
 set background=dark
-colorscheme slate
+colorscheme default
 highlight Normal ctermbg=NONE guibg=NONE
 highlight ColorColumn ctermbg=236 guibg=#303030
 highlight CursorLine ctermbg=238 guibg=#444444 cterm=NONE gui=NONE
