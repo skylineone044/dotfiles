@@ -1,0 +1,14 @@
+{
+    "output": {
+        "blocklist": [],
+        "convolver": {
+            "input-gain": 0.0,
+            "ir-width": 100,
+            "kernel-path": "/home/skyline/.config/easyeffects/irs/Beyerdynamic DT 770 80 Ohm minimum phase 48000Hz.irs",
+            "output-gain": 0.0
+        },
+        "plugins_order": [
+            "convolver"
+        ]
+    }
+}
