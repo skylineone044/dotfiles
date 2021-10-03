@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugins')
 " PLUGINS -------------------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code plugin framwork support and LSP
 Plug 'jackguo380/vim-lsp-cxx-highlight'         " sematic highlighting for C/C++, used with and requires coc.nvim
-" Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
+Plug 'sheerun/vim-polyglot'                     " mostly syntax highlighting language packs
 " Plug 'hdima/python-syntax'                      " pyhon synax highlighting
 Plug 'ARM9/arm-syntax-vim'                      " arm syntax highlighting
 " Plug 'SirVer/ultisnips'                         " the ultimate snippet engine
@@ -413,7 +413,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   indent = {
-      enable = true
+      enable = false
   },
   incremental_selection = {
       enable = true,
