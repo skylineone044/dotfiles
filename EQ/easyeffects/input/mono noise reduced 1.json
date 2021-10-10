@@ -1,5 +1,10 @@
 {
     "input": {
+        "autogain": {
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "target": -6.999999999999934
+        },
         "blocklist": [],
         "equalizer": {
             "input-gain": 0.0,
@@ -46,7 +51,7 @@
                 },
                 "band4": {
                     "frequency": 474.71708526294935,
-                    "gain": 0.0,
+                    "gain": -0.1,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -151,7 +156,7 @@
                 },
                 "band4": {
                     "frequency": 474.71708526294935,
-                    "gain": 0.0,
+                    "gain": -0.1,
                     "mode": "RLC (BT)",
                     "mute": false,
                     "q": 1.5047602375372453,
@@ -213,6 +218,7 @@
             "split-channels": false
         },
         "plugins_order": [
+            "autogain",
             "equalizer",
             "rnnoise",
             "stereo_tools"
@@ -220,13 +226,13 @@
         "rnnoise": {
             "input-gain": 0.0,
             "model-path": "/home/skyline/.config/easyeffects/rnnoise/sh.rnnn",
-            "output-gain": 0.1
+            "output-gain": 0.0
         },
         "stereo_tools": {
             "balance-in": 0.0,
             "balance-out": 0.0,
             "delay": 0.0,
-            "input-gain": 17.8,
+            "input-gain": 0.0,
             "middle-level": 0.0,
             "middle-panorama": 0.0,
             "mode": "LR > L+R (Mono Sum L+R)",
