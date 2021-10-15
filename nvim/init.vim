@@ -305,8 +305,8 @@ function! VimuxFollowPWD()
 endfunction
 
 
-let g:VimuxHeight = "40"     " default is 20 (0-100%)
-let g:VimuxOrientation = "h" " default is v (v/h)
+let g:VimuxHeight = "30"     " default is 20 (0-100%)
+let g:VimuxOrientation = "v" " default is v (v/h)
 let g:VimuxUseNearest = 1    " default is 1 (0/1)
 "
 " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>    " the next line replaces this,
