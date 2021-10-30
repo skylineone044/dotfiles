@@ -47,6 +47,7 @@ Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'lambdalisue/glyph-palette.vim'            " colors for nerdfont icons
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
 Plug 'mhinz/vim-startify'                       " start screen
+" Plug 'luukvbaal/stabilize.nvim'                 " stabilize buffer content on window open / close events
 
 Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects filetype as well
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
@@ -382,6 +383,11 @@ nnoremap <leader>fp :<C-U>call ProjectSearch()<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" stabilize
+" lua << EOF
+" require("stabilize").setups()
+" EOF
 
 " fugitive ----------------------
 nnoremap <leader>g :Git<CR>
