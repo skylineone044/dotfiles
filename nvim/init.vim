@@ -213,7 +213,7 @@ nmap <leader>f :CocFix<CR>
 let g:coc_global_extensions = [
             \"coc-pyright", "coc-sh",
             \"coc-clangd", "coc-java", "coc-java-debug", "coc-lua",
-            \"coc-html", "coc-css", "coc-phpls",
+            \"coc-html", "coc-css", "coc-phpls", "coc-tsserver",
             \"coc-explorer", "coc-json", "coc-snippets",
             \"coc-vimlsp", "coc-yank", "coc-calc", "coc-diagnostic",
             \"coc-markdownlint", "coc-pairs", "coc-lines", "coc-emoji",
@@ -554,8 +554,8 @@ augroup configgroup
     autocmd!
     " autocmd FileType python nnoremap <F5> <esc>:w<CR>:!%:p<CR>
     autocmd FileType python map <leader># ggi#!/usr/bin/env python3<CR><esc>
-    autocmd FileType sh map <leader># ggi#!/bin/bash<CR><esc>
     autocmd FileType python map <leader>i iif __name__ == "__main__":<CR>
+    autocmd FileType sh map <leader># ggi#!/bin/bash<CR><esc>
 augroup END
 
 map <space> <Leader>
