@@ -20,4 +20,4 @@ set ignorecase
 set smartcase
 
 nnoremap gh :action MoveElementLeft<CR>
-nnoremap gl :action MoveElementRight<cr>
+nnoremap gl :action MoveElementRight<CR>
