@@ -276,4 +276,4 @@ export PATH=$PATH:$HOME/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/
 export PATH=$PATH:/opt/anaconda/bin/
 
 #this must be last
-source /home/skyline/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
