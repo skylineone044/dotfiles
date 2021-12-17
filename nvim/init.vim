@@ -220,15 +220,6 @@ let g:coc_global_extensions = [
             \"coc-syntax"
             \]
 
-" let g:vimspector_enable_mappings = 'HUMAN'
-packadd! vimspector
-nmap <leader>dd <Plug>VimspectorContinue
-nmap <leader>ds :VimspectorReset<CR>
-nmap <leader>b <Plug>VimspectorToggleBreakpoint
-nmap <F8> <Plug>VimspectorStepInto
-nmap <F9> <Plug>VimspectorStepOver
-nmap <F10> <Plug>VimspectorRunToCursor
-
 " neoformat
 let g:neoformat_enabled_python = ['black', 'autopep8']
 let g:neoformat_enabled_css = ['cssbeautify', 'prettier']
