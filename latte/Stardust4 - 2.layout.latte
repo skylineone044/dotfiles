@@ -27,7 +27,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][1][Applets][109][Configuration]
-PreloadWeight=54
+PreloadWeight=5
 
 [Containments][1][Applets][109][Configuration][ConfigDialog]
 DialogHeight=558
@@ -75,12 +75,13 @@ appletOrder=109;2
 appletShadowsEnabled=false
 autoSizeEnabled=false
 backgroundOnlyOnMaximized=true
+configurationSticker=true
 dragActiveWindowEnabled=true
 durationTime=x1
 lastDodgeVisibilityMode=4
 panelSize=100
 panelTransparency=55
-proportionIconSize=3
+proportionIconSize=3.5
 shadowOpacity=60
 shadowSize=45
 shadows=All
@@ -175,7 +176,7 @@ durationTime=x1
 lastDodgeVisibilityMode=4
 panelSize=100
 panelTransparency=55
-proportionIconSize=3
+proportionIconSize=3.5
 shadowOpacity=60
 shadowSize=45
 shadows=All
@@ -306,40 +307,47 @@ location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
 
-[Containments][14][Applets][105]
-immutability=1
-plugin=org.kde.plasma.bluetooth
-
-[Containments][14][Applets][105][Configuration]
-PreloadWeight=0
-
 [Containments][14][Applets][111]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
 
 [Containments][14][Applets][111][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][14][Applets][112]
 immutability=1
 plugin=org.kde.plasma.vault
 
 [Containments][14][Applets][112][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][14][Applets][115]
 immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][14][Applets][115][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][14][Applets][116]
 immutability=1
-plugin=org.kde.plasma.mediacontroller
+plugin=org.kde.plasma.networkmanagement
 
 [Containments][14][Applets][116][Configuration]
 PreloadWeight=0
+
+[Containments][14][Applets][120]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][14][Applets][120][Configuration]
+PreloadWeight=0
+
+[Containments][14][Applets][125]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][14][Applets][125][Configuration]
+PreloadWeight=10
 
 [Containments][14][Applets][42]
 immutability=1
@@ -367,14 +375,14 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][14][Applets][46][Configuration]
-PreloadWeight=25
+PreloadWeight=0
 
 [Containments][14][Applets][47]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][14][Applets][47][Configuration]
-PreloadWeight=38
+PreloadWeight=0
 
 [Containments][14][Applets][47][Configuration][ConfigDialog]
 DialogHeight=558
@@ -389,20 +397,13 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][14][Applets][48][Configuration]
-PreloadWeight=70
+PreloadWeight=18
 
 [Containments][14][Applets][49]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
 
 [Containments][14][Applets][49][Configuration]
-PreloadWeight=0
-
-[Containments][14][Applets][50]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
-[Containments][14][Applets][50][Configuration]
 PreloadWeight=0
 
 [Containments][14][Applets][51]
@@ -469,12 +470,26 @@ viewType=1
 visibility=0
 wallpaperplugin=org.kde.image
 
+[Containments][15][Applets][126]
+immutability=1
+plugin=org.kde.netspeedWidget
+
+[Containments][15][Applets][126][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][15][Applets][126][Configuration][General]
+fontSize=135
+speedLayout=rows
+swapDownUp=true
+updateInterval=0.5
+
 [Containments][15][Applets][67]
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][15][Applets][67][Configuration]
-PreloadWeight=92
+PreloadWeight=25
 
 [Containments][15][Applets][67][Configuration][Appearance]
 enabledCalendarPlugins=/usr/lib/qt/plugins/plasmacalendarplugins/holidaysevents.so,/usr/lib/qt/plugins/plasmacalendarplugins/astronomicalevents.so
@@ -491,7 +506,11 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][15][Applets][68][Configuration]
-PreloadWeight=45
+PreloadWeight=63
+
+[Containments][15][Applets][68][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][15][Applets][68][Configuration][General]
 favoritesPortedToKAstats=true
@@ -504,12 +523,16 @@ plugin=org.kde.plasma.appmenu
 [Containments][15][Applets][69][Configuration]
 PreloadWeight=0
 
+[Containments][15][Applets][69][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][15][Applets][70]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][15][Applets][70][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 SystrayContainmentId=71
 
 [Containments][15][Applets][85]
@@ -521,23 +544,6 @@ PreloadWeight=0
 
 [Containments][15][Applets][85][Configuration][General]
 history=#026acd,#5294e2,#046cd0,#18191c,#046cd0,#27ae60,#0082ff,#585858,#a8a8a8
-
-[Containments][15][Applets][86]
-immutability=1
-plugin=org.kde.netspeedWidget
-
-[Containments][15][Applets][86][Configuration]
-PreloadWeight=0
-
-[Containments][15][Applets][86][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][15][Applets][86][Configuration][General]
-fontSize=140
-speedLayout=rows
-swapDownUp=true
-updateInterval=0.5
 
 [Containments][15][Applets][90]
 immutability=1
@@ -572,7 +578,7 @@ PreloadWeight=0
 [Containments][15][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=68;69;85;90;70;67
+appletOrder=68;69;126;85;90;70;67
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 autoSizeEnabled=false
@@ -636,6 +642,24 @@ viewType=1
 visibility=0
 wallpaperplugin=org.kde.image
 
+[Containments][16][Applets][123]
+immutability=1
+plugin=org.kde.netspeedWidget
+
+[Containments][16][Applets][123][Configuration]
+PreloadWeight=18
+
+[Containments][16][Applets][123][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][16][Applets][123][Configuration][General]
+fontSize=145
+shortUnits=true
+speedLayout=rows
+swapDownUp=true
+updateInterval=0.5
+
 [Containments][16][Applets][55]
 immutability=1
 plugin=org.kde.plasma.kickoff
@@ -658,7 +682,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][16][Applets][57][Configuration]
-PreloadWeight=92
+PreloadWeight=60
 SystrayContainmentId=14
 
 [Containments][16][Applets][58]
@@ -670,23 +694,6 @@ PreloadWeight=0
 
 [Containments][16][Applets][58][Configuration][General]
 history=#c4c4c4,#80a666,#ffcccc,#3e3f3f,#0c73d8,#0c0dd8,#710cd8,#0cd8d7,#0cd871
-
-[Containments][16][Applets][59]
-immutability=1
-plugin=org.kde.netspeedWidget
-
-[Containments][16][Applets][59][Configuration]
-PreloadWeight=0
-
-[Containments][16][Applets][59][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][16][Applets][59][Configuration][General]
-fontSize=140
-speedLayout=rows
-swapDownUp=true
-updateInterval=0.5
 
 [Containments][16][Applets][60]
 immutability=1
@@ -734,7 +741,7 @@ PreloadWeight=0
 [Containments][16][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=55;56;58;91;57;60
+appletOrder=55;56;123;58;91;57;60
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 autoSizeEnabled=false
@@ -945,7 +952,7 @@ immutability=1
 plugin=org.kde.plasma.manage-inputmethod
 
 [Containments][71][Applets][113][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][71][Applets][114]
 immutability=1
@@ -959,14 +966,35 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][71][Applets][117][Configuration]
-PreloadWeight=42
+PreloadWeight=0
+
+[Containments][71][Applets][118]
+immutability=1
+plugin=org.kde.plasma.networkmanagement
+
+[Containments][71][Applets][118][Configuration]
+PreloadWeight=6
+
+[Containments][71][Applets][119]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
+[Containments][71][Applets][119][Configuration]
+PreloadWeight=14
+
+[Containments][71][Applets][124]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][71][Applets][124][Configuration]
+PreloadWeight=10
 
 [Containments][71][Applets][72]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][71][Applets][72][Configuration]
-PreloadWeight=92
+PreloadWeight=25
 
 [Containments][71][Applets][72][Configuration][ConfigDialog]
 DialogHeight=540
@@ -991,14 +1019,14 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][71][Applets][75][Configuration]
-PreloadWeight=65
+PreloadWeight=13
 
 [Containments][71][Applets][76]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][71][Applets][76][Configuration]
-PreloadWeight=43
+PreloadWeight=10
 
 [Containments][71][Applets][76][Configuration][ConfigDialog]
 DialogHeight=558
@@ -1020,7 +1048,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][71][Applets][78][Configuration]
-PreloadWeight=92
+PreloadWeight=25
 
 [Containments][71][Applets][79]
 immutability=1
@@ -1043,20 +1071,6 @@ DialogWidth=720
 [Containments][71][Applets][81][Configuration][General]
 showPercentage=true
 
-[Containments][71][Applets][82]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
-[Containments][71][Applets][82][Configuration]
-PreloadWeight=64
-
-[Containments][71][Applets][83]
-immutability=1
-plugin=org.kde.plasma.bluetooth
-
-[Containments][71][Applets][83][Configuration]
-PreloadWeight=0
-
 [Containments][71][Applets][84]
 immutability=1
 plugin=org.kde.kscreen
@@ -1077,10 +1091,10 @@ DialogWidth=1156
 
 [Containments][71][General]
 extraItems=org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.nightcolorcontrol,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.manage-inputmethod,org.kde.plasma.vault,org.kde.ktp-contactlist
-hiddenItems=Plasma_microphone
+hiddenItems=Plasma_microphone,KOrganizer Reminder Daemon,KMix,org.kde.ktp-contactlist
 knownItems=org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.nightcolorcontrol,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.vault,org.kde.ktp-contactlist
 scaleIconsToFit=true
-shownItems=org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.battery,KDE Daemon,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,Optimus Manager Qt
+shownItems=org.kde.plasma.notifications,org.kde.plasma.volume,org.kde.plasma.battery,KDE Daemon,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,Optimus Manager Qt,org.kde.plasma.keyboardlayout
 
 [LayoutSettings]
 activities=
