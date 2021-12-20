@@ -181,8 +181,6 @@ alias sshpi="ssh pi@192.168.1.120"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-JDK_HOME="/usr/lib/jvm/java-15-openjdk"
-JAVA_HOME="/usr/lib/jvm/java-15-openjdk"
 UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 
 ##  ALIASES
@@ -267,14 +265,6 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
-#
-# fzf extras
-. /usr/share/fzf/fzf-extras.zsh
-
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
-
-export PATH=$PATH:$HOME/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/
-export PATH=$PATH:/opt/anaconda/bin/
 
 #this must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
