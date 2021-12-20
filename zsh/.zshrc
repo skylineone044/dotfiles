@@ -230,7 +230,8 @@ _comp_options+=(globdots)       # Include hidden files.
 # FZF setup
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/fzf-extras.zsh ] && source /usr/share/fzf/fzf-extras.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 export FZF_DEFAULT_COMMAND='fd . ~ --type f --hidden --follow --color=always'
 export FZF_DEFAULT_OPTS="--ansi"
 # export FZF_DEFAULT_OPTS=""
