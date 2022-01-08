@@ -213,13 +213,13 @@
             "split-channels": false
         },
         "plugins_order": [
+            "stereo_tools",
             "equalizer",
-            "rnnoise",
-            "stereo_tools"
+            "rnnoise"
         ],
         "rnnoise": {
             "input-gain": 0.0,
-            "model-path": "/home/skyline/.config/easyeffects/rnnoise/sh.rnnn",
+            "model-path": "/home/skyline/.config/easyeffects/rnnoise/Standard Model.rnnn",
             "output-gain": 0.0
         },
         "stereo_tools": {
