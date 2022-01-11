@@ -202,7 +202,7 @@ alias ":WQ"="exit"
 
 alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
 
-alias "n"="nvim ~/git/PrivateStuff/notes.md"
+alias "n"="nvim ~/git/privatestuff/notes.md"
 
 alias "webcam"="vlc v4l2:///dev/video0 & ; clear"
 
