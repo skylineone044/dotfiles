@@ -213,6 +213,7 @@ export PATH=$PATH:~/ShellScripts
 export PATH=$PATH:~/shellcsripts
 export PATH=$PATH:~/Shellcsripts
 export PATH=$PATH:/usr/sbin
+export PATH=$PATH:~/.pyenv/shims
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
 set -o HIST_FIND_NO_DUPS
 export MANPAGER='nvim +Man!'
