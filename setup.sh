@@ -99,6 +99,9 @@ printf "\n\n-- getting misc tools"
 sudo pacman -S --noconfirm exa || sudo apt install -y exa
 sudo pacman -S --noconfirm exa || sudo apt install -y bat
 
+printf "Setting global gitignore"
+git config --global core.excludesfile ~/git/dotfiles/global_gitignore
+
 
 printf "\n\n\n--- Done!\n\n\n"
 printf "-! USE PREFIX+I TO INSTALL TMUX PLUGINS"

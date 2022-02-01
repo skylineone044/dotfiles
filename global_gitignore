@@ -1,0 +1,18 @@
+# General
+log/
+*.log
+
+# Dolphin
+.directory
+
+# Node
+npm-debug.log
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# vi
+*~
