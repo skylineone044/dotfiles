@@ -194,6 +194,7 @@ alias cpa='rsync -vhae ssh --progress --append'
 alias cat='bat --paging=never'
 
 alias gs="git status"
+alias gst="/usr/bin/gst"
 
 alias ":q"="exit"
 alias ":Q"="exit"
