@@ -624,6 +624,14 @@ nnoremap <leader>q :Search<space>
 nnoremap <Leader>T :vsplit<CR>:terminal<CR>i
 tnoremap <C-\> <C-\><C-n>
 
+" remap up down to left right in the wildmenu, so it actually moves the
+" seleciton correctly"
+set wildcharm=<C-Z>
+cnoremap <expr> <up> wildmenumode() ? "\<left>" : "\<up>"
+cnoremap <expr> <down> wildmenumode() ? "\<right>" : "\<down>"
+cnoremap <expr> <left> wildmenumode() ? "\<up>" : "\<left>"
+cnoremap <expr> <right> wildmenumode() ? " \<bs>\<C-Z>" : "\<right>"
+
 augroup autocd
     autocmd!
     autocmd BufEnter * silent! lcd %:p:h
