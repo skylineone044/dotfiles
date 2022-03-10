@@ -70,6 +70,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'abecodes/tabout.nvim'                     " tab out of braces
+Plug 'narutoxy/dim.lua'                         " dim unused variables
 " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 "
 " ---------------------------------------
@@ -427,9 +428,7 @@ require'nvim-treesitter.configs'.setup {
     extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
   }
 }
-EOF
 
-lua <<EOF
 require('tabout').setup {
     tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
     backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
@@ -447,6 +446,11 @@ require('tabout').setup {
     },
     ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
     exclude = {} -- tabout will ignore these filetypes
+}
+
+require('dim').setup {
+  disable_lsp_decorations = true, -- disable virt text and underline by lsp on unused vars and functions
+  change_in_insert = true -- change highlights in insert mode (real time updates)
 }
 EOF
 
