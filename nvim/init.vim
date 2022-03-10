@@ -20,6 +20,9 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     let need_to_install_plugins = 1
 endif
 
+filetype plugin indent on
+syntax enable
+
 call plug#begin('~/.config/nvim/plugins')
 
 " PLUGINS -------------------------------
@@ -53,6 +56,7 @@ Plug 'tpope/vim-commentary'                     " comment shortcut, autodetects 
 Plug 'tpope/vim-surround'                       " surround text with quotes, {}, [], (), and more
 Plug 'tpope/vim-repeat'                         " repeat plugin actions
 Plug 'tpope/vim-fugitive'                       " Git integration
+Plug 'lervag/vimtex'                            " LaTeX
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'junegunn/gv.vim'                          " git commit browser
 Plug 'ggandor/lightspeed.nvim'                  " move around the screen
@@ -385,6 +389,15 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " fugitive ----------------------
 nnoremap <leader>g :Git<CR>
 nnoremap <leader>gp :Git push<CR>
+
+" vimtex ------------------------
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_compiler_method = 'latexrun'
+
+" Most VimTeX mappings rely on localleader and this can be changed with the
+" following line. The default is usually fine and is the symbol "\".
+let maplocalleader = ","
 
 " Python-Syntax plugin options ----------------------------
 let python_highlight_all = 1
