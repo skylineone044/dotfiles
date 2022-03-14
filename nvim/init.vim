@@ -274,6 +274,10 @@ let airline#extensions#ale#open_lnum_symbol = " ⏵"
 " ale close_lnum_symbol
 let airline#extensions#ale#close_lnum_symbol = ''
 
+let g:airline#extensions#vimtex#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#virtualenv#ft = ['python', 'markdown']
+
 " ALE settings --------------------------------------------
 let g:ale_sign_error = '⛔'
 let g:ale_sign_warning = '⚠️'
@@ -393,7 +397,10 @@ nnoremap <leader>gp :Git push<CR>
 " vimtex ------------------------
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_compiler_method = 'latexrun'
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : '/tmp/vimtex/',
+            \}
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
