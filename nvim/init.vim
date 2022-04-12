@@ -612,6 +612,8 @@ nnoremap <leader>, :vsplit<CR>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 nmap <Leader>c gcc
 vmap <Leader>c gc
 
