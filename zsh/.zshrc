@@ -207,7 +207,7 @@ alias "n"="nvim ~/git/privatestuff/notes.md"
 
 alias "webcam"="vlc v4l2:///dev/video0 & ; clear"
 
-# needs to be eparately installed
+# needs to be separately installed
 eval $(thefuck --alias)
 
 export PATH=$PATH:~/ShellScripts
