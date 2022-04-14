@@ -148,6 +148,9 @@ else
   export VISUAL='nvim'
 fi
 
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
