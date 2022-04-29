@@ -57,6 +57,7 @@ Plug 'tpope/vim-surround'                       " surround text with quotes, {},
 Plug 'tpope/vim-repeat'                         " repeat plugin actions
 Plug 'tpope/vim-fugitive'                       " Git integration
 Plug 'lervag/vimtex'                            " LaTeX
+Plug 'frabjous/knap'                            " live editing preview
 Plug 'mhinz/vim-signify'                        " show vsc file changes in the sighcolumn
 Plug 'junegunn/gv.vim'                          " git commit browser
 Plug 'ggandor/lightspeed.nvim'                  " move around the screen
@@ -472,6 +473,39 @@ require('dim').setup {
   disable_lsp_decorations = true, -- disable virt text and underline by lsp on unused vars and functions
   change_in_insert = true -- change highlights in insert mode (real time updates)
 }
+
+-- set shorter name for keymap function
+local kmap = vim.keymap.set
+
+-- F5 processes the document once, and refreshes the view
+kmap('i','<F5>', function() require("knap").process_once() end)
+kmap('v','<F5>', function() require("knap").process_once() end)
+kmap('n','<F5>', function() require("knap").process_once() end)
+
+-- F7 toggles the auto-processing on and off
+kmap('i','<F7>', function() require("knap").toggle_autopreviewing() end)
+kmap('v','<F7>', function() require("knap").toggle_autopreviewing() end)
+kmap('n','<F7>', function() require("knap").toggle_autopreviewing() end)
+
+-- F8 invokes a SyncTeX forward search, or similar, where appropriate
+kmap('i','<F8>', function() require("knap").forward_jump() end)
+kmap('v','<F8>', function() require("knap").forward_jump() end)
+kmap('n','<F8>', function() require("knap").forward_jump() end)
+
+local gknapsettings = {
+    texoutputext = "pdf",
+    textopdf = "pdflatex -synctex=1 -halt-on-error -interaction=batchmode %docroot%",
+    -- topdfviewerlaunch = "mupdf %outputfile%",
+    -- textopdfviewerrefresh = "kill -HUP %pid%"
+    mdtopdfviewerlaunch = "llpp %outputfile%",
+    mdtopdfviewerrefresh = "kill -HUP %pid%",
+    markdowntopdfviewerlaunch = "llpp %outputfile%",
+    markdowntopdfviewerrefresh = "kill -HUP %pid%",
+    textopdfviewerlaunch = "PIPE=$XDG_RUNTIME_DIR/llpp-remote.pipe ; ([[ -p $PIPE ]] || mkfifo -m 600 $PIPE) && exec llpp -remote $PIPE %outputfile%",
+    textopdfviewerrefresh = "(echo reload > $XDG_RUNTIME_DIR/llpp-remote.pipe)",
+    textopdfforwardjump = "synctex view -i %line%:%column%:%srcfile% -o %outputfile% -x \"echo goto %{page} %{h} %{v} > $XDG_RUNTIME_DIR/llpp-remote.pipe\""
+}
+vim.g.knap_settings = gknapsettings
 EOF
 
 " sidewas.vim
