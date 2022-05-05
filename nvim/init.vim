@@ -494,14 +494,14 @@ kmap('n','<F8>', function() require("knap").forward_jump() end)
 
 local gknapsettings = {
     texoutputext = "pdf",
-    textopdf = "pdflatex -synctex=1 -halt-on-error -interaction=batchmode %docroot%",
+    textopdf = "pdflatex -synctex=1 -halt-on-error -interaction=batchmode -aux-directory=/tmp/pdflatex -output-directory=/tmp/pdflatex  %docroot%",
     -- topdfviewerlaunch = "mupdf %outputfile%",
     -- textopdfviewerrefresh = "kill -HUP %pid%"
     mdtopdfviewerlaunch = "llpp %outputfile%",
     mdtopdfviewerrefresh = "kill -HUP %pid%",
     markdowntopdfviewerlaunch = "llpp %outputfile%",
     markdowntopdfviewerrefresh = "kill -HUP %pid%",
-    textopdfviewerlaunch = "PIPE=$XDG_RUNTIME_DIR/llpp-remote.pipe ; ([[ -p $PIPE ]] || mkfifo -m 600 $PIPE) && exec llpp -remote $PIPE %outputfile%",
+    textopdfviewerlaunch = "PIPE=$XDG_RUNTIME_DIR/llpp-remote.pipe ; ([[ -p $PIPE ]] || mkfifo -m 600 $PIPE) && exec llpp -remote $PIPE /tmp/pdflatex/%outputfile%",
     textopdfviewerrefresh = "(echo reload > $XDG_RUNTIME_DIR/llpp-remote.pipe)",
     textopdfforwardjump = "synctex view -i %line%:%column%:%srcfile% -o %outputfile% -x \"echo goto %{page} %{h} %{v} > $XDG_RUNTIME_DIR/llpp-remote.pipe\""
 }
