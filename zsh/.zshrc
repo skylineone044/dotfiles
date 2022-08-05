@@ -32,7 +32,6 @@ if [ "$TMUX" = "" ]; then tmux; fi
 export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/shellscripts:$PATH
 
 # Path to your oh-my-zsh installation.
 # export ZSH="/home/mint/.oh-my-zsh"
@@ -205,7 +204,7 @@ alias ":Q"="exit"
 alias ":wq"="exit"
 alias ":WQ"="exit"
 
-alias "autoclick"="sh ~/ShellScripts/autoclick.sh"
+alias "autoclick"="sh ~/shellscripts/autoclick.sh"
 
 alias "n"="nvim ~/git/privatestuff/notes.md"
 
@@ -214,9 +213,7 @@ alias "webcam"="vlc v4l2:///dev/video0 & ; clear"
 # needs to be separately installed
 eval $(thefuck --alias)
 
-export PATH=$PATH:~/ShellScripts
-export PATH=$PATH:~/shellcsripts
-export PATH=$PATH:~/Shellcsripts
+export PATH=$PATH:~/shellscripts
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:~/.pyenv/shims
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
