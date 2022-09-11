@@ -674,6 +674,8 @@ nnoremap L $
 
 " hide search results with <leader>/
 noremap <leader>/ :nohls<CR><leader>/
+xnoremap <leader>p p
+xnoremap p "_dP
 
 " better find and replace
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
