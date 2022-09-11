@@ -21,3 +21,6 @@ set smartcase
 
 nnoremap gh :action MoveElementLeft<CR>
 nnoremap gl :action MoveElementRight<CR>
+
+xnoremap <leader>p p
+xnoremap p "_dP
