@@ -5,7 +5,7 @@ echo "Installing apps..."
 echo "Installing paru..."
 DIR=`pwd`
 cd ~/Projects
-sudo pacman -S --needed base-devel
+sudo pacman -S --needed --noconfirm base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
@@ -14,6 +14,10 @@ cd $DIR
 PACKAGES="
     git
     neovim
+    python-neovim
+    xclip
+    xsel
+    wl-clipboard
     vim
     zsh
     tmux
@@ -28,7 +32,10 @@ PACKAGES="
     ripgrep
     mpv
 	vlc
+    thefuck
     pavucontrol-qt
+    ffmpeg
+    imagemagic
     code
     code-marketplace
     flatpak
@@ -47,7 +54,7 @@ FLATPAK_APPS="
     org.rncbc.qpwgraph
 "
 
-PACKAGE_INSALL_COMMAND="paru -Syu --noconfirm $PACKAGES"
+PACKAGE_INSALL_COMMAND="paru -Syu --noconfirm --needed $PACKAGES"
 FLATPAK_INSTALL_COMMAND="flatpak install --assumeyes $FLATPAK_APPS"
 
 echo "Installing packages..."

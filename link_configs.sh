@@ -49,7 +49,7 @@ echo "linking latte layout..."
 ln -s ~/Projects/dotfiles/latte ~/.config/latte
 
 echo "linking easyeffects presets..."
-ln -s ~/Projects/dotfiles/EQ/easyeffects/ ~/.config/easyeffects/
+ln -s ~/Projects/dotfiles/EQ/easyeffects/ ~/.config/
 
 echo "linking konsole..."
 ln -s ~/Projects/dotfiles/konsole/ZSH_FTW.profile ~/.local/share/konsole/ZSH_FTW.profile
@@ -67,8 +67,9 @@ git config --global core.excludesfile ~/Projects/dotfiles/global_gitignore
 echo "installing fonts..."
 mkdir ~/.local/share/fonts
 echo "copying..."
-cp ~/Projects/dotfiles/fonts/* ~/.local/share/fonts/
+cp -r ~/Projects/dotfiles/fonts/* ~/.local/share/fonts/
 echo "linking emoji font config..."
-ln -s ~/Projects/dotfiles/fonts/conf.d ~/.config/fontconfig/
+ln -s ~/Projects/dotfiles/fonts/conf.d ~/.config/
+mv ~/.config/conf.d ~/.config/fontconfig
 echo "refreshing font cache..."
 fc-cache -f -v
