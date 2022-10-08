@@ -26,7 +26,7 @@ $PRINT_COLORED "linking idevim..."
 ln -s ~/Projects/dotfiles/vim/.ideavimrc ~/.ideavimrc
 
 $PRINT_COLORED "linking tmux..."
-ln -s ~/Projects/dotfiles/tmux/.tmux ~/.tmux
+mkdir ~/.tmux
 ln -s ~/Projects/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 $PRINT_COLORED "linking zsh..."
