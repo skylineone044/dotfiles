@@ -15,6 +15,7 @@ PACKAGES="
     git
     neovim
     python-neovim
+	python-pyxdg
     xclip
     xsel
     wl-clipboard
