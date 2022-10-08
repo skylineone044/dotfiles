@@ -9,7 +9,7 @@ but here are my settings for konsole(with fonts and all) and latte-dock aswell.
 cd $HOME
 mkdir Projects
 cd Projects/
-pacman -S git
+sudo pacman -S git
 git clone https://gitlab.com/skylineone044/dotfiles
 cd dotfiles
 chmod +x *.sh
