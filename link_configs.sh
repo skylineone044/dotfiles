@@ -16,6 +16,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo "linking neovim..."
 ln -s ~/Projects/dotfiles/nvim/ ~/.config/nvim
 
+echo "linking paru..."
+ln -s ~/Projects/dotfiles/paru/ ~/.config/paru
+
 echo "linking legacy vim..."
 ln -s ~/Projects/dotfiles/vim/.vimrc ~/.vimrc
 
