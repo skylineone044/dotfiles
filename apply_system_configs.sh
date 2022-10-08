@@ -4,6 +4,7 @@ $PRINT_COLORED "Setting system configurations..."
 
 $PRINT_COLORED ""
 $PRINT_COLORED "Applying pacman confings..."
+echo "[options]" | sudo tee -a /etc/pacman.conf
 echo "Color" | sudo tee -a /etc/pacman.conf
 echo "CheckSpace" | sudo tee -a /etc/pacman.conf
 echo "VerbosePkgLists" | sudo tee -a /etc/pacman.conf
