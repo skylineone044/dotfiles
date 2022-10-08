@@ -39,7 +39,7 @@ PACKAGES="
     thefuck
     pavucontrol-qt
     ffmpeg
-    imagemagic
+    imagemagick
     linux-zen-headers
     code
     code-marketplace
