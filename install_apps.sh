@@ -12,14 +12,16 @@ makepkg -si
 cd $DIR
 
 PACKAGES="
+	base-devel
     git
+    openssh
+    vim
     neovim
     python-neovim
 	python-pyxdg
     xclip
     xsel
     wl-clipboard
-    vim
     zsh
 	zsh-syntax-highlighting
     tmux
@@ -38,6 +40,7 @@ PACKAGES="
     pavucontrol-qt
     ffmpeg
     imagemagic
+    linux-zen-headers
     code
     code-marketplace
     flatpak
