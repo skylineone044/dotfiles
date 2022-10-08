@@ -29,15 +29,6 @@ $PRINT_COLORED "linking tmux..."
 ln -s ~/Projects/dotfiles/tmux/.tmux ~/.tmux
 ln -s ~/Projects/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
-$PRINT_COLORED "Getting TPM"
-rm -R ~/Projects/dotfiles/tmux/.tmux/plugins/*
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# $PRINT_COLORED "Getting vim-plug"
-# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# $PRINT_COLORED "USE :PlugInstall of :PlugUpdate to get vim plugins"
-
 $PRINT_COLORED "linking zsh..."
 rm ~/.zshrc
 ln -s ~/Projects/dotfiles/zsh/.zshrc ~/.zshrc
