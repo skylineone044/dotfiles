@@ -13,4 +13,7 @@ tmux/.tmux/plugins/*
 *plugins*
 *pack*
 .tmux/plugins
+.tmux/plugins/*
+nvim/coc/extensions
+nvim/coc/extensions/*
 
