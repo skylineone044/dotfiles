@@ -753,7 +753,7 @@ augroup END
 set background=dark
 if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
     highlight Visual term=reverse cterm=reverse guibg=Grey
- 	set rtp+=/home/skyline/Projects/nvim-highlite
+ 	set rtp+=~/Projects/nvim-highlite
     colorscheme stardust_TS
     highlight Normal ctermbg=NONE guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
     highlight CocHighlightText ctermbg=239 guibg=#4e4e4e
