@@ -78,3 +78,6 @@ ln -s ~/Projects/dotfiles/fonts/conf.d ~/.config/
 mv ~/.config/conf.d ~/.config/fontconfig
 $PRINT_COLORED "refreshing font cache..."
 fc-cache -f -v
+
+$PRINT_COLORED "changing the default shell to zsh"
+chsh -s $(which zsh)
