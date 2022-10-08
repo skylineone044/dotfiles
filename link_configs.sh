@@ -41,6 +41,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $PRINT_COLORED "linking zsh..."
 rm ~/.zshrc
 ln -s ~/Projects/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/Projects/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+
 $PRINT_COLORED "linking fd..."
 ln -s ~/Projects/dotfiles/fd ~/.config/fd
 
