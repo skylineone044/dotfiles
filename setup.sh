@@ -2,10 +2,11 @@
 #
 BOLD_GREEN='\033[1;32m'
 CLEAR_COLOR='\033[0m' # No Color
-# alias echo=echo -e "$BOLD_GREEN"
+
+alias print_green="printf \"$BOLD_GREEN\"%s\"$CLEAR_COLOR\"\\\\n"
 
 ./install_apps.sh
 ./link_configs.sh
 ./set_desktop_theme.sh
 
-echo "All done$CLEAR_COLOR"
+print_green "All done$CLEAR_COLOR"
