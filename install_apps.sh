@@ -20,6 +20,7 @@ PACKAGES="
     wl-clipboard
     vim
     zsh
+	zsh-syntax-highlighting
     tmux
     alacritty
     nodejs
