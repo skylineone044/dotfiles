@@ -46,6 +46,7 @@ PACKAGES="
     flatpak
 	libappimage
     latte-dock-git
+	vimv-git
 	touchegg
 	touche
 	appimagelauncher
