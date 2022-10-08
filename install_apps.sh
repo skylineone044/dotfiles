@@ -1,8 +1,8 @@
 #!/bin/bash
 
-print_green "Installing apps..."
+$PRINT_COLORED "Installing apps..."
 
-print_green "Installing paru..."
+$PRINT_COLORED "Installing paru..."
 DIR=`pwd`
 cd ~/Projects
 sudo pacman -S --needed --noconfirm base-devel
@@ -59,9 +59,9 @@ FLATPAK_APPS="
 PACKAGE_INSALL_COMMAND="paru -Syu --noconfirm --needed $PACKAGES"
 FLATPAK_INSTALL_COMMAND="flatpak install --assumeyes $FLATPAK_APPS"
 
-print_green "Installing packages..."
+$PRINT_COLORED "Installing packages..."
 $PACKAGE_INSALL_COMMAND
 
-print_green "Installing flatpak apps..."
+$PRINT_COLORED "Installing flatpak apps..."
 $FLATPAK_INSTALL_COMMAND
 
