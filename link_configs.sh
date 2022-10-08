@@ -7,7 +7,7 @@ $PRINT_COLORED "Linking config files..."
 
 git clone https://github.com/skylineone044/nvim-highlite.git ~/Projects/nvim-highlite
 $PRINT_COLORED "Getting oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 $PRINT_COLORED "Getting POWERLEVEL10K..."
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 $PRINT_COLORED "Getting zsh-autosuggestions for oh-my-zsh..."
