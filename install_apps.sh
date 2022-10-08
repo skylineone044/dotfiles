@@ -3,13 +3,13 @@
 echo "Installing apps..."
 
 echo "Installing paru..."
-# DIR=`pwd`
-# cd ~/Projects
-# sudo pacman -S --needed base-devel
-# git clone https://aur.archlinux.org/paru.git
-# cd paru
-# makepkg -si
-# cd $DIR
+DIR=`pwd`
+cd ~/Projects
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd $DIR
 
 PACKAGES="
     git
