@@ -15,6 +15,10 @@ $PRINT_COLORED "Applying swappiness ..."
 echo "vm.swappiness = 1" | sudo tee /etc/sysctl.d/99-swappiness.conf
 
 $PRINT_COLORED ""
+$PRINT_COLORED "Blacklisting pcspkr..."
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
+
+$PRINT_COLORED ""
 $PRINT_COLORED "Setting default cpu count for make..."
 CPU_COUNT=`grep -c ^processor /proc/cpuinfo`
 echo "MAKEFLAGS=\"-j$CPU_COUNT\"" | sudo tee -a /etc/makepkg.conf
