@@ -36,6 +36,7 @@ PACKAGES="
     ripgrep
     mpv
 	vlc
+    openssh
     thefuck
     pavucontrol-qt
     ffmpeg
@@ -69,3 +70,6 @@ $PACKAGE_INSALL_COMMAND
 $PRINT_COLORED "Installing flatpak apps..."
 $FLATPAK_INSTALL_COMMAND
 
+$PRINT_COLORED "Enabling services..."
+sudo systemctl enable sshd
+sudo systemctl start sshd
