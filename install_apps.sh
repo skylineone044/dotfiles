@@ -33,6 +33,7 @@ PACKAGES="
     fd
     exa
     bat
+    fzf
     ripgrep
     mpv
 	vlc
