@@ -4,6 +4,8 @@ $PRINT_COLORED "Linking config files..."
 
 # git config --global user.email "skylineone044@gmail.com"
 # git config --global user.name "skylineone044"
+$PRINT_COLORED "Enabling libsecret for git..."
+git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
 
 git clone https://github.com/skylineone044/nvim-highlite.git ~/Projects/nvim-highlite
 $PRINT_COLORED "Getting oh-my-zsh..."
