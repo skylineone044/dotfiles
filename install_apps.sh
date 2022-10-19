@@ -37,14 +37,18 @@ PACKAGES="
     ripgrep
     mpv
 	vlc
+    gwenview
+    spectacle
     openssh
     thefuck
     pavucontrol-qt
     ffmpeg
     imagemagick
+    rsync
     linux-zen-headers
     code
     code-marketplace
+    noto-fonts-emoji
     flatpak
 	libappimage
     latte-dock-git
@@ -53,6 +57,7 @@ PACKAGES="
 	touche
 	appimagelauncher
     google-chrome
+    adw-gtk3
 	"
 
 FLATPAK_APPS="
