@@ -28,6 +28,7 @@ PACKAGES="
     alacritty
     nodejs
     htop
+    man-db
     firefox
     pyenv
     fd
