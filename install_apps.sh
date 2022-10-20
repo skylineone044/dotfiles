@@ -59,6 +59,9 @@ PACKAGES="
 	appimagelauncher
     google-chrome
     adw-gtk3
+    clang
+    compiler-rt
+    python-black
 	"
 
 FLATPAK_APPS="
