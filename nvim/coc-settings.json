@@ -3,6 +3,7 @@
     "diagnostic.displayByAle": true,
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": true,
     "diagnostic.enableHighlightLineNumber": true,
     "diagnostic.refreshOnInsertMode": true,
     "diagnostic.separateRelatedInformationAsDiagnostics": true,
