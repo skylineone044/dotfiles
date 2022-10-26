@@ -820,6 +820,10 @@ if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall 
     highlight IndentBlanklineChar guifg=#505050 gui=nocombine
     highlight IndentBlanklineContextChar guifg=#f1f1f1 gui=nocombine
 
+    highlight ALEErrorSign ctermfg=196 ctermbg=NONE guibg=NONE
+    highlight ALEWarningSign ctermfg=214 ctermbg=NONE guibg=NONE
+    highlight SignColumn ctermbg=NONE guibg=NONE
+
 else " old setup, for fallback
     " SEPARATE PAPERCOLOR PALETTE FILE REQUIRED
     if empty(glob('~/.config/nvim/PaperColor_stardust.vim'))
