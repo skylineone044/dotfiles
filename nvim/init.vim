@@ -724,6 +724,9 @@ nnoremap <C-h> :bprevious<CR>
 nnoremap H 0
 nnoremap L $
 
+noremap > >>
+noremap < <<
+
 " hide search results with <leader>/
 noremap <leader>/ :nohls<CR><leader>/
 xnoremap <leader>p p
