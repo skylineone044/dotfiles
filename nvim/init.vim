@@ -225,13 +225,30 @@ augroup END
 nmap <leader>f :CocFix<CR>
 
 let g:coc_global_extensions = [
-            \"coc-pyright", "coc-sh",
-            \"coc-clangd", "coc-java", "coc-java-debug", "coc-lua",
-            \"coc-html", "coc-css", "coc-phpls", "coc-tsserver",
-            \"coc-explorer", "coc-json", "coc-snippets",
-            \"coc-vimlsp", "coc-yank", "coc-calc", "coc-diagnostic",
-            \"coc-markdownlint", "coc-pairs", "coc-lines", "coc-emoji",
-            \"coc-syntax"
+            \"coc-calc",
+            \"coc-clangd",
+            \"coc-cmake",
+            \"coc-css",
+            \"coc-diagnostic",
+            \"coc-emoji",
+            \"coc-explorer",
+            \"coc-html",
+            \"coc-java",
+            \"coc-java-debug",
+            \"coc-json",
+            \"coc-lines",
+            \"coc-lua",
+            \"coc-markdownlint",
+            \"coc-pairs",
+            \"coc-pyright",
+            \"coc-sh",
+            \"coc-snippets",
+            \"coc-syntax",
+            \"coc-toml",
+            \"coc-tsserver",
+            \"coc-vimlsp",
+            \"coc-yaml",
+            \"coc-yank",
             \]
 
 " neoformat
