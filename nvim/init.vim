@@ -752,6 +752,9 @@ noremap <leader>/ :nohls<CR><leader>/
 xnoremap <leader>p p
 xnoremap p "_dP
 
+" go to definition
+nnoremap <leader><CR> :ALEGoToDefinition<CR>
+
 " better find and replace
 vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
 nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
