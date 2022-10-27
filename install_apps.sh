@@ -29,6 +29,7 @@ PACKAGES="
     nodejs
     htop
     man-db
+    ctags
     firefox
     pyenv
     fd
@@ -50,6 +51,7 @@ PACKAGES="
     code
     code-marketplace
     noto-fonts-emoji
+    noto-fonts-emoji-fontconfig
     flatpak
 	libappimage
     latte-dock-git
