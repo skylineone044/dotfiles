@@ -16,6 +16,19 @@ chmod +x *.sh
 bash setup.sh
 ```
 
+## or to also install extras use
+
+```shell
+cd $HOME
+mkdir Projects
+cd Projects/
+sudo pacman -S git
+git clone https://gitlab.com/skylineone044/dotfiles
+cd dotfiles
+chmod +x *.sh
+bash setup.sh --install-extras
+```
+
 neovim color scheme is at [https://github.com/skylineone044/nvim-highlite](https://github.com/skylineone044/nvim-highlite)
 the setup script automatically installs it as well
 
