@@ -27,6 +27,7 @@ PACKAGES="
     tmux
     alacritty
     nodejs
+    npm
     htop
     man-db
     ctags
