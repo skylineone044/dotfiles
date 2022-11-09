@@ -52,7 +52,7 @@ PACKAGES="
     code
     code-marketplace
     noto-fonts-emoji
-    noto-fonts-emoji-fontconfig
+    noto-color-emoji-fontconfig
     veracrypt
     flatpak
     libappimage
