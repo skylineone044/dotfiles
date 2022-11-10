@@ -165,7 +165,6 @@ bindkey '5~' kill-word
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshpi="ssh pi@192.168.1.120"
 
 # Run ls after cd
 
