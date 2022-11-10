@@ -55,6 +55,8 @@ PACKAGES="
     code
     code-marketplace
     noto-fonts-emoji
+    noto-fonts-cjk
+    noto-fonts-extra
     noto-color-emoji-fontconfig
     veracrypt
     flatpak
