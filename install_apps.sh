@@ -42,6 +42,7 @@ PACKAGES="
     vlc
     gwenview
     spectacle
+    kdeconnect
     okular
     openssh
     thefuck
