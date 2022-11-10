@@ -13,6 +13,7 @@ cd $DIR
 
 PACKAGES="
     base-devel
+    acpi_call-dkms
     git
     openssh
     vim
