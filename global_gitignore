@@ -22,3 +22,6 @@ tags
 
 # project specific vim / neovim configs
 .exrc
+
+# cmake build dir
+cmake-build-debug
