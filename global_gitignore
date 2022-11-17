@@ -25,3 +25,9 @@ tags
 
 # cmake build dir
 cmake-build-debug
+
+# general outpud dirs
+out
+*out
+bin
+*bin
