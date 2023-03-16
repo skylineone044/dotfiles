@@ -191,8 +191,8 @@ UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 alias l="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
 alias sl="exa --oneline --classify --group-directories-first --long --icons --color=auto --git"
 
-alias cp='rsync -vhae ssh --progress'
-alias cpa='rsync -vhae ssh --progress --append'
+alias copy='rsync -vhae ssh --progress'
+alias copyappend='rsync -vhae ssh --progress --append'
 
 alias cat='bat --paging=never'
 
@@ -204,18 +204,15 @@ alias ":Q"="exit"
 alias ":wq"="exit"
 alias ":WQ"="exit"
 
-alias "autoclick"="sh ~/shellscripts/autoclick.sh"
-
-alias "n"="nvim ~/git/privatestuff/notes.md"
-
-alias "webcam"="vlc v4l2:///dev/video0 & ; clear"
-
 # needs to be separately installed
 eval $(thefuck --alias)
 
 export PATH=$PATH:~/shellscripts
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:~/.pyenv/shims
+export PATH=$PATH:~/Toolchains/*/bin/
+export PATH=$PATH:~/.local/bin
+
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
 set -o HIST_FIND_NO_DUPS
 export MANPAGER='nvim +Man!'
