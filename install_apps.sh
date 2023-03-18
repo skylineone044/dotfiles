@@ -12,103 +12,103 @@ makepkg -si
 cd $DIR
 
 PACKAGES="
-    base-devel
     acpi_call-dkms
-    git
-    openssh
-    vim
-    neovim
-    python-neovim
-    python-pyxdg
-    xclip
-    xsel
-    wl-clipboard
-    zsh
-    zsh-syntax-highlighting
-    tmux
+    adw-gtk3
     alacritty
-    nodejs
-    npm
-    htop
-    man-db
-    ctags
-    firefox
-    pyenv
-    fd
-    exa
+    appimagelauncher
+    base-devel
     bat
-    fzf
-    ripgrep
-    mpv
-    vlc
-    gwenview
-    spectacle
-    kdeconnect
-    okular
-    openssh
-    thefuck
-    pavucontrol-qt
-    ffmpeg
-    imagemagick
-    rsync
-    linux-zen-headers
+    clang
     code
     code-marketplace
-    noto-fonts-emoji
-    noto-fonts-cjk
-    noto-fonts-extra
-    noto-color-emoji-fontconfig
-    veracrypt
-    flatpak
-    libappimage
-    latte-dock-git
-    vimv-git
-    touchegg
-    touche
-    appimagelauncher
-    google-chrome
-    adw-gtk3
-    clang
     compiler-rt
+    ctags
+    exa
+    fd
+    ffmpeg
+    firefox
+    flatpak
+    fzf
+    git
+    google-chrome
+    gwenview
+    htop
+    imagemagick
+    kdeconnect
+    latte-dock-git
+    libappimage
+    linux-zen-headers
+    man-db
+    mpv
+    neovim
+    nodejs
+    noto-color-emoji-fontconfig
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+    npm
+    okular
+    openssh
+    pavucontrol-qt
+    pyenv
     python-black
+    python-neovim
+    python-pyxdg
+    python-virtualenv
+    ripgrep
+    rsync
+    spectacle
+    thefuck
+    tmux
+    touche
+    touchegg
+    veracrypt
+    vim
+    vimv-git
+    vlc
+    wl-clipboard
+    xclip
+    xsel
+    zsh
+    zsh-syntax-highlighting
 "
 
 FLATPAK_APPS="
-    com.github.tchx84.Flatseal
     chat.rocket.RocketChat
+    com.github.tchx84.Flatseal
     org.gtk.Gtk3theme.adw-gtk3-dark
     org.rncbc.qpwgraph
 "
 
 EXTRA_PACKAGES="
-    obsidian
-    easyeffects
-    kolourpaint
     blender
-    krita
+    clion
+    clion-cmake
+    clion-gdb
+    clion-jre
+    clion-lldb
+    discord
+    easyeffects
+    eog
     gimp
     inkscape
-    eog
-    kdenlive
-    discord
-    telegram-desktop
-    clion-lldb
-    clion-jre
-    clion-gdb
-    clion-cmake
-    clion
     intellij-idea-ultimate-edition
     intellij-idea-ultimate-edition-jre
-    pycharm-professional
-    webstorm
-    webstorm-jre
-    steam
-    transmission-qt
+    kdenlive
+    kolourpaint
+    krita
+    libvirt
     nicotine+
+    obsidian
+    piper
+    pycharm-professional
+    steam
+    telegram-desktop
+    transmission-qt
     virtualbox
     virtualbox-host-dkms
-    libvirt
-    piper
+    webstorm
+    webstorm-jre
 "
 
 EXTRA_FLATPAK_APPS="
