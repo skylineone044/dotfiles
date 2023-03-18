@@ -35,8 +35,6 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export ZSH="/home/mint/.oh-my-zsh"
-# export ZSH="/home/ubuntu/.oh-my-zsh"
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -44,41 +42,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-DEFAULT_USER=$USER
-
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time os_icon )
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user context ssh dir dir_writable vcs newline status)
-
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-#POWERLEVEL9K_DISABLE_RPROMPT=true    #Disable the right promt
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=" "
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" "  #\u00BB "
-POWERLEVEL8K_DIR_ETC_BACKGROUND="009"
-POWERLEVEL9K_DIR_ETC_FOREGROUND="015"
-POWERLEVEL8K_DIR_DEFAULT_BACKGROUND="009"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="015"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="015"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="004"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="015"
-POWERLEVEL9K_DIR_HOME_BACKGROUND="004"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="009"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND="015"
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND="009"
-POWERLEVEL9K_MODE='nerdfont-complete'
-
-#POWERLEVEL9K_ALWAYS_SHOW_USER=true
-#POWERLEVEL9K_USER_ICON="\uF415" #
-#POWERLEVEL9K_ROOT_ICON="#"
-#POWERLEVEL9K_SUDO_ICON="$" #'\uF09C'
-
-
-#
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -142,8 +105,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-  export VISUAL='nvim'
+  export EDITOR='vim'
+  export VISUAL='vim'
 else
   export EDITOR='nvim'
   export VISUAL='nvim'
@@ -209,7 +172,6 @@ eval $(thefuck --alias)
 
 export PATH=$PATH:~/shellscripts
 export PATH=$PATH:/usr/sbin
-export PATH=$PATH:~/.pyenv/shims
 export PATH=$PATH:~/Toolchains/*/bin/
 export PATH=$PATH:~/.local/bin
 
@@ -268,6 +230,11 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 #this must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
