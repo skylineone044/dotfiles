@@ -55,5 +55,6 @@
             "open"
         ],
         "v": "open:vsplit"
-    }
+    },
+    "snippets.ultisnips.pythonPrompt": false
 }
