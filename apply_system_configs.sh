@@ -23,3 +23,7 @@ $PRINT_COLORED "Setting default cpu count for make..."
 CPU_COUNT=`grep -c ^processor /proc/cpuinfo`
 echo "MAKEFLAGS=\"-j$CPU_COUNT\"" | sudo tee -a /etc/makepkg.conf
 
+$PRINT_COLORED ""
+$PRINT_COLORED "Enabling services..."
+sudo systemctl enable power-profiles-daemon.service
+

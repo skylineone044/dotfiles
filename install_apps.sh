@@ -50,6 +50,7 @@ PACKAGES="
     okular
     openssh
     pavucontrol-qt
+    power-profiles-daemon
     pyenv
     python-black
     python-neovim
