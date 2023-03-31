@@ -92,6 +92,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh

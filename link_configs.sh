@@ -14,6 +14,8 @@ $PRINT_COLORED "Getting POWERLEVEL10K..."
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 $PRINT_COLORED "Getting zsh-autosuggestions for oh-my-zsh..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$PRINT_COLORED "Getting zsh-vi-mode for oh-my-zsh..."
+git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
 $PRINT_COLORED "linking neovim..."
 ln -s ~/Projects/dotfiles/nvim/ ~/.config/nvim
