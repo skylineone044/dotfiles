@@ -193,8 +193,8 @@ _comp_options+=(globdots)       # Include hidden files.
 # FZF setup
 function fzf_init() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-  bindkey -M viins '^R' history-incremental-search-backward
-  bindkey -M vicmd '^R' history-incremental-search-backward
+  bindkey -M viins '^R' fzf-history-widget
+  bindkey -M vicmd '^R' fzf-history-widget
   [ -f /usr/share/fzf/fzf-extras.zsh ] && source /usr/share/fzf/fzf-extras.zsh
   [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
   [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
@@ -234,9 +234,10 @@ _fzf_comprun() {
   esac
 }
 
+
 function zvm_keybinds() {
-  zvm_bindkey vicmd '^R' history-incremental-search-backward
-  zvm_bindkey viins '^R' history-incremental-search-backward
+  zvm_bindkey vicmd '^R' fzf-history-widget
+  zvm_bindkey viins '^R' fzf-history-widget
   zvm_bindkey viins '^H' backward-kill-word
   zvm_bindkey viins '^[^?' backward-kill-word
   zvm_bindkey viins '5~' kill-word
