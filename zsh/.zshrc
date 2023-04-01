@@ -191,19 +191,21 @@ _comp_options+=(globdots)       # Include hidden files.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # FZF setup
-bindkey -M viins '^R' history-incremental-search-backward
-bindkey -M vicmd '^R' history-incremental-search-backward
-[ -f /usr/share/fzf/fzf-extras.zsh ] && source /usr/share/fzf/fzf-extras.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-export FZF_DEFAULT_COMMAND='fd . ~ --type f --hidden --follow --color=always'
-export FZF_DEFAULT_OPTS="--ansi"
-# export FZF_DEFAULT_OPTS=""
-export FZF_TMUX_OPTS="-u 60%"
+function fzf_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  bindkey -M viins '^R' history-incremental-search-backward
+  bindkey -M vicmd '^R' history-incremental-search-backward
+  [ -f /usr/share/fzf/fzf-extras.zsh ] && source /usr/share/fzf/fzf-extras.zsh
+  [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+  [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+  export FZF_DEFAULT_COMMAND='fd . ~ --type f --hidden --follow --color=always'
+  export FZF_DEFAULT_OPTS="--ansi"
+  # export FZF_DEFAULT_OPTS=""
+  export FZF_TMUX_OPTS="-u 60%"
 
-# Options to fzf command
-export FZF_COMPLETION_OPTS='+c -x'
-
+  # Options to fzf command
+  export FZF_COMPLETION_OPTS='+c -x'
+}
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
@@ -231,6 +233,18 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+function zvm_keybinds() {
+  zvm_bindkey vicmd '^R' history-incremental-search-backward
+  zvm_bindkey viins '^R' history-incremental-search-backward
+  zvm_bindkey viins '^H' backward-kill-word
+  zvm_bindkey viins '^[^?' backward-kill-word
+  zvm_bindkey viins '5~' kill-word
+  zvm_bindkey viins '^[[3;3~' kill-word
+}
+
+zvm_after_init_commands+=(fzf_init)
+zvm_after_init_commands+=(zvm_keybinds)
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
