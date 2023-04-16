@@ -23,6 +23,9 @@ PACKAGES="
     code-marketplace
     compiler-rt
     ctags
+    docker
+    docker-buildx
+    docker-compose
     exa
     fd
     ffmpeg

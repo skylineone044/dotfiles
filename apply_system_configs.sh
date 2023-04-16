@@ -26,4 +26,9 @@ echo "MAKEFLAGS=\"-j$CPU_COUNT\"" | sudo tee -a /etc/makepkg.conf
 $PRINT_COLORED ""
 $PRINT_COLORED "Enabling services..."
 sudo systemctl enable power-profiles-daemon.service
+sudo systemctl enable docker.service
+
+$PRINT_COLORED ""
+$PRINT_COLORED "Adding user $USER to groups..."
+sudo usermod -aG docker $USER
 
