@@ -74,7 +74,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug 'narutoxy/dim.lua'                         " dim unused variables
+Plug 'zbirenbaum/neodim'                        " dim unused variables
 Plug 'folke/todo-comments.nvim'                 " highlight todos
 " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 "
@@ -475,10 +475,17 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-require('dim').setup {
-  disable_lsp_decorations = true, -- disable virt text and underline by lsp on unused vars and functions
-  change_in_insert = true -- change highlights in insert mode (real time updates)
-}
+-- renable all decorations for 'unused' diagnostics
+require("neodim").setup({
+  update_in_insert = {
+    delay = 200, -- increase the delay for updates to 200ms between insertions
+  },
+  hide = {
+    virtual_text = false,
+    signs = false,
+    underline = false,
+  }
+})
 
 require("todo-comments").setup {
   signs = true, -- show icons in the signs column
