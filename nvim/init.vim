@@ -342,6 +342,7 @@ augroup vimux1
     autocmd!
     autocmd FileType python nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('python ', 1)<CR>
     autocmd FileType javascript nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('node ', 1)<CR>
+    autocmd FileType tex nnoremap <F5> :w<CR>:call VimuxRunCommandInDir('pdflatex ', 1)<CR>
     " autocmd BufEnter * call VimuxFollowPWD()
 augroup END
 " map <Leader>T :VimuxCloseRunner<CR>
