@@ -230,6 +230,7 @@ let g:coc_global_extensions = [
             \"coc-cmake",
             \"coc-css",
             \"coc-diagnostic",
+            \"coc-dictionary",
             \"coc-emoji",
             \"coc-explorer",
             \"coc-html",
@@ -771,6 +772,10 @@ nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 com! -nargs=1 Search :let @/='\V'.escape(<q-args>, '\\')| normal! n
 com! -nargs=1 LitSearch :let @/='\V'.escape(<q-args>, '\\')| normal! n
 com! -nargs=1 Lits :let @/='\V'.escape(<q-args>, '\\')| normal! n
+
+" add dictionaries do completion via coc-dictionary
+set dictionary+=/usr/share/dict/cracklib-small
+set dictionary+=/home/skyline/.config/nvim/spell/freedict
 
 nnoremap <leader>q :Search<space>
 
