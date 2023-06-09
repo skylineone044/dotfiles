@@ -74,5 +74,10 @@ mv ~/.config/conf.d ~/.config/fontconfig
 $PRINT_COLORED "refreshing font cache..."
 fc-cache -f -v
 
+$PRINT_COLORED "set locales..."
+echo "hu_HU.UTF-8 UTF-8" | sudo tee -a /etc/config_file
+echo "en_SE.UTF-8 UTF-8" | sudo tee -a /etc/config_file
+sudo locale-gen
+
 $PRINT_COLORED "changing the default shell to zsh"
 chsh -s $(which zsh)

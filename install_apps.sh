@@ -26,6 +26,7 @@ PACKAGES="
     docker
     docker-buildx
     docker-compose
+    en_se
     exa
     fd
     ffmpeg
