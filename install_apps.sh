@@ -107,9 +107,9 @@ EXTRA_PACKAGES="
     obsidian
     piper
     pycharm-professional
+    qbittorrent
     steam
     telegram-desktop
-    transmission-qt
     virtualbox
     virtualbox-host-dkms
     webstorm
