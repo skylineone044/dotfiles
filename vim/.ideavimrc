@@ -1,6 +1,6 @@
 map <space> <Leader>
 
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 nnoremap Y y$
 
 nnoremap <c-j> :m .+1<CR>==
