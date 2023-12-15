@@ -39,7 +39,7 @@ PACKAGES="
     htop
     imagemagick
     kdeconnect
-    latte-dock-git
+    latte-dock
     libappimage
     linux-zen-headers
     man-db
@@ -79,20 +79,16 @@ PACKAGES="
 "
 
 FLATPAK_APPS="
-    chat.rocket.RocketChat
     com.github.tchx84.Flatseal
     org.gtk.Gtk3theme.adw-gtk3-dark
-    org.rncbc.qpwgraph
 "
 
 EXTRA_PACKAGES="
-    blender
     clion
     clion-cmake
     clion-gdb
     clion-jre
     clion-lldb
-    discord
     easyeffects
     eog
     gimp
@@ -108,8 +104,6 @@ EXTRA_PACKAGES="
     piper
     pycharm-professional
     qbittorrent
-    steam
-    telegram-desktop
     virtualbox
     virtualbox-host-dkms
     webstorm
@@ -117,11 +111,21 @@ EXTRA_PACKAGES="
 "
 
 EXTRA_FLATPAK_APPS="
+    chat.rocket.RocketChat
+    com.discordapp.Discord
+    com.github.iwalton3.jellyfin-media-player
     com.github.taiko2k.tauonmb
-    com.sindresorhus.Caprine
+    com.github.tchx84.Flatseal
     com.skype.Client
+    com.valvesoftware.Steam
     in.srev.guiscrcpy
+    org.blender.Blender
     org.libreoffice.LibreOffice
+    org.mozilla.Thunderbird
+    org.onlyoffice.desktopeditors
+    org.rncbc.qpwgraph
+    org.signal.Signal
+    org.telegram.desktop
 "
 
 PACKAGE_INSALL_COMMAND="paru -Syu --noconfirm --needed"
