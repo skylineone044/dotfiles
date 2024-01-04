@@ -1,0 +1,65 @@
+[colors.bright]
+black = "#7f8c8d"
+blue = "#58caff"
+cyan = "#49e0db"
+green = "#3cff1a"
+magenta = "#ff8ffa"
+red = "#ff4a50"
+white = "#ffffff"
+yellow = "#ffdf25"
+
+[colors.normal]
+black = "#000000"
+blue = "#10a4ff"
+cyan = "#22bcb7"
+green = "#29d10c"
+magenta = "#ff4faa"
+red = "#ff2b32"
+white = "#d2d2d2"
+yellow = "#f6c100"
+
+[colors.primary]
+background = "#000000"
+foreground = "#efefef"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 12.5
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[shell]
+program = "/bin/tmux"
+
+[window]
+decorations_theme_variant = "Dark"
+dynamic_padding = false
+dynamic_title = true
+opacity = 0.55
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 120
+lines = 35
