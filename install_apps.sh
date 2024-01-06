@@ -100,7 +100,6 @@ EXTRA_PACKAGES="
     krita
     libvirt
     nicotine+
-    obsidian
     piper
     pycharm-professional
     qbittorrent
@@ -119,6 +118,7 @@ EXTRA_FLATPAK_APPS="
     com.skype.Client
     com.valvesoftware.Steam
     in.srev.guiscrcpy
+    md.obsidian.Obsidian
     org.blender.Blender
     org.libreoffice.LibreOffice
     org.mozilla.Thunderbird
