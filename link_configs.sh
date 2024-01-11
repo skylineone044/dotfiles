@@ -61,6 +61,9 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config/
 $PRINT_COLORED "linking kitty"
 ln -s ~/Projects/dotfiles/kitty ~/.config/
 
+$PRINT_COLORED "misc configs"
+ln -s ~/Projects/dotfiles/misc_config_files/.uncrustify.cfg ~/
+
 $PRINT_COLORED "Setting global gitignore"
 git config --global core.excludesfile ~/Projects/dotfiles/global_gitignore
 

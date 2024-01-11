@@ -295,6 +295,7 @@ let g:coc_global_extensions = [
 let g:neoformat_enabled_python = ['black', 'autopep8']
 let g:neoformat_enabled_css = ['cssbeautify', 'prettier']
 let g:neoformat_enabled_html = ['htmlbeautify']
+let g:neoformat_enabled_c = ['uncrustify', 'clang-format']
 " Enable alignment
 let g:neoformat_basic_format_align = 1
 

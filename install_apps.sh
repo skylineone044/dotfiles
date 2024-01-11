@@ -67,6 +67,7 @@ PACKAGES="
     tmux
     touche
     touchegg
+    uncrustify
     veracrypt
     vim
     vimv-git
