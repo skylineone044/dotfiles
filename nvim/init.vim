@@ -74,7 +74,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug 'zbirenbaum/neodim'                        " dim unused variables
 Plug 'folke/todo-comments.nvim'                 " highlight todos
 " Plug 'p00f/nvim-ts-rainbow'                     " rainbow parens
 "
@@ -516,18 +515,6 @@ require'nvim-treesitter.configs'.setup {
     extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
   }
 }
-
--- renable all decorations for 'unused' diagnostics
-require("neodim").setup({
-  update_in_insert = {
-    delay = 200, -- increase the delay for updates to 200ms between insertions
-  },
-  hide = {
-    virtual_text = false,
-    signs = false,
-    underline = false,
-  }
-})
 
 require("todo-comments").setup {
   signs = true, -- show icons in the signs column
