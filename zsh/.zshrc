@@ -257,5 +257,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cudnn/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/skyline/Projects/alex_projects/assets/rembg/venv/lib64/python3.11/site-packages/tensorrt_libs
 
+export PATH="$PATH:/home/skyline/.dotnet/tools"
+
 #this must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
