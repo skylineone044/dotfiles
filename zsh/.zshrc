@@ -93,6 +93,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-vi-mode
+  zsh-fzf-history-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -148,6 +149,12 @@ bindkey '5~' kill-word
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+ZSH_FZF_HISTORY_SEARCH_BIND='^r'
+ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS=0
+ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
+ZSH_FZF_HISTORY_SEARCH_END_OF_LINE=1
+ZSH_FZF_HISTORY_SEARCH_FZF_ARGS='+s +m -x --preview-window=hidden' # removed -e (exact match)
+
 UNCRUSTIFY_CONFIG=~/git/sotfiles/nvim/uncrustify.cfs
 
 ##  ALIASES
@@ -194,10 +201,12 @@ _comp_options+=(globdots)       # Include hidden files.
 # FZF setup
 function fzf_init() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-  bindkey -M viins '^R' fzf-history-widget
-  bindkey -M vicmd '^R' fzf-history-widget
+  # bindkey -M viins '^R' fzf-history-widget
+  # bindkey -M vicmd '^R' fzf-history-widget
   [ -f /usr/share/fzf/fzf-extras.zsh ] && source /usr/share/fzf/fzf-extras.zsh
   [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+  bindkey -M vicmd '^R' fzf_history_search
+  bindkey -M viins '^R' fzf_history_search
   [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
   export FZF_DEFAULT_COMMAND='fd . ~ --type f --hidden --follow --color=always'
   export FZF_DEFAULT_OPTS="--ansi"
@@ -237,15 +246,17 @@ _fzf_comprun() {
 
 
 function zvm_keybinds() {
-  zvm_bindkey vicmd '^R' fzf-history-widget
-  zvm_bindkey viins '^R' fzf-history-widget
+  # zvm_bindkey vicmd '^R' fzf-history-widget
+  # zvm_bindkey viins '^R' fzf-history-widget
+  zvm_bindkey vicmd '^R' fzf_history_search
+  zvm_bindkey viins '^R' fzf_history_search
   zvm_bindkey viins '^H' backward-kill-word
   zvm_bindkey viins '^[^?' backward-kill-word
   zvm_bindkey viins '5~' kill-word
   zvm_bindkey viins '^[[3;3~' kill-word
 }
 
-zvm_after_init_commands+=(fzf_init)
+# zvm_after_init_commands+=(fzf_init)
 zvm_after_init_commands+=(zvm_keybinds)
 
 export PYENV_ROOT="$HOME/.pyenv"
