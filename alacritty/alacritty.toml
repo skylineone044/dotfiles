@@ -19,7 +19,7 @@ white = "#d2d2d2"
 yellow = "#f6c100"
 
 [colors.primary]
-background = "#000000"
+background = "#1b1b1b"
 foreground = "#efefef"
 
 [env]
@@ -54,7 +54,7 @@ program = "/bin/tmux"
 decorations_theme_variant = "Dark"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.55
+opacity = 1.0
 
 [window.class]
 general = "Alacritty"
