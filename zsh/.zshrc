@@ -27,7 +27,7 @@ fi
 
 
 #Start tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 export TERM="xterm-256color"
 [[ -n $TMUX ]] && export TERM="screen-256color"
