@@ -46,6 +46,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                         " fuzzy file search
 Plug 'chengzeyi/fzf-preview.vim'                " file preview for fzf
 
+Plug 'Iron-E/nvim-highlite'                     " colol scheIron-E/nvim-highliteme
 Plug 'norcalli/nvim-colorizer.lua'              " highlight hex colors
 Plug 'lambdalisue/glyph-palette.vim'            " colors for nerdfont icons
 Plug 'NLKNguyen/papercolor-theme'               " the abse for my theme, required
@@ -870,16 +871,21 @@ augroup END
 " Colorscheme settings -------------------------------------
 " set t_Co=256
 set background=dark
-if has('nvim-0.5') " if running nvim >= 0.5 then use treesitter, otherwise fall back to the old papercolor setup
-    highlight Visual term=reverse cterm=reverse guibg=Grey
- 	set rtp+=~/Projects/nvim-highlite
-    colorscheme stardust_TS
+if has('nvim-0.9') " if running nvim >= 0.9 then use treesitter & nvim-highlite, otherwise fall back to the old papercolor setup
+lua << EOF
+require('highlite')
+require('stardust_gen2')
+EOF
+
+    highlight Visual term=reverse cterm=reverse guibg=#505050
     highlight Normal ctermbg=NONE guibg=NONE "overwrite highlite settings, because it seems it cant do NONE as background
     highlight CocHighlightText ctermbg=239 guibg=#4e4e4e
     highlight CocMenuSel ctermbg=251 guibg=#c6c6c6 ctermfg=236 guifg=#1c1c1c
     highlight CocSearch ctermfg=39 guifg=#5cc1ff
-
+    "
+    highlight CursorLineNR ctermfg=254 guifg=#f1f1f1
     highlight ColorColumn ctermbg=236 guibg=#303030
+    highlight NonText guifg=#606060
 
     set t_ZH=^[[3m
     set t_ZR=^[[23m
