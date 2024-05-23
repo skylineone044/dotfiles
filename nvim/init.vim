@@ -869,7 +869,6 @@ augroup END
 
 
 " Colorscheme settings -------------------------------------
-" set t_Co=256
 set background=dark
 if has('nvim-0.9') " if running nvim >= 0.9 then use treesitter & nvim-highlite, otherwise fall back to the old papercolor setup
 lua << EOF
