@@ -33,7 +33,7 @@ local green_light   = '#00ff00'
 
 local blue_dark     = '#005285'
 local blue_mid      = '#5f5fff'
-local blue          = '#10a4ff'
+local blue          = '#3599fc'
 local blue_light    = '#5cc1ff'
 
 local turqoise_dark = '#008080'
