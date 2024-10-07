@@ -63,6 +63,7 @@ ln -s ~/Projects/dotfiles/kitty ~/.config/
 
 $PRINT_COLORED "misc configs"
 ln -s ~/Projects/dotfiles/misc_config_files/.uncrustify.cfg ~/
+ln -s ~/Projects/dotfiles/gdb-dashboard ~/.config
 
 $PRINT_COLORED "Setting global gitignore"
 git config --global core.excludesfile ~/Projects/dotfiles/global_gitignore
