@@ -179,6 +179,7 @@ alias ":WQ"="exit"
 eval $(thefuck --alias)
 
 export PATH=$PATH:~/shellscripts
+export PATH=$PATH:~/shellscripts/*
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:~/Toolchains/*/bin/
 export PATH=$PATH:~/.local/bin
