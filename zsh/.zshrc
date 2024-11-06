@@ -271,6 +271,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/skyline/Projects/alex_projects/ass
 
 export PATH="$PATH:/home/skyline/.dotnet/tools"
 export PATH="$PATH:/home/skyline/.cargo/bin"
+export PATH="$PATH:/opt/depot_tools"
 
 #this must be last
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
