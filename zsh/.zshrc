@@ -183,6 +183,7 @@ export PATH=$PATH:~/shellscripts/*
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:~/Toolchains/*/bin/
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/share/Steam/steamapps/common/SteamVR/tools/lighthouse/bin/linux64/
 export PATH=$PATH:~/.local/share/gem/ruby/*/bin
 
 export STEAM_COMPAT_DATA_PATH=$HOME/proton
