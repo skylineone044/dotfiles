@@ -54,7 +54,7 @@ program = "/bin/tmux"
 decorations_theme_variant = "Dark"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.80
+opacity = 1.0
 
 [window.class]
 general = "Alacritty"
