@@ -24,3 +24,8 @@ nnoremap gl :action MoveElementRight<CR>
 
 xnoremap <leader>p p
 xnoremap p "_dP
+
+" ideavim only in the main editor view
+set ideavimsupport=
+set dialogescape=off
+set oneline=off
